@@ -1,0 +1,9 @@
+Change Component Comment: Designator=C10 Old Comment==value New Comment=20pF
+Change Component Comment: Designator=C11 Old Comment==value New Comment=20pF
+Change Component Comment: Designator=R9 Old Comment==value New Comment=100k
+Change Component Comment: Designator=X1 Old Comment=32.786MHz New Comment=8MHz
+Add Pin To Net: Pin=*-2 Old Net=Net*_2 New Net=J1850 BUS+
+Change Pin Designator/Name:  Old Designator=U1-20 Old Name=PA10 New Designator =PA14 New Name=24
+Change Pin Designator/Name:  Old Designator=U1-24 Old Name=PA14 New Designator =PA10 New Name=20
+Change Pin Designator/Name:  Old Designator=U1-29 Old Name=PB6 New Designator =PB7 New Name=30
+Change Pin Designator/Name:  Old Designator=U1-30 Old Name=PB7 New Designator =PB6 New Name=29
