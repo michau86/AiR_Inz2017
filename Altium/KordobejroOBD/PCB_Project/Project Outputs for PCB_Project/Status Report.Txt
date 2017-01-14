@@ -1,0 +1,32 @@
+Output: Gerber Files
+Type  : Gerber
+From  : Variant [[No Variations]] of Project [PCB_Project.PrjPcb]
+   Generated File[Cordobejro.GTL]
+   Generated File[Cordobejro.GP1]
+   Generated File[Cordobejro.GBL]
+   Generated File[Cordobejro.GPB]
+   Generated File[Cordobejro.GPT]
+   Generated File[Cordobejro.GTO]
+   Generated File[Cordobejro.GTP]
+   Generated File[Cordobejro.GTS]
+   Generated File[Cordobejro.GBS]
+   Generated File[Cordobejro.GBP]
+   Generated File[Cordobejro.GBO]
+   Generated File[Cordobejro.GKO]
+   Generated File[Cordobejro.GM1]
+   Generated File[Cordobejro.GM4]
+   Generated File[Cordobejro.GM11]
+   Generated File[Cordobejro.GM13]
+   Generated File[Cordobejro.GM15]
+   Generated File[Cordobejro.GM16]
+   Generated File[Cordobejro.GD1]
+   Generated File[Cordobejro.GG1]
+   Generated File[Cordobejro.RUL]
+   Generated File[Cordobejro.EXTREP]
+   Generated File[Cordobejro.REP]
+
+
+Files Generated   : 23
+Documents Printed : 0
+
+Finished Output Generation At 23:09:11 On 11.01.2017
