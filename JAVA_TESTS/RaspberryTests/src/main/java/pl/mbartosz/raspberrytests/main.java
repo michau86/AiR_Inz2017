@@ -16,6 +16,7 @@ import com.pi4j.io.serial.SerialDataEventListener;
 import com.pi4j.io.serial.SerialFactory;
 import com.pi4j.io.serial.SerialPort;
 import com.pi4j.io.serial.StopBits;
+import com.pi4j.system.SystemInfo;
 import com.pi4j.util.CommandArgumentParser;
 import com.pi4j.util.Console;
 import java.io.IOException;
@@ -48,7 +49,7 @@ public class main {
 
         try {
             SerialConfig config = new SerialConfig();
-            config.device(SerialPort.getDefaultPort())
+            config.device(SerialPort.getDefaultPort(SystemInfo.BoardType.RaspberryPi_3B))
                     .baud(Baud._38400)
                     .dataBits(DataBits._8)
                     .parity(Parity.NONE)

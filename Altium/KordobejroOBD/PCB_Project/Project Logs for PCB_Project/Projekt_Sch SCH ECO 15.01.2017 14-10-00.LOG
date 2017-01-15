@@ -1,0 +1,25 @@
+Change Component Footprint: Designator=R1 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R2 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R3 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R4 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R5 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R7 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R8 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R9 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R10 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=R11 Old Footprint=0402 New Footprint=J1-0603
+Change Component Footprint: Designator=D1 Old Footprint=0402-A New Footprint=3.5X2.8X1.9
+Change Component Footprint: Designator=D2 Old Footprint=0402-A New Footprint=3.5X2.8X1.9
+Change Component Footprint: Designator=D3 Old Footprint=0402-A New Footprint=3.5X2.8X1.9
+Change Component Footprint: Designator=D4 Old Footprint=0402-A New Footprint=3.5X2.8X1.9
+Change Component Footprint: Designator=D5 Old Footprint=0402-A New Footprint=3.5X2.8X1.9
+Change Component Footprint: Designator=C3 Old Footprint=0603 New Footprint=0402
+Change Component Footprint: Designator=Q2 Old Footprint=HC-49U New Footprint=R38
+Change Component Footprint: Designator=P3 Old Footprint=HDR1X5 New Footprint=HDR1X6
+Change Component Footprint: Designator=Q1 Old Footprint=Kwarc New Footprint=R38
+Change Component Comment: Designator=C3 Old Comment==value New Comment=47u
+Change Component Comment: Designator=P3 Old Comment=Header 5 New Comment=Header 6
+Change Component Comment: Designator=D3 Old Comment=Red New Comment=Blue
+Change Component Comment: Designator=D1 Old Comment=Red New Comment=Green
+Change Component Comment: Designator=U6 Old Comment=RN4020-V/RM New Comment=RN2020-V/RM
+Change Component Designator: OldDesignator=U6 NewDesignator=U5

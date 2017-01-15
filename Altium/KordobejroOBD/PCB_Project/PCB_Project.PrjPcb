@@ -89,103 +89,111 @@ GenerateClassCluster=0
 DocumentUniqueId=
 
 [GeneratedDocument1]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.EXTREP
+DocumentPath=Project Outputs for PCB_Project\Design Rule Check - Projekt_Pcb.html
 DItemRevisionGUID=
 
 [GeneratedDocument2]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GBL
+DocumentPath=MessageListReport.html
 DItemRevisionGUID=
 
 [GeneratedDocument3]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GBO
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.1
 DItemRevisionGUID=
 
 [GeneratedDocument4]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GBP
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.EXTREP
 DItemRevisionGUID=
 
 [GeneratedDocument5]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GBS
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GBL
 DItemRevisionGUID=
 
 [GeneratedDocument6]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GD1
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GBO
 DItemRevisionGUID=
 
 [GeneratedDocument7]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GG1
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GBP
 DItemRevisionGUID=
 
 [GeneratedDocument8]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GKO
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GBS
 DItemRevisionGUID=
 
 [GeneratedDocument9]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GM1
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GD1
 DItemRevisionGUID=
 
 [GeneratedDocument10]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GM4
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GG1
 DItemRevisionGUID=
 
 [GeneratedDocument11]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GM11
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GKO
 DItemRevisionGUID=
 
 [GeneratedDocument12]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GM13
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GM1
 DItemRevisionGUID=
 
 [GeneratedDocument13]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GM15
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GM4
 DItemRevisionGUID=
 
 [GeneratedDocument14]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GM16
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GM11
 DItemRevisionGUID=
 
 [GeneratedDocument15]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GP1
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GM13
 DItemRevisionGUID=
 
 [GeneratedDocument16]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GPB
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GM15
 DItemRevisionGUID=
 
 [GeneratedDocument17]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GPT
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GM16
 DItemRevisionGUID=
 
 [GeneratedDocument18]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GTL
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GML
 DItemRevisionGUID=
 
 [GeneratedDocument19]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GTO
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GP1
 DItemRevisionGUID=
 
 [GeneratedDocument20]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GTP
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GPB
 DItemRevisionGUID=
 
 [GeneratedDocument21]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.GTS
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GPT
 DItemRevisionGUID=
 
 [GeneratedDocument22]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.REP
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GTL
 DItemRevisionGUID=
 
 [GeneratedDocument23]
-DocumentPath=Project Outputs for PCB_Project\Cordobejro.RUL
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GTO
 DItemRevisionGUID=
 
 [GeneratedDocument24]
-DocumentPath=Project Outputs for PCB_Project\Design Rule Check - Cordobejro.html
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GTP
 DItemRevisionGUID=
 
 [GeneratedDocument25]
-DocumentPath=MessageListReport.html
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.GTS
+DItemRevisionGUID=
+
+[GeneratedDocument26]
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.REP
+DItemRevisionGUID=
+
+[GeneratedDocument27]
+DocumentPath=Project Outputs for PCB_Project\Projekt_Pcb.RUL
 DItemRevisionGUID=
 
 [Configuration1]
@@ -519,7 +527,7 @@ OutputDocumentPath12=
 OutputVariantName12=[No Variations]
 OutputDefault12=0
 Configuration12_Name1=OutputConfigurationParameter1
-Configuration12_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Imperial|GerberUnit=Imperial|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set="All Layers","Component Layers","Signal Layers","Electrical Layers"|LayerClassesPlot.Set= |LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=40|MinusApertureTolerance=40|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842751~1,16973835~1,16973833~1,16973831~1,16908289~1,16908292~1,16908299~1,16908301~1,16908303~1,16908304~1,16973837~1,16973848~1,16973849~1|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=5|NumberOfDecimals=5|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842751~1,16973835~1,16973833~1,16973831~1,16908289~1,16908292~1,16908299~1,16908301~1,16908303~1,16908304~1,16973837~1,16973848~1,16973849~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=True|PlotUsedDrillGuideLayerPairs=True|PlusApertureTolerance=40|PlusApertureTolerance=40|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
+Configuration12_Item1=AddToAllLayerClasses.Set= |AddToAllPlots.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16908289~1,16908292~1,16908299~1,16908301~1,16908303~1,16908304~1|CentrePlots=False|DrillDrawingSymbol=GraphicsSymbol|DrillDrawingSymbolSize=200000|EmbeddedApertures=True|FilmBorderSize=10000000|FilmXSize=200000000|FilmYSize=160000000|FlashAllFills=False|FlashPadShapes=True|G54OnApertureChange=False|GenerateDRCRulesFile=True|GenerateDRCRulesFile=True|GenerateReliefShapes=True|GerberUnit=Metric|GerberUnit=Metric|IncludeUnconnectedMidLayerPads=False|LayerClassesMirror.Set="All Layers","Component Layers","Signal Layers","Electrical Layers"|LayerClassesPlot.Set="All Layers","Component Layers","Signal Layers","Electrical Layers"|LeadingAndTrailingZeroesMode=SuppressLeadingZeroes|MaxApertureSize=2500000|MinusApertureTolerance=39|MinusApertureTolerance=39|Mirror.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842751~1,16973835~1,16973833~1,16973831~1,16908289~1,16908292~1,16908299~1,16908301~1,16908303~1,16908304~1,16973837~1,16973848~1,16973849~1|MirrorDrillDrawingPlots=False|MirrorDrillGuidePlots=False|NoRegularPolygons=False|NumberOfDecimals=2|NumberOfDecimals=2|OptimizeChangeLocationCommands=True|OptimizeChangeLocationCommands=True|OriginPosition=Relative|Panelize=False|Plot.Set=SerializeLayerHash.Version~2,ClassName~TLayerToBoolean,16973830~1,16973832~1,16973834~1,16777217~1,16842753~1,16842751~1,16973835~1,16973833~1,16973831~1,16908289~1,16908292~1,16908299~1,16908301~1,16908303~1,16908304~1,16973837~1,16973848~1,16973849~1|PlotPositivePlaneLayers=False|PlotUsedDrillDrawingLayerPairs=True|PlotUsedDrillGuideLayerPairs=True|PlusApertureTolerance=39|PlusApertureTolerance=39|Record=GerberView|SoftwareArcs=False|Sorted=False|Sorted=False
 
 [OutputGroup6]
 Name=Report Outputs

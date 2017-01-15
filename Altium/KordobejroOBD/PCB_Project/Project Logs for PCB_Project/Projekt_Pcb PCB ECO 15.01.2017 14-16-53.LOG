@@ -1,0 +1,17 @@
+Change Component Footprint: Designator=C3 Old Footprint=0402 New Footprint=0603
+Change Component Footprint: Designator=P3 Old Footprint=HDR1X6 New Footprint=HDR1X5
+Change Component Footprint: Designator=R1 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R2 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R3 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R4 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R5 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R7 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R8 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R9 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R10 Old Footprint=J1-0603 New Footprint=0402
+Change Component Footprint: Designator=R11 Old Footprint=J1-0603 New Footprint=0402
+Change Component Comment : Designator=C3 Old Comment=47u New Comment=1u
+Change Component Comment : Designator=D3 Old Comment=Blue New Comment=Red
+Change Component Comment : Designator=D1 Old Comment=Green New Comment=Red
+Change Component Comment : Designator=P3 Old Comment=Header 6 New Comment=Header 5
+Change Component Comment : Designator=U6 Old Comment=RN2020-V/RM New Comment=RN4020-V/RM
