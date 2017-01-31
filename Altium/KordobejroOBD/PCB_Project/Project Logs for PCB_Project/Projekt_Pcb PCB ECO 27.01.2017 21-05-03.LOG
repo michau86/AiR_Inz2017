@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=PIO1 Pin=U1-25
+Removed Pin From Net: NetName=PIO3 Pin=U1-27
+Added Pin To Net: NetName=PIO3 Pin=U1-25
+Added Pin To Net: NetName=PIO1 Pin=U1-27
+Added Room: Name=Projekt_Sch

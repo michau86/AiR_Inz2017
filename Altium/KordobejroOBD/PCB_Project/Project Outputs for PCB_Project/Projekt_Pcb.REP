@@ -7,18 +7,6 @@ Generating : Top Layer
 
     Adding Layer      : Top Layer
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
     Adding Layer      : Multi-Layer
 
 
@@ -40,49 +28,6 @@ Used DCodes :
     D24
     D25
     D26
-    D27
-    D28
-    D29
-    D30
-    D31
-*************************************************************
-
-*************************************************************
-Generating : GroundPanel
-      File : Projekt_Pcb.GP1
-
-    Adding Layer      : GroundPanel
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
-    D32
-    D33
-    D34
-    D35
-    D36
-    D37
-    D38
-    D39
-    D40
 *************************************************************
 
 *************************************************************
@@ -91,24 +36,12 @@ Generating : Bottom Layer
 
     Adding Layer      : Bottom Layer
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
+    D10
     D13
-    D14
     D17
     D18
     D19
@@ -124,14 +57,10 @@ Used DCodes :
     D29
     D30
     D31
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
+    D32
+    D33
+    D34
+    D35
 *************************************************************
 
 *************************************************************
@@ -142,22 +71,10 @@ Generating : Bottom Pad Master
 
     Adding Layer      : Multi-Layer
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
+    D10
     D13
-    D14
     D18
     D19
     D20
@@ -166,19 +83,14 @@ Used DCodes :
     D23
     D24
     D25
-    D26
     D27
     D28
     D29
     D30
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
+    D31
+    D32
+    D33
+    D34
 *************************************************************
 
 *************************************************************
@@ -189,18 +101,6 @@ Generating : Top Pad Master
 
     Adding Layer      : Multi-Layer
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
     D10
@@ -218,11 +118,6 @@ Used DCodes :
     D23
     D24
     D25
-    D26
-    D27
-    D28
-    D29
-    D30
 *************************************************************
 
 *************************************************************
@@ -231,28 +126,12 @@ Generating : Top Overlay
 
     Adding Layer      : Top Overlay
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
     D17
-    D18
-    D19
-    D20
-    D21
-    D22
-    D49
-    D50
+    D36
+    D37
+    D38
 *************************************************************
 
 *************************************************************
@@ -260,18 +139,6 @@ Generating : Top Paste
       File : Projekt_Pcb.GTP
 
     Adding Layer      : Top Paste
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
 
     Adding Layer      : Top Layer
 
@@ -286,11 +153,6 @@ Used DCodes :
     D14
     D15
     D16
-    D18
-    D19
-    D20
-    D21
-    D22
 *************************************************************
 
 *************************************************************
@@ -299,29 +161,49 @@ Generating : Top Solder
 
     Adding Layer      : Top Solder
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
     Adding Layer      : Top Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
+    D39
+    D40
+    D41
+    D42
+    D43
+    D44
+    D45
+    D46
+    D47
+    D48
+    D49
+    D50
+    D51
+    D52
+    D53
+    D54
+*************************************************************
+
+*************************************************************
+Generating : Bottom Solder
+      File : Projekt_Pcb.GBS
+
+    Adding Layer      : Bottom Solder
+
+    Adding Layer      : Bottom Layer
+
+    Adding Layer      : Multi-Layer
+
+
+Used DCodes :
+    D39
+    D42
+    D46
+    D47
+    D48
+    D49
+    D50
     D51
     D52
     D53
@@ -334,60 +216,6 @@ Used DCodes :
     D60
     D61
     D62
-    D63
-    D64
-    D65
-    D66
-*************************************************************
-
-*************************************************************
-Generating : Bottom Solder
-      File : Projekt_Pcb.GBS
-
-    Adding Layer      : Bottom Solder
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
-    Adding Layer      : Bottom Layer
-
-    Adding Layer      : Multi-Layer
-
-
-Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
-    D54
-    D55
-    D58
-    D59
-    D60
-    D61
-    D62
-    D63
-    D64
-    D65
-    D66
-    D67
-    D68
-    D69
-    D70
-    D71
-    D72
-    D73
-    D74
 *************************************************************
 
 *************************************************************
@@ -396,39 +224,22 @@ Generating : Bottom Paste
 
     Adding Layer      : Bottom Paste
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
     Adding Layer      : Bottom Layer
 
     Adding Layer      : Multi-Layer
 
 
 Used DCodes :
+    D10
     D13
-    D14
-    D18
-    D19
-    D20
-    D21
-    D22
-    D41
-    D42
-    D43
-    D44
-    D45
-    D46
-    D47
-    D48
+    D27
+    D28
+    D29
+    D30
+    D31
+    D32
+    D33
+    D34
 *************************************************************
 
 *************************************************************
@@ -437,28 +248,12 @@ Generating : Bottom Overlay
 
     Adding Layer      : Bottom Overlay
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
     D17
-    D18
-    D19
-    D20
-    D21
-    D22
-    D49
-    D75
+    D36
+    D37
+    D63
 *************************************************************
 
 *************************************************************
@@ -467,25 +262,8 @@ Generating : Keep-Out Layer
 
     Adding Layer      : Keep-Out Layer
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
 *************************************************************
 
 *************************************************************
@@ -494,25 +272,10 @@ Generating : Mechanical 1
 
     Adding Layer      : Mechanical 1
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
+    D17
+    D35
 *************************************************************
 
 *************************************************************
@@ -521,25 +284,8 @@ Generating : Mechanical 4
 
     Adding Layer      : Mechanical 4
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
 *************************************************************
 
 *************************************************************
@@ -548,25 +294,10 @@ Generating : Mechanical 11
 
     Adding Layer      : Mechanical 11
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
+    D37
+    D64
 *************************************************************
 
 *************************************************************
@@ -575,25 +306,9 @@ Generating : Mechanical 13
 
     Adding Layer      : Mechanical 13
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
+    D64
 *************************************************************
 
 *************************************************************
@@ -602,25 +317,9 @@ Generating : Mechanical 15
 
     Adding Layer      : Mechanical 15
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
+    D64
 *************************************************************
 
 *************************************************************
@@ -629,25 +328,11 @@ Generating : Mechanical 16
 
     Adding Layer      : Mechanical 16
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
+    D65
+    D66
+    D67
 *************************************************************
 
 *************************************************************
@@ -656,25 +341,8 @@ Generating : Dielectric1
 
     Adding Layer      : Dielectric1
 
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
-
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
 *************************************************************
 
 *************************************************************
@@ -682,18 +350,6 @@ Generating : Multi-Layer
       File : Projekt_Pcb.GML
 
     Adding Layer      : Multi-Layer
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
 
 
 Used DCodes :
@@ -705,28 +361,11 @@ Used DCodes :
     D23
     D24
     D25
-    D26
-    D27
-    D28
-    D29
-    D30
 *************************************************************
 
 *************************************************************
 Generating : Drill Drawing
       File : Projekt_Pcb.GD1
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
 
     Adding Drill Pair : Top Layer-Bottom Layer
 
@@ -734,29 +373,13 @@ Generating : Drill Drawing
 
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
-    D76
+    D66
+    D68
 *************************************************************
 
 *************************************************************
 Generating : Drill Guide
       File : Projekt_Pcb.GG1
-
-    Adding Layer      : Mechanical 1
-
-    Adding Layer      : Mechanical 4
-
-    Adding Layer      : Mechanical 11
-
-    Adding Layer      : Mechanical 13
-
-    Adding Layer      : Mechanical 15
-
-    Adding Layer      : Mechanical 16
 
     Adding Drill Pair : Top Layer-Bottom Layer
 
@@ -764,10 +387,6 @@ Generating : Drill Guide
 
 
 Used DCodes :
-    D18
-    D19
-    D20
-    D21
-    D22
+    D66
 *************************************************************
 

@@ -1,34 +1,9 @@
-Output: Gerber Files
-Type  : Gerber
-From  : Variant [[No Variations]] of Project [PCB_Project.PrjPcb]
-   Generated File[Projekt_Pcb.GTL]
-   Generated File[Projekt_Pcb.GP1]
-   Generated File[Projekt_Pcb.GBL]
-   Generated File[Projekt_Pcb.GPB]
-   Generated File[Projekt_Pcb.GPT]
-   Generated File[Projekt_Pcb.GTO]
-   Generated File[Projekt_Pcb.GTP]
-   Generated File[Projekt_Pcb.GTS]
-   Generated File[Projekt_Pcb.GBS]
-   Generated File[Projekt_Pcb.GBP]
-   Generated File[Projekt_Pcb.GBO]
-   Generated File[Projekt_Pcb.GKO]
-   Generated File[Projekt_Pcb.GM1]
-   Generated File[Projekt_Pcb.GM4]
-   Generated File[Projekt_Pcb.GM11]
-   Generated File[Projekt_Pcb.GM13]
-   Generated File[Projekt_Pcb.GM15]
-   Generated File[Projekt_Pcb.GM16]
-   Generated File[Projekt_Pcb.1]
-   Generated File[Projekt_Pcb.GML]
-   Generated File[Projekt_Pcb.GD1]
-   Generated File[Projekt_Pcb.GG1]
-   Generated File[Projekt_Pcb.RUL]
-   Generated File[Projekt_Pcb.EXTREP]
-   Generated File[Projekt_Pcb.REP]
+Output: AutoCAD dwg/dxf File PCB
+Type  : AutoCAD PCB
+From  : PCB Document [Projekt_Pcb.PcbDoc]
 
 
-Files Generated   : 25
+Files Generated   : 0
 Documents Printed : 0
 
-Finished Output Generation At 17:02:55 On 15.01.2017
+Finished Output Generation At 22:30:42 On 31.01.2017

@@ -1,5 +1,5 @@
 ------------------------------------------------------------------------------------------
-Gerber File Extension Report For: Projekt_Pcb.GBR   15.01.2017  17:02:51
+Gerber File Extension Report For: Projekt_Pcb.GBR   31.01.2017  22:24:25
 ------------------------------------------------------------------------------------------
 
 
@@ -7,7 +7,6 @@ Gerber File Extension Report For: Projekt_Pcb.GBR   15.01.2017  17:02:51
 Layer Extension     Layer Description                      
 ------------------------------------------------------------------------------------------
 .GTL                Top Layer                               
-.GP1                GroundPanel                             
 .GBL                Bottom Layer                            
 .GPB                Bottom Pad Master                       
 .GPT                Top Pad Master                          
