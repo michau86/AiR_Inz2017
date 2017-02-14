@@ -5,12 +5,14 @@
 \contentsline {section}{\numberline {2}Zagadnienia wprowadzaj\IeC {\k a}ce}{6}{section.2}
 \contentsline {subsection}{\numberline {2.1}Z\IeC {\l }\IeC {\k a}cze diagnostyczne}{6}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Z\IeC {\l }\IeC {\k a}cze diagnostyczne OBD-II}{7}{subsubsection.2.1.1}
-\contentsline {subsection}{\numberline {2.2}Protoko\IeC {\l }y komunikacyjne w motoryzacji}{8}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Opis wykorzystanych narz\IeC {\k e}dzi}{9}{subsection.2.3}
-\contentsline {section}{\numberline {3}Struktura projektu}{10}{section.3}
-\contentsline {section}{\numberline {4}Projekt uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym}{11}{section.4}
-\contentsline {subsection}{\numberline {4.1}Schemat elektryczny}{11}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Projekt p\IeC {\l }ytki drukowanej}{12}{subsection.4.2}
-\contentsline {section}{\numberline {5}Aplikacja przetwarzaj\IeC {\k a}ca dane ze z\IeC {\l }\IeC {\k a}cza diagnostycznego}{13}{section.5}
-\contentsline {section}{\numberline {6}Interfejs u\IeC {\.z}ytkownika}{14}{section.6}
-\contentsline {section}{\numberline {7}Podsumowanie}{15}{section.7}
+\contentsline {subsubsection}{\numberline {2.1.2}Struktura wysy\IeC {\l }anych zapyta\IeC {\'n}}{8}{subsubsection.2.1.2}
+\contentsline {subsubsection}{\numberline {2.1.3}Struktura kod\IeC {\'o}w b\IeC {\l }\IeC {\k e}d\IeC {\'o}w}{9}{subsubsection.2.1.3}
+\contentsline {subsection}{\numberline {2.2}Protoko\IeC {\l }y komunikacyjne dost\IeC {\k e}pne w z\IeC {\l }\IeC {\k a}czu diagnostycznym}{10}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Opis wykorzystanych narz\IeC {\k e}dzi}{11}{subsection.2.3}
+\contentsline {section}{\numberline {3}Struktura projektu}{12}{section.3}
+\contentsline {section}{\numberline {4}Projekt uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym}{13}{section.4}
+\contentsline {subsection}{\numberline {4.1}Schemat elektryczny}{13}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Projekt p\IeC {\l }ytki drukowanej}{14}{subsection.4.2}
+\contentsline {section}{\numberline {5}Aplikacja przetwarzaj\IeC {\k a}ca dane ze z\IeC {\l }\IeC {\k a}cza diagnostycznego}{15}{section.5}
+\contentsline {section}{\numberline {6}Interfejs u\IeC {\.z}ytkownika}{16}{section.6}
+\contentsline {section}{\numberline {7}Podsumowanie}{17}{section.7}

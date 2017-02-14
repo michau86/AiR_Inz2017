@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.8)  13 FEB 2017 16:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.8)  15 FEB 2017 00:01
 entering extended mode
 **./InzynierskaPracaDyplomowa_MateuszBartosz_2017.tex
 (InzynierskaPracaDyplomowa_MateuszBartosz_2017.tex
@@ -722,11 +722,7 @@ Package: multirow 2016/11/25 v2.2 Span multiple rows of a table
 \multirow@dima=\skip65
 \bigstrutjot=\dimen143
 )
-(InzynierskaPracaDyplomowa_MateuszBartosz_2017.aux
-
-LaTeX Warning: Label `Halliday12' multiply defined.
-
-)
+(InzynierskaPracaDyplomowa_MateuszBartosz_2017.aux)
 \openout1 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
@@ -744,7 +740,8 @@ LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
 LaTeX Font Info:    ... okay on input line 78.
 LaTeX Font Info:    Try loading font information for T1+ptm on input line 78.
- ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 *geometry* driver: auto-detecting
@@ -855,170 +852,67 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 \openout4 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.toc'.
 
  [2] [3] [4]
-[5] [6] [7] [8] [9] [10]
-Overfull \hbox (3.20049pt too wide) in paragraph at lines 200--200
+[5] [6] <Images/ZlaczaOBD2.pdf, id=125, 469.00218pt x 123.04279pt>
+File: Images/ZlaczaOBD2.pdf Graphic file (type pdf)
+
+<use Images/ZlaczaOBD2.pdf>
+Package pdftex.def Info: Images/ZlaczaOBD2.pdf used on input line 173.
+(pdftex.def)             Requested size: 375.20226pt x 98.43434pt.
+
+<Images/ZlaczeOBD2_pinout.pdf, id=128, 260.22218pt x 115.94058pt>
+File: Images/ZlaczeOBD2_pinout.pdf Graphic file (type pdf)
+
+<use Images/ZlaczeOBD2_pinout.pdf>
+Package pdftex.def Info: Images/ZlaczeOBD2_pinout.pdf used on input line 184.
+(pdftex.def)             Requested size: 208.17802pt x 92.75258pt.
+ [7 <./Images/ZlaczaOBD2.pdf> <./Images/ZlaczeOBD2_pinout.pdf
+
+pdfTeX warning: pdflatex (file ./Images/ZlaczeOBD2_pinout.pdf): PDF inclusion: 
+multiple pdfs with page group included in a single page
+>] [8] [9] [10] [11] [12]
+Overfull \hbox (3.20049pt too wide) in paragraph at lines 269--269
 []\T1/ptm/b/n/17.28 Projekt ukªa-du do ko-mu-ni-ka-cji ze zª¡-czem dia-gno-styc
 z-
  []
 
-[11] [12] [13] [14] [15] [16pdfTeX warning (ext4): destination with the same id
-entifier (name{cite.Halliday12}) has been already used, duplicate ignored
-
-\AtBegShi@Output ...ipout \box \AtBeginShipoutBox 
-                                                  \fi \fi 
-l.294 
-      ] [17] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof)
+[13] [14] [15] [16] [17] [18]
+(InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof)
 \tf@lof=\write5
 \openout5 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof'.
 
- [18]
+ [19]
 (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot)
 \tf@lot=\write6
 \openout6 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot'.
 
- [19] [20]
+ [20]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 326.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 326.
 
-Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
-
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-23.91173pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
-
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-23.91173pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-
-Package geometry Warning: `a4paper': not available in `\newgeometry'; skipped.
-
-*geometry* verbose mode - [ newgeometry ] result:
-* driver: pdftex
-* paper: a4paper
-* layout: <same size as paper>
-* layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(71.13188pt, 455.24411pt, 71.13188pt)
-* v-part:(T,H,B)=(85.35826pt, 702.78308pt, 56.9055pt)
-* \paperwidth=597.50787pt
-* \paperheight=845.04684pt
-* \textwidth=455.24411pt
-* \textheight=702.78308pt
-* \oddsidemargin=-1.1381pt
-* \evensidemargin=-1.1381pt
-* \topmargin=-23.91173pt
-* \headheight=12.0pt
-* \headsep=25.0pt
-* \topskip=12.0pt
-* \footskip=30.0pt
-* \marginparwidth=44.0pt
-* \marginparsep=10.0pt
-* \columnsep=10.0pt
-* \skip\footins=10.8pt plus 4.0pt minus 2.0pt
-* \hoffset=0.0pt
-* \voffset=0.0pt
-* \mag=1000
-* \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
-* \@reversemarginfalse
-* (1in=72.27pt=25.4mm, 1cm=28.453pt)
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 345.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 345.
 (InzynierskaPracaDyplomowa_MateuszBartosz_2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 345.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 345.
-
-
-Package rerunfilecheck Warning: File `InzynierskaPracaDyplomowa_MateuszBartosz_
-2017.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `InzynierskaPracaDyplomowa_MateuszBa
-rtosz_2017.out':
-(rerunfilecheck)             Before: E839C54E1C665F710B6E8A8900921D01;1053
-(rerunfilecheck)             After:  CDDD32F8E9C7C171FFC93F4146742D0F;1144.
-
-LaTeX Warning: There were multiply-defined labels.
-
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 345.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 326.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 326.
+Package rerunfilecheck Info: File `InzynierskaPracaDyplomowa_MateuszBartosz_201
+7.out' has not changed.
+(rerunfilecheck)             Checksum: CCC9BF4820BC82BF6E292D6F40239D80;1350.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 326.
  ) 
 Here is how much of TeX's memory you used:
- 10234 strings out of 493333
- 146975 string characters out of 3139195
- 251856 words of memory out of 3000000
- 13530 multiletter control sequences out of 15000+200000
- 30163 words of font info for 55 fonts, out of 3000000 for 9000
+ 10221 strings out of 493333
+ 146897 string characters out of 3139195
+ 251568 words of memory out of 3000000
+ 13531 multiletter control sequences out of 15000+200000
+ 34655 words of font info for 58 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,5n,43p,2263b,440s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,14n,43p,2263b,367s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utm
 ri8a.pfb>
 Output written on InzynierskaPracaDyplomowa_MateuszBartosz_2017.pdf (20 pages, 
-86156 bytes).
+114083 bytes).
 PDF statistics:
- 230 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 121 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 258 PDF objects out of 1000 (max. 8388607)
+ 54 named destinations out of 1000 (max. 500000)
+ 155 words of extra memory for PDF output out of 10000 (max. 10000000)
 

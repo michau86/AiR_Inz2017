@@ -5,12 +5,14 @@
 \BOOKMARK [1][-]{section.2}{Zagadnienia wprowadzajace}{}% 5
 \BOOKMARK [2][-]{subsection.2.1}{Z\233acze diagnostyczne}{section.2}% 6
 \BOOKMARK [3][-]{subsubsection.2.1.1}{Z\233acze diagnostyczne OBD-II}{subsection.2.1}% 7
-\BOOKMARK [2][-]{subsection.2.2}{Protoko\233y komunikacyjne w motoryzacji}{section.2}% 8
-\BOOKMARK [2][-]{subsection.2.3}{Opis wykorzystanych narzedzi}{section.2}% 9
-\BOOKMARK [1][-]{section.3}{Struktura projektu}{}% 10
-\BOOKMARK [1][-]{section.4}{Projekt uk\233adu do komunikacji ze z\233aczem diagnostycznym}{}% 11
-\BOOKMARK [2][-]{subsection.4.1}{Schemat elektryczny}{section.4}% 12
-\BOOKMARK [2][-]{subsection.4.2}{Projekt p\233ytki drukowanej}{section.4}% 13
-\BOOKMARK [1][-]{section.5}{Aplikacja przetwarzajaca dane ze z\233acza diagnostycznego}{}% 14
-\BOOKMARK [1][-]{section.6}{Interfejs uzytkownika}{}% 15
-\BOOKMARK [1][-]{section.7}{Podsumowanie}{}% 16
+\BOOKMARK [3][-]{subsubsection.2.1.2}{Struktura wysy\233anych zapytan}{subsection.2.1}% 8
+\BOOKMARK [3][-]{subsubsection.2.1.3}{Struktura kod\363w b\233ed\363w}{subsection.2.1}% 9
+\BOOKMARK [2][-]{subsection.2.2}{Protoko\233y komunikacyjne dostepne w z\233aczu diagnostycznym}{section.2}% 10
+\BOOKMARK [2][-]{subsection.2.3}{Opis wykorzystanych narzedzi}{section.2}% 11
+\BOOKMARK [1][-]{section.3}{Struktura projektu}{}% 12
+\BOOKMARK [1][-]{section.4}{Projekt uk\233adu do komunikacji ze z\233aczem diagnostycznym}{}% 13
+\BOOKMARK [2][-]{subsection.4.1}{Schemat elektryczny}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Projekt p\233ytki drukowanej}{section.4}% 15
+\BOOKMARK [1][-]{section.5}{Aplikacja przetwarzajaca dane ze z\233acza diagnostycznego}{}% 16
+\BOOKMARK [1][-]{section.6}{Interfejs uzytkownika}{}% 17
+\BOOKMARK [1][-]{section.7}{Podsumowanie}{}% 18

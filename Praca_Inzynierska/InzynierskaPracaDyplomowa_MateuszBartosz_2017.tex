@@ -166,13 +166,82 @@
 		\newpage
 		
 		\subsubsection{Złącze diagnostyczne OBD-II}
-			\hspace{0.5cm}OMFG ALE DUŻO NAPISAŁEM, TERAZ OBD2 I JAZDA!
+			\hspace{0.5cm}Złącze diagnostyczne OBD w wersji drugiej jest aktualnie stosowanym w motoryzacji wyprowadzeniem umożliwiającym wykrywanie błędów poszczególnych układów pojazdu. Opis budowy tego złącza zawarty jest w normie SAE J1962[\cite{saej1962}]. Standard OBD-II zawiera specyfikację dotyczącą budowy złącza, a także opis udostępnianych przez nie protokołów komunikacyjnych. Zgodnie z normą, złącze występuje w dwóch wersjach: A oraz B, oba szesnastopinowe (2x8), żeńskie. Na Rys. \ref{rys_obd2_wtyczka} przedstawiono budowę obu typów złączy.
 		
+		\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.8]{Images/ZlaczaOBD2.pdf}
+		\caption{Porównanie złącza diagnostycznego w wersji A oraz B.}
+		\label{rys_obd2_wtyczka}
+		\end{figure}
+		
+		Złącze typu A stosowane jest w pojazdach wyposażonych w akumulator o napięciu 12V, natomiast złącze typu B w pojazdach wyposażonych w akumulator o napięciu 24V.
+		
+		Norma SAE J1962 definiuje protokoły komunikacyjne udostępniane przez złącze diagnostyczne. Dostępność poszczególnych protokołów komunikacyjnych może być różna w zależności od producenta pojazdu oraz roku produkcji. Na Rys. \ref{rys_obd2_pinout} oraz w tabeli \ref{tab_obd2_pinout} przedstawione zostały potencjalnie dostępne protokoły komunikacyjne wraz z numerem pinu, do którego powinny być podłączone.
+		
+		\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.8]{Images/ZlaczeOBD2_pinout.pdf}
+		\caption{Opis wyprowadzeń złącza diagnostycznego. Wykorzystywane wyprowadzenia zostały zaznaczone kolorem niebieskim oraz odpowiednim numerem. Opis wyprowadzeń znajduje się w Tab \ref{tab_obd2_pinout}}
+		\label{rys_obd2_pinout}
+		\end{figure}
+		
+		W złączu diagnostycznym udostępnionych jest 5 różnych protokołów. Dodatkowo rozróżnione są dwie masy: masa podwozia oraz masa sygnałowa. W praktyce najczęściej wyprowadzenia te są ze sobą zwarte. Zazwyczaj w pojazdach udostępniony jest tylko jeden z opisanych poniżej protokołów. 
+		
+		\newpage
+		
+		\begin{table}[ht]
+\centering
+\caption{Opis wyprowadzeń złącza diagnostycznego OBD-II.}
+\label{tab_obd2_pinout}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Numer wyprowadzenia} & \textbf{Przeznaczenie wyprowadzenia}                                                                    \\ \hline
+2                            & Linia dodatnia protokołu SAE J1850 PWM oraz VPW                                                         \\ \hline
+4                            & Masa podwozia                                                                                           \\ \hline
+5                            & Masa sygnałowa                                                                                          \\ \hline
+6                            & Linia wysoka magistrali CAN                                                                             \\ \hline
+7                            & Linia K protokołu ISO 9141-2 oraz ISO 14230-4                                                           \\ \hline
+10                           & Linia ujemna protokołu SAE J1850 PWM                                                                    \\ \hline
+14                           & Linia niska magistrali CAN                                                                              \\ \hline
+15                           & Linia L protokołu ISO 9141-2 oraz ISO 14230-4                                                           \\ \hline
+16                           & \begin{tabular}[c]{@{}c@{}}Zasilanie\\ 12V/4A dla złącza typu A\\ 24V/2A dla złącza typu B\end{tabular} \\ \hline
+\end{tabular}
+\end{table}
+		
+		\subsubsection{Struktura wysyłanych zapytań}
+		
+		\hspace{0.5cm}Przy użyciu złącza diagnostycznego można odpytywać komputer pokładowy parametry z dziesięciu podgrup wybierając odpowiedni tryb. Tryby wybierane są za pomocą wysłania w żądaniu odpowiedniej liczby zapisanej w postaci szesnastkowej do złącza diagnostycznego. W tabeli \ref{tab_pid_modes} przedstawionych jest dziesięć modów opisanych w normie SAE J1979.
+		
+		\begin{table}[ht]
+\centering
+\caption{Tryby pracy złącza diagnostycznego}
+\label{tab_pid_modes}
+\begin{tabular}{|c|c|}
+\hline
+\textbf{Tryb (hex)} & \textbf{Opis}                                                               \\ \hline
+01                  & Aktualny stan parametrów poszczególnych układów                             \\ \hline
+02                  & Stan niektórych czujników w momencie wystąpienia błędu                      \\ \hline
+03                  & Zapisane kody błędów                                                        \\ \hline
+04                  & Wyczyszczenie zapisanych kodów błędów            \\ \hline
+05                  & Wyniki testu samodiagnostyki czujnika tlenu \\ \hline
+06                  & Wyniki testu samodiagnostyki czujnika tlenu (CAN)                             \\ \hline
+07                  & Kody błędów z aktualnego oraz poprzedniego przejazdu         \\ \hline
+08                  & Kontrola operacji poszczególnych układów wewnętrznych                       \\ \hline
+09                  & Parametry pojazdu                                                           \\ \hline
+0A                  & Trwałe kody błędów (czyste kody błędów)                                     \\ \hline
+\end{tabular}
+\end{table}
+		
+		
+		\newpage
+		
+		\subsubsection{Struktura kodów błędów}
 		
 	
 		\newpage	
 	
-	\subsection{Protokoły komunikacyjne w motoryzacji}
+	\subsection{Protokoły komunikacyjne dostępne w złączu diagnostycznym}
 		\hspace{0.5cm}GŁÓWNIE TE Z OBD LIN, ISO9141-2, CAN,
 						te nowsze
 	
@@ -240,73 +309,9 @@
 	
 		\bibitem{Bogusz10}
 		Bogusz W., Grabarczyk J., Krok F., \emph{Podstawy fizyki}, Oficyna Wydawnicza Politechniki Warszawskiej, Warszawa, 2010.
-	
-		\bibitem{Halliday12}
-		Halliday D., Resnick R., Walker J., \emph{Podstawy fizyki tom 1}, Wydawnictwo Naukowe PWN, Warszawa, 2012.
-	
-		\bibitem{Szuba10}
-		Szuba S., \emph{Ćwiczenia laboratoryjne z fizyki}, Poznańska Księgarnia Akademicka, Poznań, 2010.
-	
-		\bibitem{Szydlowski03}
-		Szydłowski H., \emph{Pracownia fizyczna wspomagana komputerem}, Wydawnictwo Naukowe PWN, Warszawa, 2003.
 		
-		\bibitem{Ostwald12}
-		Ostwald M., \emph{Podstawy wytrzymałości materiałów}, Wydawnictwo Politechniki Poznańskiej, Poznań, 2012.
-	
-		\bibitem{Ostwald12_ZbiorZadan}
-		Ostwald M., \emph{Wytrzymałości materiałów. Zbiór zadań}, Wydawnictwo Politechniki Poznańskiej, Poznań, 2012.
-		
-		\bibitem{Niezgodzinski09}
-		Niezgodziński M. E., Niezgodziński T., \emph{Wzory, wykresy i tablice wytrzymałościowe}, Wydawnictwo Naukowe PWN, Warszawa, 2009.
-	
-		\bibitem{Hadam04}
-		Hadam P., \emph{Projektowanie systemów mikroprocesorowych}, Wydawnictwo BTC, Warszawa, 2004.
-	
-		\bibitem{Ziętek11}
-		Ziętek B., \emph{Optoelektronika}, Wydawnictwo Naukowe Uniwersytetu Mikołaja Kopernika, Toruń, 2011.
-	
-		\bibitem{Francuz11}
-		Francuz T., \emph{Język C dla mikrokontrolerów AVR}, Wydawnictwo Helion, Gliwice, 2011.
-	
-		\bibitem{Anderson14}
-		Anderson R., Cervo D., \emph{Arduino dla zaawansowanych}, Wydawnictwo Helion, 2014.
-	
-		\bibitem{Chruściel08}
-		Chruściel M., \emph{LabVIEW w praktyce}, Wydawnictwo BTC, Legionowo, 2008.
-	
-		\bibitem{Chomicki14}
-		Chomicki W., \emph{Magisterska praca dyplomowa}, Politechnika Poznańska, Poznań, 2014.
-	
-		\bibitem{niusb6009}
-		http://www.ni.com/datasheet/pdf/en/ds-218 (28.06.2016)
-		
-		\bibitem{silnikKrokowy16}
-		http://www.silniki.pl/download/57bygh\_032011.pdf (28.06.2016)
-		
-		\bibitem{sterownikSilnikaKrokowego16}
-		http://www.silniki.pl/download/SMC104\_karta\_katalogowa.pdf (28.06.2016)
-		
-		\bibitem{uln2003a}
-		http://www.ti.com/lit/ds/symlink/uln2003a.pdf (28.06.2016)
-		
-		\bibitem{panasonicHG-C1400}
-		https://www.panasonic-electric-works.com/ \\ cps/rde/xbcr/pew\_eu\_en/ds\_hgc\_3219\_en.pdf (28.06.2016)
-		
-		\bibitem{RysPanasonicHG-C1400}
-		https://www.panasonic-electric-works.com/ \\ 
-		cps/rde/xbcr/pew\_eu\_en/ds\_hgc\_applications\_en.pdf (28.06.2016)
-		
-		\bibitem{kamera16}
-		http://wiibrew.org/wiki/Wiimote\#IR\_Camera (28.06.2016)
-		
-		\bibitem{Arduino16}
-		https://www.arduino.cc/en/Main/ArduinoBoardUno (28.06.2016)
-		
-		\bibitem{LabVIEW16}
-		http://poland.ni.com/labview (28.06.2016)
-		
-		\bibitem{ArduinoSoftware16}
-		https://www.arduino.cc/en/Main/OldSoftwareReleases\#previous (28.06.2016)
+		\bibitem{saej1962}
+		https://law.resource.org/pub/us/cfr/ibr/005/sae.j1962.2002.pdf (14.02.2017)
 		
 
 \end{thebibliography}
@@ -318,28 +323,4 @@
 	\listoftables
 	\newpage
 
-\section*{Dokumentacja techniczna}
-	\lhead{\textit{DOKUMENTACJA TECHNICZNA}}
-
-	\begin{enumerate}
-		\item{Obudowa Arduino Uno}
-		\item{Korpus obudowy Arduino Uno}
-		\item{Pokrywa obudowy Arduino Uno}
-	\end{enumerate}
-
-
-	\newpage
-	\thispagestyle{empty}
-	\newgeometry{a4paper,left=2.5cm,right=2.5cm,top=3cm,bottom=2cm,includefoot=false,includehead=false}
-
-	\newpage
-	\thispagestyle{empty}
-	\newgeometry{a4paper,left=2.5cm,right=2.5cm,top=3cm,bottom=2cm,includefoot=false,includehead=false}
-	
-
-	\newpage
-	\thispagestyle{empty}
-	\newgeometry{a4paper,left=2.5cm,right=2.5cm,top=3cm,bottom=2cm,includefoot=false,includehead=false}
-	
-	\thispagestyle{empty}
 \end{document}
