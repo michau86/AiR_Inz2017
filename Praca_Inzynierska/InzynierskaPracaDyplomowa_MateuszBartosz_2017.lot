@@ -1,2 +1,7 @@
 \contentsline {table}{\numberline {2.1}{\ignorespaces Opis wyprowadze\IeC {\'n} z\IeC {\l }\IeC {\k a}cza diagnostycznego OBD-II.\relax }}{8}{table.caption.6}
-\contentsline {table}{\numberline {2.2}{\ignorespaces Tryby pracy z\IeC {\l }\IeC {\k a}cza diagnostycznego\relax }}{8}{table.caption.7}
+\contentsline {table}{\numberline {2.2}{\ignorespaces Tryby pracy z\IeC {\l }\IeC {\k a}cza diagnostycznego\relax }}{9}{table.caption.7}
+\contentsline {table}{\numberline {2.3}{\ignorespaces Interpretacja cz\IeC {\k e}\IeC {\'s}ci odpowiedzi na kod zapytania 01 00\relax }}{10}{table.caption.8}
+\contentsline {table}{\numberline {4.1}{\ignorespaces Najwa\IeC {\.z}niejsze parametry STM32F103CBT6 \cite {stm32}.\relax }}{14}{table.caption.9}
+\contentsline {table}{\numberline {4.2}{\ignorespaces Najwa\IeC {\.z}niejsze parametry RN4020-V/RM \cite {RN4020}.\relax }}{14}{table.caption.10}
+\contentsline {table}{\numberline {4.3}{\ignorespaces Wykaz wykorzystanych element\IeC {\'o}w wraz z opisem obudowy, rodzaju monta\IeC {\.z}u oraz warstwy na projekcie obwodu drukowanego.\relax }}{15}{table.caption.11}
+\contentsline {table}{\numberline {4.4}{\ignorespaces Opis wykorzystanych warstw.\relax }}{18}{table.caption.14}

@@ -12,12 +12,12 @@
    xml:space="preserve"
    id="svg3336"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="76x76_hover_icon_settings.svg"
+   sodipodi:docname="76x76_dark_icon_settings.svg"
    width="76"
    height="76"><metadata
      id="metadata3345"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
      id="defs3343" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -44,7 +44,7 @@
      transform="translate(0,52)" /><g
      id="icons"
      transform="translate(0,52)"><rect
-       style="fill:#015cac;fill-opacity:1"
+       style="fill:#666666;fill-opacity:1"
        id="rect3359"
        width="115"
        height="100"

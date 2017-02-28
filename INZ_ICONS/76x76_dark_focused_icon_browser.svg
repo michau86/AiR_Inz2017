@@ -18,10 +18,10 @@
    viewBox="0 0 86.604078 86.604078"
    xml:space="preserve"
    inkscape:version="0.91 r13725"
-   sodipodi:docname="76x76_icon_browser.svg"><metadata
+   sodipodi:docname="76x76_dark_focused_icon_browser.svg"><metadata
      id="metadata5380"><rdf:RDF><cc:Work
          rdf:about=""><dc:format>image/svg+xml</dc:format><dc:type
-           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title /></cc:Work></rdf:RDF></metadata><defs
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" /><dc:title></dc:title></cc:Work></rdf:RDF></metadata><defs
      id="defs5378" /><sodipodi:namedview
      pagecolor="#ffffff"
      bordercolor="#666666"
@@ -37,9 +37,9 @@
      showgrid="true"
      showguides="true"
      inkscape:guide-bbox="true"
-     inkscape:zoom="3.6875001"
-     inkscape:cx="6.0425532"
-     inkscape:cy="47.689022"
+     inkscape:zoom="5.2149126"
+     inkscape:cx="37.433744"
+     inkscape:cy="34.608339"
      inkscape:window-x="1432"
      inkscape:window-y="333"
      inkscape:window-maximized="1"
@@ -58,7 +58,7 @@
        position="21.65102,0"
        orientation="0,1"
        id="guide5930" /></sodipodi:namedview><rect
-     style="fill:#0273d8;fill-opacity:1;stroke:none"
+     style="fill:#4d4d4d;fill-opacity:1;stroke:none"
      id="rect5932"
      width="96.859833"
      height="96.859833"
