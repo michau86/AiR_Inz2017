@@ -149,10 +149,10 @@
 
 %---------------------------------------------------ZAGADNIENIA WPROWADZAJĄCE-------------------------------------------------------------
 \section{Zagadnienia wprowadzające}
-	\hspace{0.5cm}We współczesnej motoryzacji wyraźnie można zauważyć tendencję automatyzacji procesu prowadzenia pojazdu oraz kontroli stanu jego parametrów. W samochodach dostępnych na rynku można spotkać bardzo wiele różnych protokołów komunikacyjnych. Cześć z nich służy do komunikacji pomiędzy urządzeniami wewnętrznymi pojazdu, inne do komunikacji z użytkownikiem, w celu zwiększenia komfortu jazdy, a jeszcze inne wykorzystywane są w diagnostyce stanu poszczególnych układów samochodu. Te ostatnie, wyprowadzone są do gniazda diagnostycznego(ang. On-Board Diagnosdic - OBD). W zależności od producenta, modelu oraz roku produkcji pojazdu do dyspozycji są różne protokoły. Umożliwiają one między innymi odczytywanie aktualnych wskazań niektórych czujników, kontrolę zużywania się elementów eksploatacyjnych czy detekcję błędów silnika. W niniejszym rozdziale omówione zostało złącze diagnostyczne w wersji drugiej(ODB2) wraz z udostępnianymi przez nie protokołami komunikacyjnymi. Dodatkowo w ostatnim podrozdziale znajduje się przegląd narzędzi wykorzystanych podczas realizacji pracy.
+	\hspace{0.5cm}We współczesnej motoryzacji wyraźnie można zauważyć tendencję automatyzacji procesu prowadzenia pojazdu oraz kontroli stanu jego parametrów. W samochodach dostępnych na rynku można spotkać bardzo wiele różnych protokołów komunikacyjnych. Cześć z nich służy do komunikacji pomiędzy urządzeniami wewnętrznymi pojazdu, inne do komunikacji z użytkownikiem, w celu zwiększenia komfortu jazdy, a jeszcze inne wykorzystywane są w diagnostyce stanu poszczególnych układów samochodu. Te ostatnie, wyprowadzone są do gniazda diagnostycznego(ang. On-Board Diagnosdic - OBD). W zależności od producenta, modelu oraz roku produkcji pojazdu do dyspozycji są różne protokoły. Umożliwiają one między innymi odczytywanie aktualnych wskazań niektórych czujników, kontrolę zużywania się elementów eksploatacyjnych czy detekcję błędów silnika. W niniejszym rozdziale omówione zostało złącze diagnostyczne w wersji drugiej(ODB2) wraz z udostępnianymi przez nie protokołami komunikacyjnymi.
 
 	\subsection{Złącze diagnostyczne}
-		\hspace{0.5cm}Historia złącza diagnostycznego używanego w motoryzacji sięga końcówki lat sześćdziesiątych dwudziestego wieku. Pierwsze komputery pokładowe wprowadzone zostały w samochodach marki Volkswagen w 1968 roku. Dziesięć lat później za sprawą marki Nissan komputery pokładowe pojawiły się w pojazdach konsumenckich. Kolejnym krokiem było wprowadzenie protokołu ALDL  przez General Motors w 1980 roku. Był to pierwszy standard zbliżony do obecnie stosowanego w gniazdach OBD2. Występował w trzech wersjach: dwunasto, dziesięcio i pięciopinowej. Pierwsze wersje były jednokierunkowe i umożliwiały przesyłanie 160 bodów danych. W późniejszych wersjach wprowadzono dwukierunkową transmisję danych o zwiększono szybkości transmisji do 8192 bodów. W 1991 roku agencja California Air Resources Board zażądała, aby każdy nowy pojazd sprzedawany w Kalifornii posiadał wyprowadzenie diagnostyczne. Stało się to impulsem do opracowania i wprowadzenia standardu OBD-I, choć nazwa ta została wprowadzona dopiero po opracowaniu kolejnego standardu OBD w wersji drugiej. Złącze ODB-I nie zostało ściśle ustandaryzowane i każdy producent samochodów mógł wykonać je w swojej wersji. Główną motywacją do wprowadzenia tego standardu było zachęcenie producentów pojazdów do zaprojektowania systemów kontroli emisji spalin. Często spotykana wersja tego złącza umożliwiała odczytywanie kodów błędów poprzez analizę migania diody znajdującej się przy złączu. Miganie diody reprezentowało odpowiednią liczbę dwucyfrową, która była interpretowana jako odpowiedni kod błędu pojazdu. W 1994 roku na bazie poprawionej i uzupełnionej specyfikacji OBD-I powstał standard OBD w wersji drugiej - ODB-II. Jest to najpopularniejszy, aktualnie używany system diagnostyki samochodowej. Od roku 1996 wszystkie nowe samochody sprzedawane w Stanach Zjednoczonych muszą być wyposażone właśnie w gniazdo ODB w wersji drugiej. W 2001 roku standard OBD-II pod nazwą EOBD został wprowadzony jako obowiązkowy w samochodach benzynowych produkowanych w Unii Europejskiej, a w 2003 roku również w samochodach z silnikami wysokoprężnymi.
+		\hspace{0.5cm}Historia złącza diagnostycznego używanego w motoryzacji sięga końcówki lat sześćdziesiątych dwudziestego wieku. Pierwsze komputery pokładowe wprowadzone zostały w samochodach marki Volkswagen w 1968 roku. Dziesięć lat później za sprawą marki Nissan komputery pokładowe pojawiły się w pojazdach konsumenckich. Kolejnym krokiem było wprowadzenie protokołu ALDL  przez General Motors w 1980 roku. Był to pierwszy standard zbliżony do obecnie stosowanego w gniazdach OBD2. Występował w trzech wersjach: dwunasto, dziesięcio i pięciopinowej. Pierwsze wersje były jednokierunkowe i umożliwiały przesyłanie 160 bodów danych. W późniejszych wersjach wprowadzono dwukierunkową transmisję danych o zwiększono szybkości transmisji do 8192 bodów. W 1991 roku agencja California Air Resources Board zażądała, aby każdy nowy pojazd sprzedawany w Kalifornii posiadał wyprowadzenie diagnostyczne. Stało się to impulsem do opracowania i wprowadzenia standardu OBD-I, choć nazwa ta została wprowadzona dopiero po opracowaniu kolejnego standardu OBD w wersji drugiej. Złącze ODB-I nie zostało ściśle ustandaryzowane i każdy producent samochodów mógł wykonać je w swojej wersji. Główną motywacją do wprowadzenia tego standardu było zachęcenie producentów pojazdów do zaprojektowania systemów kontroli emisji spalin. Często spotykana wersja tego złącza umożliwiała odczytywanie kodów błędów poprzez analizę migania diody znajdującej się przy złączu. Miganie diody reprezentowało odpowiednią liczbę dwucyfrową, która była interpretowana jako odpowiedni kod błędu pojazdu. W 1994 roku na bazie poprawionej i uzupełnionej specyfikacji OBD-I powstał standard ODB-II. Jest to najpopularniejszy, aktualnie używany system diagnostyki samochodowej. Od roku 1996 wszystkie nowe samochody sprzedawane w Stanach Zjednoczonych muszą być wyposażone właśnie w gniazdo ODB w wersji drugiej. W 2001 roku standard OBD-II pod nazwą EOBD został wprowadzony jako obowiązkowy w samochodach benzynowych produkowanych w Unii Europejskiej, a w 2003 roku również w samochodach z silnikami wysokoprężnymi.
 		
 		\newpage
 		
@@ -201,7 +201,7 @@
 \end{table}
 
 		\subsubsection{Protokoły komunikacyjne dostępne w złączu diagnostycznym}
-		\hspace{0.5cm}Zgodnie z normą SAE J1962 do złącza diagnostycznego doprowadzone może być pięć różnych magistral danych które udostępniają następujące protokołu komunikacji:
+		\hspace{0.5cm}Zgodnie z normą SAE J1962 do złącza diagnostycznego doprowadzone może być pięć różnych magistral danych które udostępniają następujące protokoły komunikacji:
 		
 		\begin{itemize}
 			\item{SAE J1850 PWM,}
@@ -210,6 +210,16 @@
 			\item{ISO 9141,}
 			\item{ISO 14230 - KWP2000.}
 		\end{itemize}
+		
+		SAE  J1850 to  magistrala wykorzystywana głównie w samochodach marek amerykańskich. Występuje w dwóch odmianach. Pierwsza z nich to J1850 PWM (Pulse width modulation). Jest to technologia komunikacji wykorzystująca modulację szerokością impulsu do kodowania logicznych stanów (0 oraz 1). Każdy bit zaczyna się zmianą stanu niskiego na wysoki. Następnie, w zależności od wysyłanego bitu danych, zmienia się wypełnienie impulsu, dla logicznego „0” stan wysoki utrzymuje się przez 2/3 czasu impulsu, natomiast dla „1” stan wysoki to 1/3 impulsu. Czas trwania impulsu jest stały. Magistrala jest dwuprzewodowa, kodowanie różnicą pomiędzy potencjałami obu kanałów. Prędkość transmisji wynosi 41,6 kb/s. Głównym koncernem wykorzystującym magistralę J1850 PWM jest Ford.
+		
+		\newpage
+		
+		Drugą odmianą magistrali J1850 jest wersja VPW (variable pulse width). W tej wersji każdy nowy bit sygnalizowany jest za pomocą zmianą stanu. W związku z tym, aby rozpoznać logiczne zmiany, w zależności od wartości poprzedniego bitu kolejny bit kodowany jest za pomocą długości impulsu, nie zaś stanem wysokim lub niskim.  W związku z tym, że długości bitów są różne,  nie można jednoznacznie określić prędkości transmisji, przyjmowane jest średnio 10,4 kbit/s. Jest to magistrala jednoprzewodowa, używana przez General Motors.
+		
+		Magistrala CAN (Controller Area Network), zastosowana pierwszy raz przez koncern Mercedes w roku 1992,  umożliwia komunikację pomiędzy urządzeniami oraz mikrokontrolerami bez używania urządzenia nadrzędnego.  Początkowo używany w branży motoryzacyjnej, został również z powodzeniem wprowadzony do automatyki przemysłowej. Transmisja sygnału odbywa się za pomocą dwóch przewodów, na każdym występują dwa stany. Jeden stan jest zgodny (dla linii wysokiej oraz niskiej potencjał jest ten sam), oznacza logiczne 0, drugi stan sygnalizowany jest za pomocą wysokiego stanu na linii „High”, a niskim na linii „Low”. 
+		
+		Tańszym odpowiednikiem CAN stosowanym we wcześniejszych pojazdach jest magistrala oparta na normie ISO 9141,  LIN (Local Interconnect Network).  Komunikacja opiera się na architekturze master/slave. Komunikacja wywoływana jest poprzez zapytanie wysyłane przez mastera, przez co nie ma konieczności wykrywania kolizji. Jest to sieć stworzona jednoprzewodowo lub dwuprzewodowo, w zależności od zastosowania, pozwalająca na podłączenie maksymalnie 16 urządzeń do jednej sieci. Maksymalna prędkość przesyłania to 20 kbit/s.
 		
 		\newpage
 		
@@ -303,28 +313,49 @@
 		
 		\newpage
 		
+		\begin{table}[!h]
+\centering
+\caption{Kodowanie źródła błędu.}
+\label{tab_dtc_interpret}
+\begin{tabular}{|c|c|c|}
+\hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Pierwsza cyfra\\ odpowiedzi\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Zakodowany\\ identyfikator\end{tabular}} & \textbf{Opis}                                                                               \\ \hline
+0                                                                            & P0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody układu napędowego \\ zdefiniowane w normie SAE\end{tabular} \\ \hline
+1                                                                            & P1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+2                                                                            & P2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ w normie SAE\end{tabular}                    \\ \hline
+3                                                                            & P3                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+4                                                                            & C0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody podwozia\\ zdefiniowane w normie SAE\end{tabular}           \\ \hline
+5                                                                            & C1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+6                                                                            & C2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+7                                                                            & C3                                                                          & \begin{tabular}[c]{@{}c@{}}Zarezerwowane dla\\ przyszłych zastosowań\end{tabular}           \\ \hline
+8                                                                            & B0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ w normie SAE\end{tabular}                   \\ \hline
+9                                                                            & B1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+A                                                                            & B2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+B                                                                            & B3                                                                          & \begin{tabular}[c]{@{}c@{}}Zarezerwowane dla \\ przyszłych zastosowań\end{tabular}          \\ \hline
+C                                                                            & U0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody sieci zdefiniowane \\ w normie SAE\end{tabular}             \\ \hline
+D                                                                            & U1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+E                                                                            & U2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+F                                                                            & U3                                                                          & \begin{tabular}[c]{@{}c@{}}Zarezerwowane dla \\ przyszłych zastosowań\end{tabular}          \\ \hline
+\end{tabular}
+\end{table}
 		
-		
+	Kod błędu z przykładowej odpowiedzi to 0133. Pierwszą cyfrę należy zastąpić wartością z tabeli, a pozostałe trzy cyfry pozostawić bez zmiany. W przedstawionym przykładzie daje to wartość P0133 co oznacza wystąpienie błędu wolnej odpowiedzi obwodu czujnika tlenu. Analogicznie po otrzymaniu odpowiedzi w postaci D016 odczytanym kodem jest U1016. Znaczenie wszystkich kodów błędów można odnaleźć w dokumentacji normie \cite{saej1979}.
 	
-		\newpage	
 	
-	\subsection{Opis wykorzystanych narzędzi}
-		\hspace{0.5cm}
-		-java
-		-javafx
-		-raspberry
-		-PCB
-		-maven
-		-ELM327
-	
-		\newpage
+	\newpage	
 	
 %---------------------------------------------------STRUKTURA PROJEKTU-------------------------------------------------------------	
-\section{Struktura projektu}
-	\hspace{0.5cm}
-	-założenia całościowe
-	-schemat
-	-opis ogólny	
+	\section{Struktura projektu}
+	\hspace{0.5cm}OPIS
+	
+		\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.8]{Images/SchematUkladu.pdf}
+		\caption{Schemat układu.}
+		\label{rys_schemat_ukladu}
+		\end{figure}
+	
+	OPIS	
 	
 	\newpage	
 	
@@ -530,17 +561,23 @@ Pokrycie dolne                                                    &             
 	
 \begin{thebibliography}{99}
 
-		\bibitem{Massalski80}
-		Massalski J., Massalska M., \emph{Fizyka dla inżynierów część I}, Wydawnictwo Naukowo-Techniczne, Warszawa, 1980.
+		\bibitem{Schmidgall08}
+		Schmidgall R., Zimmermann W., \emph{Magistrale Danych w Pojazdach. Protokoły i Standardy}, Wydawnictwo Helion, Warszawa, 2008.
+		
+		\bibitem{Upton15}
+		Upton E., Halfacree G., \emph{Raspberry Pi. Przewodnik użytkownika. Wydanie III}, Wydawnictwa Komunikacji i Łączności WKŁ, Gliwice, 2015.
+		
+		\bibitem{raspberrypi}
+		https://www.raspberrypi.org/documentation/
 	
-		\bibitem{Halliday12}
-		Halliday D., Resnick R., Walker J., \emph{Podstawy fizyki tom 2}, Wydawnictwo Naukowe PWN, Warszawa, 2012.
+		\bibitem{Schildt15}
+		Schildt H., \emph{Java. Kompendium programisty. Wydanie IX}, Wydawnictwo Helion, Gliwice, 2015.
 
-		\bibitem{Sawieliew98}
-		Sawieliew I. W., \emph{Wykład z fizyki tom 1}, Wydawnictwo Naukowe PWN, Warszawa, 2002.
-	
-		\bibitem{Bogusz10}
-		Bogusz W., Grabarczyk J., Krok F., \emph{Podstawy fizyki}, Oficyna Wydawnicza Politechniki Warszawskiej, Warszawa, 2010.
+		\bibitem{javafx}
+		http://docs.oracle.com/javase/8/javafx/api/toc.htm (14.02.2017)
+		
+		\bibitem{java}
+		https://docs.oracle.com/javase/8/docs/api/index.html
 		
 		\bibitem{saej1962}
 		https://law.resource.org/pub/us/cfr/ibr/005/sae.j1962.2002.pdf (14.02.2017)

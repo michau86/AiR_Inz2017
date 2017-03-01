@@ -6,14 +6,13 @@
 \contentsline {subsection}{\numberline {2.1}Z\IeC {\l }\IeC {\k a}cze diagnostyczne}{6}{subsection.2.1}
 \contentsline {subsubsection}{\numberline {2.1.1}Z\IeC {\l }\IeC {\k a}cze diagnostyczne OBD-II}{7}{subsubsection.2.1.1}
 \contentsline {subsubsection}{\numberline {2.1.2}Protoko\IeC {\l }y komunikacyjne dost\IeC {\k e}pne w z\IeC {\l }\IeC {\k a}czu diagnostycznym}{8}{subsubsection.2.1.2}
-\contentsline {subsection}{\numberline {2.2}Struktura zapyta\IeC {\'n} z\IeC {\l }\IeC {\k a}cza diagnostycznego}{9}{subsection.2.2}
-\contentsline {subsection}{\numberline {2.3}Struktura kod\IeC {\'o}w b\IeC {\l }\IeC {\k e}d\IeC {\'o}w}{11}{subsection.2.3}
-\contentsline {subsection}{\numberline {2.4}Opis wykorzystanych narz\IeC {\k e}dzi}{12}{subsection.2.4}
-\contentsline {section}{\numberline {3}Struktura projektu}{13}{section.3}
-\contentsline {section}{\numberline {4}Projekt uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym}{14}{section.4}
-\contentsline {subsection}{\numberline {4.1}Zastosowane elementy}{14}{subsection.4.1}
-\contentsline {subsection}{\numberline {4.2}Schemat elektryczny}{16}{subsection.4.2}
-\contentsline {subsection}{\numberline {4.3}Projekt obwodu drukowanego}{18}{subsection.4.3}
-\contentsline {section}{\numberline {5}Aplikacja przetwarzaj\IeC {\k a}ca dane ze z\IeC {\l }\IeC {\k a}cza diagnostycznego}{20}{section.5}
-\contentsline {section}{\numberline {6}Interfejs u\IeC {\.z}ytkownika}{21}{section.6}
-\contentsline {section}{\numberline {7}Podsumowanie}{22}{section.7}
+\contentsline {subsection}{\numberline {2.2}Struktura zapyta\IeC {\'n} z\IeC {\l }\IeC {\k a}cza diagnostycznego}{10}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Struktura kod\IeC {\'o}w b\IeC {\l }\IeC {\k e}d\IeC {\'o}w}{12}{subsection.2.3}
+\contentsline {section}{\numberline {3}Struktura projektu}{14}{section.3}
+\contentsline {section}{\numberline {4}Projekt uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym}{15}{section.4}
+\contentsline {subsection}{\numberline {4.1}Zastosowane elementy}{15}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Schemat elektryczny}{17}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Projekt obwodu drukowanego}{19}{subsection.4.3}
+\contentsline {section}{\numberline {5}Aplikacja przetwarzaj\IeC {\k a}ca dane ze z\IeC {\l }\IeC {\k a}cza diagnostycznego}{21}{section.5}
+\contentsline {section}{\numberline {6}Interfejs u\IeC {\.z}ytkownika}{22}{section.6}
+\contentsline {section}{\numberline {7}Podsumowanie}{23}{section.7}
