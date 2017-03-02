@@ -1,13 +1,17 @@
 \contentsline {figure}{\numberline {2.1}{\ignorespaces Por\IeC {\'o}wnanie z\IeC {\l }\IeC {\k a}cza diagnostycznego w wersji A oraz B.\relax }}{7}{figure.caption.4}
 \contentsline {figure}{\numberline {2.2}{\ignorespaces Opis wyprowadze\IeC {\'n} z\IeC {\l }\IeC {\k a}cza diagnostycznego. Wykorzystywane wyprowadzenia zosta\IeC {\l }y zaznaczone kolorem niebieskim oraz odpowiednim numerem. Opis wyprowadze\IeC {\'n} znajduje si\IeC {\k e} w Tab \ref {tab_obd2_pinout}\relax }}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat uk\IeC {\l }adu.\relax }}{14}{figure.caption.10}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Schemat obwodu uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym. Opis w tek\IeC {\'s}cie.\relax }}{18}{figure.caption.14}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Widok (a) oraz przekr\IeC {\'o}j poprzeczny z wymiarami (b) obudowy uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym.\relax }}{19}{figure.caption.15}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{19}{figure.caption.15}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{19}{figure.caption.15}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) g\IeC {\'o}rnej warstwy p\IeC {\l }ytki.\relax }}{20}{figure.caption.17}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{20}{figure.caption.17}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{20}{figure.caption.17}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) dolnej warstwy p\IeC {\l }ytki.\relax }}{20}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{20}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{20}{figure.caption.18}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces ELM 327 w wersji bluetooth.\relax }}{15}{figure.caption.10}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat uk\IeC {\l }adu. Opis w tek\IeC {\'s}cie.\relax }}{16}{figure.caption.11}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Schemat obwodu uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym. Opis w tek\IeC {\'s}cie.\relax }}{21}{figure.caption.15}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Widok (a) oraz przekr\IeC {\'o}j poprzeczny z wymiarami (b) obudowy uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym.\relax }}{22}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{22}{figure.caption.16}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{22}{figure.caption.16}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) g\IeC {\'o}rnej warstwy p\IeC {\l }ytki.\relax }}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) dolnej warstwy p\IeC {\l }ytki.\relax }}{23}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{figure.caption.19}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{figure.caption.19}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{26}{figure.caption.22}

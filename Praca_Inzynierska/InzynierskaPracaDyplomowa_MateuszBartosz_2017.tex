@@ -225,56 +225,60 @@
 		
 		\subsection{Struktura zapytań złącza diagnostycznego}
 		
-		\hspace{0.5cm}Zgodnie z normą SAE J1979 z komputerem pokładowym pojazdu można komunikować się poprzez złącze diagnostyczne wysyłając odpowiednie komendy. Mają one postać heksadecymalnego ciągu cyfr, a pojedyncze instrukcje komputera pokładowego kodowane są jako dwie cyfry. Kod zapytania musi składać się z przynajmniej dwóch znaków. Każda instrukcja powinna być zakończona znakiem powrotu karetki. Kody zapytań podzielone są na dziesięć grup zwanych modami pracy złącza diagnostycznego. Nagłówki zapytań dla poszczególnych modów wraz z ich opisem przedstawiono w tabeli \ref{tab_pid_modes}.
+		\hspace{0.5cm}Głównym zastosowaniem złącza diagnostycznego miało być nadzorowanie systemów, które mają znaczenie w emisji spalin. Specyfikacja na temat transmisji danych diagnostycznych dostępne są w normie ISO 15031 oraz bliźniaczej SAE J1979. Jako systemy podległe normy dopuszczają sieć K-Line z KWP 200 oraz jej poprzednika ISO 9141-2 CARB, KWP 2000 z CAN oraz stosowaną głównie w pojazdach amerykańskich producentów magistralę SAE J1850 w wersji VPW i PWM.
+		
+		Komunikacja z OBD odbywa się w postaci żądanie - odpowiedź(and request - response) i ma formę protokołu KWP 2000 \cite{Schmidgall08}. Komunikat żądania podzielony jest na trzy części. Pierwszą z nich stanowi identyfikator serwisu (ang. Service ID - SID), który w normie amerykańskiej nazywane jest trybem testowym lub po prostu trybem (ang. test modes). Tryby o numerach 01-09 są nazywane trybami podstawowymi, natomiast tryby powyżej numeru 09 trybami rozszerzonymi\cite{Merkisz02}. W tabeli \ref{tab_pid_modes} przedstawione zostały dostępne podstawowe identyfikatory serwisu.
 		
 		\begin{table}[ht]
 \centering
-\caption{Tryby pracy złącza diagnostycznego}
+\caption{Tryby pracy złącza diagnostycznego\cite{Schmidgall08}.}
 \label{tab_pid_modes}
-\begin{tabular}{|c|c|}
-\hline
-\textbf{Tryb (hex)} & \textbf{Opis}                                                               \\ \hline
-01                  & Aktualny stan parametrów                              \\ \hline
-02                  & Zapisane w pamięci stan parametrów                      \\ \hline
-03                  & Wyświetlenie kodów błędów                                                        \\ \hline
-04                  & Wyczyszczenie kodów błędów            \\ \hline
-05                  & Wyniki testu czujników tlenu \\ \hline
-06                  & Wyniki testu czujnika tlenu (CAN)                             \\ \hline
-07                  & Wyświetlenie niepotwierdzonych kodów błędów         \\ \hline
-08                  & Kontrola operacji poszczególnych układów wewnętrznych                       \\ \hline
-09                  & Wyświetlanie informacji o pojeździe                                                           \\ \hline
-0A                  & Trwałe kody błędów (czyste kody błędów)                                     \\ \hline
+\begin{tabular}{|c|l|}
+\hline                                                                 
+\textbf{SID (hex)} & \multicolumn{1}{c|}{\textbf{Opis}}                                                                                                                                      \\ \hline
+01                 & \begin{tabular}[c]{@{}l@{}}Pytania o wartości danych w sterowniku. Dane są \\ identyfikowane za pomocą kodu PID\end{tabular}                                            \\ \hline
+02                 & \begin{tabular}[c]{@{}l@{}}Pytanie o dane dotyczące warunków otoczenia dla kodów \\ usterek zapisanych w pamięci.\end{tabular}                                          \\ \hline
+03                 & \begin{tabular}[c]{@{}l@{}}Odczytywanie z pamięci błędów mających wpływ na emisję\\  spalin zakwalifikowanych jako ,,wykryte bezzasadnie''.\end{tabular}                \\ \hline
+04                 & \begin{tabular}[c]{@{}l@{}}Kasowanie pamięci błędów (kodów błędów, warunków\\ otoczenia, statusu różnych testów)\end{tabular}                                           \\ \hline
+05                 & Nadzorowanie sondy lambda                                                                                                                                               \\ \hline
+06                 & \begin{tabular}[c]{@{}l@{}}Nadzorowanie katalizatorów, układów wylotowych,\\ ogrzewania sondy lambda i katalizatorów,  układów\\ wtrysku paliwa i zapłonu.\end{tabular} \\ \hline
+07                 & \begin{tabular}[c]{@{}l@{}}Podobnie jak dla SID=03, tutaj są odsyłane tylko błędy, \\ które zostały zakwalifikowane jako ,,wykryte przejściowo''.\end{tabular}          \\ \hline
+08                 & Test poziomu paliwa                                                                                                                                                     \\ \hline
+09                 & Wyświetlanie informacji o pojeździe      \\ \hline  
 \end{tabular}
 \end{table}
 
+Opis trybów rozszerzonych można znaleźć w literaturze \cite{Merkisz02}.
 	
+	Kolejną częścią wysyłanego żądania jest identyfikator parametru - PID (ang. Parameter Identifier). Zajmuje on również 1 bajt oraz kodowany jest szesnastkowo. Ostatnią częścią zapytania są parametry żądania, które mogą zająć maksymalnie 6 bajtów. Najczęściej jednak wykorzystuje się żądania bez dodatkowych parametrów.
 
-	W złączu diagnostycznym pojazdu nie muszą być udostępnione wszystkie mody pracy, a także nie muszą być udostępnione wszystkie kody zapytań z udostępnionego modu. Ogólna struktura kodów zapytań ma postać:
+	\newpage
+
+	W złączu diagnostycznym pojazdu nie muszą być udostępnione wszystkie tryby pracy, a także nie muszą być udostępnione wszystkie kody zapytań z udostępnionego trybu. Ogólna struktura kodów zapytań ma postać:
 
 	\begin{itemize}
-		\item{AA BB C,}
+		\item{AA BB CC CC CC CC CC,}
 	\end{itemize}
-		 gdzie AA to numer modu, BB to kod danego zapytania z wybranego modu natomiast C to liczba linii oczekiwanej odpowiedzi. Kody BB oraz C są opcjonalne, kod AA musi być zawarty w każdym zapytaniu. 
+		 gdzie AA to numer trybu testowego , BB to identyfikator z wybranego trybu natomiast CC dodatkowe parametry. Kody BB oraz CC są opcjonalne, natomiast kod AA musi być zawarty w każdym zapytaniu. 
 		 
-		 Struktura odpowiedzi złącza diagnostycznego na zadany kod jest podobna do zapytania:
+		 Struktura odpowiedzi złącza diagnostycznego na zadany kod jest podobna do zapytania. Pierwszy bajt to kod SID zapytania, ale po wykonaniu (AA|40), czyli po dodaniu do kodu SID zapytania liczby 40 kodowanej szesnastkowo. Drugi bajt jest powtórzeniem identyfikatora parametru żądania. Następnie w odpowiedź może się znaleźć do sześciu bajtów parametrów odpowiedzi. Ogólna struktura kodów odpowiedzi ma zatem postać:
 		
 		\begin{itemize}
-			\item{AA BB XX XX XX XX,}
+			\item{AA|40 BB CC CC CC CC CC.}
 		\end{itemize}		
-		gdzie AA to wartość modu zapytania powiększona o 40, BB to powtórzenie kodu z zapytania, natomiast wartości XX XX XX XX to właściwa treść odpowiedzi. W zależności od wysłanego zapytania liczba bajtów odpowiedzi może być różna. Poniżej zaprezentowane zostało przykładowe zapytanie, wraz z przykładową odpowiedzią. 
+		 
+		 Ilość odebranych danych, a także ich interpretacja jest różna w zależności od identyfikatora parametru. Strukturę oraz interpretację odpowiedzi można przeanalizować na przykładzie. Wysyłając do złącza diagnostycznego żądanie 01 00 w odpowiedzi zwrócona zostanie informacja o udostępnionych identyfikatora parametru trybu 01 z zakresu 01-20:
 		
 		\begin{itemize}
 			\item{01 00}
 			\item{41 00 BE 1F B8 10}
 		\end{itemize}
 		
-	\newpage		
-		
-		Interpretacja odpowiedzi jest różna w zależności od wysłanego zapytania. Powyższe zapytanie dotyczy kodów udostępnionych przez złącze diagnostyczne dla modu 01 z zakresu 01-20. Odpowiedź - po usunięciu z niej nagłówka - należy zapisać w postaci binarnej, w której wartość 1 oznacza że dany kod jest udostępniony. Interpretacja tego przykładu przedstawiona została w tabeli \ref{tab_pid_response}
+		Odpowiedź - po usunięciu z niej nagłówka - należy zapisać w postaci binarnej, w której wartość 1 oznacza że dany kod jest udostępniony. Sposób dekodowanie odpowiedzi przedstawiony zostały w tabeli \ref{tab_pid_response}
 		
 \begin{table}[!h]
 \centering
-\caption{Interpretacja części odpowiedzi na kod zapytania 01 00}
+\caption{Interpretacja odpowiedzi na kod zapytania 01 00}
 \label{tab_pid_response}
 \begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|}
 \hline
@@ -283,14 +287,22 @@
 \textbf{Kod PID}                                                           & 01   & 02  & 03  & 04  & 05   & 06  & 07  & 08  & \textbf{.} & \textbf{.} \\ \hline
 \end{tabular}
 \end{table}		
-
-		Pełna specyfikacja kodów zapytań oraz ich odpowiedzi zapisana jest w normie SAE J1979\cite{saej1979}.
+		
+		Wartości identyfikatora parametru powtarzające się co wartość 20 w kodzie szesnastkowym(00, 20, 40) zarezerwowane są do odczytywania udostępnionych przez dany sterownik kodów PID i dekoduje się je zawsze tak jak przedstawiono w przykładzie.
+		\newpage
+		
+		Najczęściej jednak żadnie dotyczy konkretnego parametru pojazdu. Odpowiedź otrzymana na żądanie jest wtedy dekodowana na podstawie wzoru:
+		
+	\begin{equation}
+	x_{fiz} = (x_{hex}) \times {(2^n-1)}^{-1} \times (V_{max} - V_{min}) + V_{min},
+	\end{equation}			
+	gdzie: $x_{fiz}$ - obliczona wartość fizyczna, $x_{hex}$ - odebrana wartość w postaci szesnastkowej, n - liczba bitów odpowiedzi, $V_{max}$ - wartość maksymalna zakresu zmiennej, $V_{min}$ - wartość minimalna zakresu zmiennej.
 		
 		\newpage
 		
 		\subsection{Struktura kodów błędów}
 		
-		\hspace{0.5cm}Podstawową funkcjonalnością złącza diagnostycznego jest raportowanie błędów poszczególnych układów za pomocą diagnostycznych kodów błędów(ang. Diagnostic Trouble Codes - DTC). Aby uzyskać informację o zapisanych kodach należy wysłać zapytanie 03 do złącza diagnostycznego, ale najpierw zdefiniować ile kodów jest obecnych w pamięci. W tym celu należy wysłać komendę:
+		\hspace{0.5cm}Podstawową funkcjonalnością złącza diagnostycznego jest raportowanie błędów poszczególnych układów za pomocą diagnostycznych kodów błędów(ang. Diagnostic Trouble Codes - DTC). Są one zapisywane w sterowniku jako 16-bitowe liczby heksadecymalne, a następnie przetwarzane przez tester diagnostyczny to postaci 5-znakowego słowa alfanumerycznego. Aby uzyskać informację o zapisanych kodach należy wysłać zapytanie 03 do złącza diagnostycznego, ale najpierw zdefiniować ile kodów jest obecnych w pamięci. W tym celu należy wysłać komendę:
 		
 		\begin{itemize}
 			\item{01 01.}
@@ -315,52 +327,97 @@
 		
 		\begin{table}[!h]
 \centering
-\caption{Kodowanie źródła błędu.}
+\caption{Kodowanie źródła błędu \cite{White06}.}
 \label{tab_dtc_interpret}
-\begin{tabular}{|c|c|c|}
+\begin{tabular}{|c|c|l|}
 \hline
-\textbf{\begin{tabular}[c]{@{}c@{}}Pierwsza cyfra\\ odpowiedzi\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Zakodowany\\ identyfikator\end{tabular}} & \textbf{Opis}                                                                               \\ \hline
-0                                                                            & P0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody układu napędowego \\ zdefiniowane w normie SAE\end{tabular} \\ \hline
-1                                                                            & P1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
-2                                                                            & P2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ w normie SAE\end{tabular}                    \\ \hline
-3                                                                            & P3                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
-4                                                                            & C0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody podwozia\\ zdefiniowane w normie SAE\end{tabular}           \\ \hline
-5                                                                            & C1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
-6                                                                            & C2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
-7                                                                            & C3                                                                          & \begin{tabular}[c]{@{}c@{}}Zarezerwowane dla\\ przyszłych zastosowań\end{tabular}           \\ \hline
-8                                                                            & B0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ w normie SAE\end{tabular}                   \\ \hline
-9                                                                            & B1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
-A                                                                            & B2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
-B                                                                            & B3                                                                          & \begin{tabular}[c]{@{}c@{}}Zarezerwowane dla \\ przyszłych zastosowań\end{tabular}          \\ \hline
-C                                                                            & U0                                                                          & \begin{tabular}[c]{@{}c@{}}Kody sieci zdefiniowane \\ w normie SAE\end{tabular}             \\ \hline
-D                                                                            & U1                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
-E                                                                            & U2                                                                          & \begin{tabular}[c]{@{}c@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
-F                                                                            & U3                                                                          & \begin{tabular}[c]{@{}c@{}}Zarezerwowane dla \\ przyszłych zastosowań\end{tabular}          \\ \hline
+\textbf{\begin{tabular}[c]{@{}c@{}}Pierwsza cyfra\\ odpowiedzi\end{tabular}} & \textbf{\begin{tabular}[c]{@{}c@{}}Zakodowany\\ identyfikator\end{tabular}} & \multicolumn{1}{c|}{\textbf{Opis}} \\ \hline
+0                                                                            & P0                                                                          & \begin{tabular}[l]{@{}l@{}}Kody układu napędowego\\ zdefiniowane w normie SAE\end{tabular} \\ \hline
+1                                                                            & P1                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+2                                                                            & P2                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ w normie SAE\end{tabular}                    \\ \hline
+3                                                                            & P3                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+4                                                                            & C0                                                                          & \begin{tabular}[l]{@{}l@{}}Kody podwozia zdefiniowane\\ w normie SAE\end{tabular}           \\ \hline
+5                                                                            & C1                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+6                                                                            & C2                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ przez producenta\end{tabular}                \\ \hline
+7                                                                            & C3                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ w normie SAE\end{tabular}           \\ \hline
+8                                                                            & B0                                                                          & \begin{tabular}[l]{@{}l@{}}Kody nadwozia zdefiniowane \\ w normie SAE\end{tabular}                   \\ \hline
+9                                                                            & B1                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+A                                                                            & B2                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+B                                                                            & B3                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ w normie SAE\end{tabular}          \\ \hline
+C                                                                            & U0                                                                          & \begin{tabular}[l]{@{}l@{}}Kody sieci zdefiniowane \\ w normie SAE\end{tabular}             \\ \hline
+D                                                                            & U1                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+E                                                                            & U2                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane \\ przez producenta\end{tabular}               \\ \hline
+F                                                                            & U3                                                                          & \begin{tabular}[l]{@{}l@{}}Kody zdefiniowane\\ w normie SAE\end{tabular}          \\ \hline
 \end{tabular}
 \end{table}
 		
-	Kod błędu z przykładowej odpowiedzi to 0133. Pierwszą cyfrę należy zastąpić wartością z tabeli, a pozostałe trzy cyfry pozostawić bez zmiany. W przedstawionym przykładzie daje to wartość P0133 co oznacza wystąpienie błędu wolnej odpowiedzi obwodu czujnika tlenu. Analogicznie po otrzymaniu odpowiedzi w postaci D016 odczytanym kodem jest U1016. Znaczenie wszystkich kodów błędów można odnaleźć w dokumentacji normie \cite{saej1979}.
+	Kod błędu z przykładowej odpowiedzi to 0133. Pierwszą cyfrę należy zastąpić wartością z tabeli, a pozostałe trzy cyfry pozostawić bez zmiany. W przedstawionym przykładzie daje to wartość P0133 co oznacza wystąpienie błędu wolnej odpowiedzi obwodu czujnika tlenu. Analogicznie po otrzymaniu odpowiedzi w postaci D016 odczytanym kodem jest U1016. Znaczenie wszystkich kodów błędów można odnaleźć w dokumentacji normie \cite{saej1979} lub w literaturze \cite{White06}.
 	
 	
 	\newpage	
 	
+	\subsection{Interfejs komunikacyjny ELM 327}
+	
+	\hspace{0.5cm}Do komunikacji ze złączem diagnostyczny można wykorzystać popularny interfejs ELM327 firmy ELM Electronics. Dostępny jest w dwóch wariantach: RS232 lub bluetooth. Jądrem urządzenia jest mikroprocesor PIC18F2480 firmy Microchip Technology. W niniejszej pracy wykorzystany zostało urządzenie udostępniające komunikację bluetooth pokazane na Rys. \ref{rys_elm327}.
+	
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=1]{Images/rys_elm327.png}
+		\caption{ELM 327 w wersji bluetooth.}
+		\label{rys_elm327}
+		\end{figure}
+	
+	Interfejs ELM327 umożliwia współpracę ze wszystkimi udostępnionymi w złączu diagnostycznym protokołami. Komunikacja modułu z komputerem odbywa się poprzez wirtualny port szeregowy. W celu umożliwienia poprawnej komunikacji należy skonfigurować port zgodnie z następującymi parametrami:
+	
+	\begin{itemize}
+		\item{prędkość transmisji : 15200 bit/s,}
+		\item{liczba bitów danych : 8,}
+		\item{parzystość : żaden,}
+		\item{liczba bitów stopu : 1.}
+	\end{itemize}	
+	
+	Z modułem można się komunikować za pomocą komend AT zdefiniowanych w dokumentacji producenta \cite{elm327}. Żeby żądanie zostało wysłane do interfejsu każdą instrukcję należy zakończyć znakiem powrotu karetki. Przykładowa komenda z odpowiedzią do wyłączania echa instrukcji w odpowiedzi wraz ma następującą postać:
+	
+	\begin{itemize}
+		\item{ATE0}
+		\item{ATE0OK}
+	\end{itemize}	
+	
+	\newpage
+	
 %---------------------------------------------------STRUKTURA PROJEKTU-------------------------------------------------------------	
 	\section{Struktura projektu}
-	\hspace{0.5cm}OPIS
+	\hspace{0.5cm}Zrealizowany projekt układu do komunikacji ze złączem diagnostycznym składa się z trzech głównych modułów:
+	
+	\begin{itemize}
+		\item{Moduł komunikacji ze złączem diagnostycznym}
+		\item{Oprogramowanie umożliwiające komunikację z komputera z wymienionym wyżej modułem oraz zapisywanie danych pomiarowych}
+		\item{Oprogramowanie wizualizujące odczytane parametry}
+	\end{itemize}
+	
+	Struktura zbudowanego układu przedstawiona jest na Rys. \ref{rys_schemat_ukladu}.
 	
 		\begin{figure}[ht]
 		\centering
 		\includegraphics[scale=0.8]{Images/SchematUkladu.pdf}
-		\caption{Schemat układu.}
+		\caption{Schemat układu. Opis w tekście.}
 		\label{rys_schemat_ukladu}
 		\end{figure}
 	
-	OPIS	
+	W pierwszej fazie projektu planowano wykonać autorski moduł do komunikacji ze złączem diagnostycznym. W tym celu zaprojektowany został układ oparty o mikroprocesor STM32F103CBT6 opisany w rozdziale \ref{rozdzial_uklad_stm}. Niestety ze względu na zbyt wysoką cenę wykonania jednej tylko jednej sztuki prace zakończono na projekcie schematu elektrycznego oraz obwodu drukowanego. Jako zamiennik autorskiego układu w pracy wykorzystano popularne urządzenie ELM327 v2.1 udostępniające komunikację bezprzewodową bluetooth. 
+	
+	\newpage
+	
+	Jako moduł główny w projekcie zdecydowano się wykorzystać komputer \mbox{Raspberry Pi 3} ze względu na jego dobry stosunek jakości do ceny. Przy wyborze tego układu ważna również była możliwość podłączenia zewnętrznego ekranu, a także możliwość komunikacji bluetooth. Oprogramowanie obsługujące funkcjonalność napisane zostało w języku Java SE 8 z wykorzystaniem dodatkowej biblioteki pi4j umożliwiającej dostęp dostęp do funkcji wbudowanych komputera Raspberry Pi, takich jak komunikacja bluetooth, czy zarządzanie portami GPIO. Dodatkowo oprogramowanie wykorzystuje bibliotekę jbidibc-rxtx-2.2 umożliwiającą wykorzystanie portów szeregowych komputera, które były niezbędne do komunikacji z urządzeniem ELM327. Dokładny opis funkcjonalności stworzonego oprogramowania znajduje się w rozdziale \ref{rozdzial_raspberry_software}.
+	
+	Ostatni moduł - interfejs graficzny użytkownika - stworzony został w języku Java SE 8 z wykorzystaniem nowego frameworku do tworzenia zaawansowanych interfejsów graficznych JavaFX 8. Interfejs użytkownika dostosowany został do wykorzystywania na urządzeniach wyposażonych w ekran dotykowy o rozdzielczości 1024x600 pikseli. Do umożliwienie zapisywania danych w celu sporządzania dalszych statystyk stworzona została relacyjna baza danych wykorzystująca darmowy serwer MySQL Community Server w wersji 5.7 firmy Oracle. Dokładny opis funkcjonalności stworzonego oprogramowania wraz z przykładowymi widokami panelu użytkownika znajduje się w rozdziale \ref{rozdzial_hmi_software}.
+	
+	
 	
 	\newpage	
 	
 %---------------------------------------------------PROJEKT PŁYTKI-------------------------------------------------------------	
-\section{Projekt układu do komunikacji ze złączem diagnostycznym}
+\section{Projekt układu do komunikacji ze złączem diagnostycznym} \label{rozdzial_uklad_stm}
 	\subsection{Zastosowane elementy}W projekcie układu do komunikacji ze złączem diagnostycznym wykorzystane zostały układy scalone wymienione poniżej(w nawiasie znajduje się symbol odpowiadający danemu elementowi na Rys. \ref{rys_schemat_ukladu_elektrycznego}.
 	
 	\begin{itemize}
@@ -481,7 +538,7 @@ CB1                 & Button PS11ABK         & SPST-NO          & THT           
 				\includegraphics[scale=0.3]{Images/widok_wtyczka_obd.png}
 			} 
 			\subfigure[]{
-				\includegraphics[scale=0.3]{Images/widok_wtyczka_obd.png}
+				\includegraphics[scale=1]{Images/wymiary_wtyczka_obd.pdf}
 			} 
 			\caption{Widok (a) oraz przekrój poprzeczny z wymiarami (b) obudowy układu do komunikacji ze złączem diagnostycznym.}
 			\label{widok_wtyczka_obd}
@@ -539,17 +596,48 @@ Pokrycie dolne                                                    &             
 		
 	
 		\newpage
+
+%---------------------------------------------------OPROGRAMOWANIE-------------------------------------------------------------	
+
+\section{Oprogramowanie}
+
+\hspace{0.5cm}W ramach pracy stworzono oprogramowanie umożliwiające komunikację ze złączem diagnostycznym poprzez urządzenie ELM327, zapisywanie danych pomiarowych oraz wizualizację odczytywanych parametrów. Zgodnie z przyjętymi standardami dobrego wytwarzania oprogramowania, aplikacja podzielona została na dwa osobne moduły. Moduł pierwszy odpowiedzialny jest za zarządzanie logiką aplikacji, drugi natomiast za komunikację z użytkownikiem za pomocą graficznego interfejsu. W kolejnych dwóch podrozdziałach znajduje się dokładny opis zastosowanego rozwiązania.
+
 %---------------------------------------------------APLIKACJA KOMUNIKACYJNA-------------------------------------------------------------	
 	
-\section{Aplikacja przetwarzająca dane ze złącza diagnostycznego}
+\subsection{Moduł komunikacji i przetwarzania danych}\label{rozdzial_raspberry_software}
 	\hspace{0.5cm}
 	
 	\newpage
 	
 %---------------------------------------------------INTERFEJS GRAFICZNY-------------------------------------------------------------	
 	
-\section{Interfejs użytkownika}
+\subsection{Moduł interfejsu użytkownika}\label{rozdzial_hmi_software}
 	\hspace{0.5cm}
+	
+	\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.5]{Images/user_interface_dashboard.png}
+			\caption{Panel główny interfejsu użytkownika.}
+			\label{user_interface_dashboard}
+		\end{figure}
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.5]{Images/user_interface_settings_elm_tab.png}
+			\caption{Panel główny interfejsu użytkownika.}
+			\label{user_interface_dashboard}
+		\end{figure}
+		
+		\newpage
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.5]{Images/user_interface_settings_parameters_tab.png}
+			\caption{Panel główny interfejsu użytkownika.}
+			\label{user_interface_dashboard}
+		\end{figure}
+	
 	
 	\newpage
 	
@@ -562,28 +650,37 @@ Pokrycie dolne                                                    &             
 \begin{thebibliography}{99}
 
 		\bibitem{Schmidgall08}
-		Schmidgall R., Zimmermann W., \emph{Magistrale Danych w Pojazdach. Protokoły i Standardy}, Wydawnictwo Helion, Warszawa, 2008.
+		Schmidgall R., Zimmermann W., \emph{Magistrale Danych w Pojazdach. Protokoły i Standardy}, Wydawnictwa Komunikacji i Łączności WKŁ, Warszawa, 2008.
+
+		\bibitem{Merkisz02}
+		Merkisz J., Mazurek St., \emph{Pokładowe systemy diagnostyczne pojazdów samochodowych}, Wydawnictwa Komunikacji i Łączności WKŁ, Warszawa, 2002.		
+		
+		\bibitem{Sitek11}
+		Sitek K., Syta S., \emph{Pojazdy Samochodowe. Badania stanowiskowe i diagnostyka}, Wydawnictwa Komunikacji i Łączności WKŁ, Warszawa, 2011.
+		
+		\bibitem{White06}
+		White C., Randall M., \emph{Kody usterek}, Wydawnictwa Komunikacji i Łączności WKŁ, Warszawa, 2006.
+		
+		\bibitem{Grzejszczyk10}
+		Fryśkowski B., Grzejszczyk E., \emph{Systemy transmisji danych}, Wydawnictwa Komunikacji i Łączności WKŁ, Warszawa, 10.
 		
 		\bibitem{Upton15}
-		Upton E., Halfacree G., \emph{Raspberry Pi. Przewodnik użytkownika. Wydanie III}, Wydawnictwa Komunikacji i Łączności WKŁ, Gliwice, 2015.
+		Upton E., Halfacree G., \emph{Raspberry Pi. Przewodnik użytkownika. Wydanie III}, Wydawnictwo Helion, Gliwice, 2015.
 		
 		\bibitem{raspberrypi}
 		https://www.raspberrypi.org/documentation/
 	
 		\bibitem{Schildt15}
 		Schildt H., \emph{Java. Kompendium programisty. Wydanie IX}, Wydawnictwo Helion, Gliwice, 2015.
-
-		\bibitem{javafx}
-		http://docs.oracle.com/javase/8/javafx/api/toc.htm (14.02.2017)
-		
-		\bibitem{java}
-		https://docs.oracle.com/javase/8/docs/api/index.html
 		
 		\bibitem{saej1962}
 		https://law.resource.org/pub/us/cfr/ibr/005/sae.j1962.2002.pdf (14.02.2017)
 		
 		\bibitem{saej1979}
 		https://law.resource.org/pub/us/cfr/ibr/005/sae.j1979.2002.pdf (14.02.2017)
+		
+		\bibitem{elm327}
+		https://www.elmelectronics.com/wp-content/uploads/2016/07/ELM327DS.pdf (14.02.2017)
 		
 		\bibitem{stm32}
 		http://www.st.com/content/ccc/resource/technical/document/datasheet/33/d4/6f/
@@ -603,6 +700,24 @@ Pokrycie dolne                                                    &             
 		
 		\bibitem{MCP17}
 		http://www.mouser.com/ds/2/268/22049a-51817.pdf (27.02.2017)
+		
+		\bibitem{javafx}
+		http://docs.oracle.com/javase/8/javafx/api/toc.htm (14.02.2017)
+		
+		\bibitem{java}
+		https://docs.oracle.com/javase/8/docs/api/index.html (14.02.2017)
+		
+		\bibitem{hibernate}
+		http://docs.jboss.org/hibernate/orm/5.2/javadocs/ (14.02.2017)
+		
+		\bibitem{jpa}
+		http://docs.jboss.org/hibernate/jpa/2.1/api/ (14.02.2017)
+		
+		\bibitem{pi4j}
+		http://pi4j.com/apidocs/ (14.02.2017)
+		
+		\bibitem{maven}
+		https://maven.apache.org/guides/ (14.02.2017)
 		
 
 \end{thebibliography}
