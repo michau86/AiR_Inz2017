@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.8)  3 MAR 2017 00:32
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.8)  3 MAR 2017 16:14
 entering extended mode
 **./InzynierskaPracaDyplomowa_MateuszBartosz_2017.tex
 (InzynierskaPracaDyplomowa_MateuszBartosz_2017.tex
@@ -732,21 +732,21 @@ LaTeX Warning: Label `user_interface_dashboard' multiply defined.
 )
 \openout1 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 78.
-LaTeX Font Info:    ... okay on input line 78.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 78.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 75.
+LaTeX Font Info:    ... okay on input line 75.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 75.
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
@@ -812,7 +812,7 @@ G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 456.
 )
 \AtBeginShipoutBox=\box32
-Package hyperref Info: Link coloring OFF on input line 78.
+Package hyperref Info: Link coloring OFF on input line 75.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
@@ -822,9 +822,9 @@ Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
 \c@section@level=\count135
 )
-LaTeX Info: Redefining \ref on input line 78.
-LaTeX Info: Redefining \pageref on input line 78.
-LaTeX Info: Redefining \nameref on input line 78.
+LaTeX Info: Redefining \ref on input line 75.
+LaTeX Info: Redefining \pageref on input line 75.
+LaTeX Info: Redefining \nameref on input line 75.
 
 (InzynierskaPracaDyplomowa_MateuszBartosz_2017.out)
 (InzynierskaPracaDyplomowa_MateuszBartosz_2017.out)
@@ -835,11 +835,11 @@ Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 92.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 89.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 95.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 92.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 99.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 96.
  [1
 
 {C:/Users/mateu/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
@@ -864,59 +864,59 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[5] [6] <Images/ZlaczaOBD2.pdf, id=135, 469.00218pt x 123.04279pt>
+[5] [6] <Images/ZlaczaOBD2.pdf, id=160, 469.00218pt x 123.04279pt>
 File: Images/ZlaczaOBD2.pdf Graphic file (type pdf)
 
 <use Images/ZlaczaOBD2.pdf>
-Package pdftex.def Info: Images/ZlaczaOBD2.pdf used on input line 164.
+Package pdftex.def Info: Images/ZlaczaOBD2.pdf used on input line 161.
 (pdftex.def)             Requested size: 375.20226pt x 98.43434pt.
 
-<Images/ZlaczeOBD2_pinout.pdf, id=138, 260.22218pt x 115.94058pt>
+<Images/ZlaczeOBD2_pinout.pdf, id=163, 260.22218pt x 115.94058pt>
 File: Images/ZlaczeOBD2_pinout.pdf Graphic file (type pdf)
 
 <use Images/ZlaczeOBD2_pinout.pdf>
-Package pdftex.def Info: Images/ZlaczeOBD2_pinout.pdf used on input line 175.
+Package pdftex.def Info: Images/ZlaczeOBD2_pinout.pdf used on input line 172.
 (pdftex.def)             Requested size: 208.17802pt x 92.75258pt.
  [7 <./Images/ZlaczaOBD2.pdf> <./Images/ZlaczeOBD2_pinout.pdf
 
 pdfTeX warning: pdflatex (file ./Images/ZlaczeOBD2_pinout.pdf): PDF inclusion: 
 multiple pdfs with page group included in a single page
 >]
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 207.
+LaTeX Font Info:    Try loading font information for OMS+ptm on input line 204.
 
  ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
 File: omsptm.fd 
 )
 LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 207.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 204.
  [8] [9] [10]
-[11] [12] [13] [14] <Images/rys_elm327.png, id=229, 301.125pt x 175.65625pt>
+[11] [12] [13] [14] <Images/rys_elm327.png, id=254, 301.125pt x 175.65625pt>
 File: Images/rys_elm327.png Graphic file (type png)
 
 <use Images/rys_elm327.png>
-Package pdftex.def Info: Images/rys_elm327.png used on input line 365.
+Package pdftex.def Info: Images/rys_elm327.png used on input line 362.
 (pdftex.def)             Requested size: 301.12425pt x 175.6558pt.
  [15 <./Images/rys_elm327.png>]
-<Images/SchematUkladu.pdf, id=238, 417.98897pt x 354.13423pt>
+<Images/SchematUkladu.pdf, id=263, 417.98897pt x 354.13423pt>
 File: Images/SchematUkladu.pdf Graphic file (type pdf)
 
 <use Images/SchematUkladu.pdf>
-Package pdftex.def Info: Images/SchematUkladu.pdf used on input line 402.
+Package pdftex.def Info: Images/SchematUkladu.pdf used on input line 399.
 (pdftex.def)             Requested size: 334.39162pt x 283.30777pt.
  [16 <./Images/SchematUkladu.pdf>]
-Overfull \hbox (6.07619pt too wide) in paragraph at lines 411--412
+Overfull \hbox (6.07619pt too wide) in paragraph at lines 408--409
 []\T1/ptm/m/n/12 Jako mo-duª gªów-ny w pro-jek-cie zde-cy-do-wa-no si¦ wy-ko-rz
 y-sta¢ kom-pu-ter []
  []
 
 [17]
-Overfull \hbox (3.20049pt too wide) in paragraph at lines 420--420
+Overfull \hbox (3.20049pt too wide) in paragraph at lines 417--417
 []\T1/ptm/b/n/17.28 Projekt ukªa-du do ko-mu-ni-ka-cji ze zª¡-czem dia-gno-styc
 z-
  []
 
 [18] [19] [20]
-Overfull \hbox (8.36055pt too wide) in paragraph at lines 519--520
+Overfull \hbox (8.36055pt too wide) in paragraph at lines 516--517
 \T1/ptm/m/n/12 st¦p-ne-go w ze-sta-wach STM32 NUC-LEO lub DI-SCO-VE-RY lub pro-
 gra-ma-to-ra ST-LINK/V2.
  []
@@ -925,123 +925,196 @@ gra-ma-to-ra ST-LINK/V2.
 
 pdfTeX warning: pdflatex (file ./Images/SchematUkladuElektrycznego.pdf): PDF in
 clusion: found PDF version <1.7>, but at most version <1.5> allowed
-<Images/SchematUkladuElektrycznego.pdf, id=299, 845.07724pt x 597.55246pt>
+<Images/SchematUkladuElektrycznego.pdf, id=324, 845.07724pt x 597.55246pt>
 File: Images/SchematUkladuElektrycznego.pdf Graphic file (type pdf)
 
 <use Images/SchematUkladuElektrycznego.pdf>
 Package pdftex.def Info: Images/SchematUkladuElektrycznego.pdf used on input li
-ne 525.
+ne 522.
 (pdftex.def)             Requested size: 507.05026pt x 358.53424pt.
  [21 <./Images/SchematUkladuElektrycznego.pdf>] <Images/widok_wtyczka_obd.png, 
-id=314, 526.96875pt x 747.79375pt>
+id=339, 526.96875pt x 747.79375pt>
 File: Images/widok_wtyczka_obd.png Graphic file (type png)
 
 <use Images/widok_wtyczka_obd.png>
-Package pdftex.def Info: Images/widok_wtyczka_obd.png used on input line 539.
+Package pdftex.def Info: Images/widok_wtyczka_obd.png used on input line 536.
 (pdftex.def)             Requested size: 158.09184pt x 224.33984pt.
 
-<Images/wymiary_wtyczka_obd.pdf, id=315, 253.33394pt x 236.16316pt>
+<Images/wymiary_wtyczka_obd.pdf, id=340, 253.33394pt x 236.16316pt>
 File: Images/wymiary_wtyczka_obd.pdf Graphic file (type pdf)
 
 <use Images/wymiary_wtyczka_obd.pdf>
-Package pdftex.def Info: Images/wymiary_wtyczka_obd.pdf used on input line 542.
+Package pdftex.def Info: Images/wymiary_wtyczka_obd.pdf used on input line 539.
 
 (pdftex.def)             Requested size: 253.33331pt x 236.16258pt.
  [22 <./Images/widok_wtyczka_obd.png> <./Images/wymiary_wtyczka_obd.pdf>]
-<Images/rys_pcb_top_schemat.png, id=336, 496.85625pt x 511.9125pt>
+<Images/rys_pcb_top_schemat.png, id=361, 496.85625pt x 511.9125pt>
 File: Images/rys_pcb_top_schemat.png Graphic file (type png)
 
 <use Images/rys_pcb_top_schemat.png>
-Package pdftex.def Info: Images/rys_pcb_top_schemat.png used on input line 574.
+Package pdftex.def Info: Images/rys_pcb_top_schemat.png used on input line 571.
 
 (pdftex.def)             Requested size: 198.73897pt x 204.76137pt.
 
-<Images/rys_pcb_top_model.png, id=338, 467.7475pt x 527.9725pt>
+<Images/rys_pcb_top_model.png, id=363, 467.7475pt x 527.9725pt>
 File: Images/rys_pcb_top_model.png Graphic file (type png)
 
 <use Images/rys_pcb_top_model.png>
-Package pdftex.def Info: Images/rys_pcb_top_model.png used on input line 577.
+Package pdftex.def Info: Images/rys_pcb_top_model.png used on input line 574.
 (pdftex.def)             Requested size: 187.09567pt x 211.18526pt.
 
-<Images/rys_pcb_bottom_schemat.png, id=339, 480.79625pt x 578.16pt>
+<Images/rys_pcb_bottom_schemat.png, id=364, 480.79625pt x 578.16pt>
 File: Images/rys_pcb_bottom_schemat.png Graphic file (type png)
 
 <use Images/rys_pcb_bottom_schemat.png>
 Package pdftex.def Info: Images/rys_pcb_bottom_schemat.png used on input line 5
-86.
+83.
 (pdftex.def)             Requested size: 192.31508pt x 231.2599pt.
 
-<Images/rys_pcb_bottom_model.png, id=340, 502.87875pt x 576.1525pt>
+<Images/rys_pcb_bottom_model.png, id=365, 502.87875pt x 576.1525pt>
 File: Images/rys_pcb_bottom_model.png Graphic file (type png)
 
 <use Images/rys_pcb_bottom_model.png>
-Package pdftex.def Info: Images/rys_pcb_bottom_model.png used on input line 589
+Package pdftex.def Info: Images/rys_pcb_bottom_model.png used on input line 586
 .
 (pdftex.def)             Requested size: 201.14793pt x 230.45691pt.
  [23 <./Images/rys_pcb_top_schemat.png> <./Images/rys_pcb_top_model.png> <./Ima
-ges/rys_pcb_bottom_schemat.png> <./Images/rys_pcb_bottom_model.png>] [24]
-<Images/user_interface_dashboard.png, id=359, 770.88pt x 451.6875pt>
+ges/rys_pcb_bottom_schemat.png> <./Images/rys_pcb_bottom_model.png>]
+<Images/rys_ogolny_schemat_aplikacji.pdf, id=381, 551.5635pt x 323.72215pt>
+File: Images/rys_ogolny_schemat_aplikacji.pdf Graphic file (type pdf)
+
+<use Images/rys_ogolny_schemat_aplikacji.pdf>
+Package pdftex.def Info: Images/rys_ogolny_schemat_aplikacji.pdf used on input 
+line 605.
+(pdftex.def)             Requested size: 413.6716pt x 242.79102pt.
+ [24 <./Images/rys_ogolny_schemat_aplikacji.pdf>]
+<Images/rys_pakiety_api.png, id=403, 219.06844pt x 260.47313pt>
+File: Images/rys_pakiety_api.png Graphic file (type png)
+
+<use Images/rys_pakiety_api.png>
+Package pdftex.def Info: Images/rys_pakiety_api.png used on input line 630.
+(pdftex.def)             Requested size: 219.06789pt x 260.47249pt.
+ [25 <./Images/rys_pakiety_api.png>] [26]
+(C:\Users\mateu\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstlang1.sty
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 663.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <10> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 663.
+
+(Listings/put_command.java)
+LaTeX Font Info:    Font shape `T1/pcr/bx/n' in size <12> not available
+(Font)              Font shape `T1/pcr/b/n' tried instead on input line 663.
+
+Underfull \hbox (badness 10000) in paragraph at lines 665--666
+
+ []
+
+(Listings/serial_listener.java) [27]
+Overfull \hbox (61.0449pt too wide) in paragraph at lines 671--672
+[]\T1/ptm/m/n/12 Realizacja ko-mu-ni-ka-cji z in-ter-fej-sem ELM 327 za-war-ta 
+jest w pa-kie-cie pl.mbartosz.api.ElmService,
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 682--683
+
+ []
+
+(Listings/communication_thread.java) [28]
+Underfull \hbox (badness 10000) in paragraph at lines 691--693
+
+ []
+
+(Listings/send_to_port.java) [29]
+Underfull \hbox (badness 10000) in paragraph at lines 698--700
+
+ []
+
+(Listings/execute_response.java) [30]
+<Images/rys_logical_database_model.png, id=538, 322.95656pt x 204.765pt>
+File: Images/rys_logical_database_model.png Graphic file (type png)
+
+<use Images/rys_logical_database_model.png>
+Package pdftex.def Info: Images/rys_logical_database_model.png used on input li
+ne 715.
+(pdftex.def)             Requested size: 258.36559pt x 163.8122pt.
+
+<Images/rys_physical_database_model.png, id=539, 368.1253pt x 239.39438pt>
+File: Images/rys_physical_database_model.png Graphic file (type png)
+
+<use Images/rys_physical_database_model.png>
+Package pdftex.def Info: Images/rys_physical_database_model.png used on input l
+ine 718.
+(pdftex.def)             Requested size: 294.50064pt x 191.51575pt.
+ [31 <./Images/rys_logical_database_model.png> <./Images/rys_physical_database_
+model.png>]
+<Images/user_interface_dashboard.png, id=551, 963.6pt x 565.11125pt>
 File: Images/user_interface_dashboard.png Graphic file (type png)
 
 <use Images/user_interface_dashboard.png>
 Package pdftex.def Info: Images/user_interface_dashboard.png used on input line
- 620.
-(pdftex.def)             Requested size: 385.43906pt x 225.84319pt.
+ 736.
+(pdftex.def)             Requested size: 385.43317pt x 226.04048pt.
 
-<Images/user_interface_settings_elm_tab.png, id=360, 770.88pt x 451.6875pt>
+<Images/user_interface_settings_elm_tab.png, id=552, 770.88pt x 451.6875pt>
 File: Images/user_interface_settings_elm_tab.png Graphic file (type png)
 
 <use Images/user_interface_settings_elm_tab.png>
 Package pdftex.def Info: Images/user_interface_settings_elm_tab.png used on inp
-ut line 627.
+ut line 745.
 (pdftex.def)             Requested size: 385.43906pt x 225.84319pt.
- [25 <./Images/user_interface_dashboard.png> <./Images/user_interface_settings_
+ [32 <./Images/user_interface_dashboard.png> <./Images/user_interface_settings_
 elm_tab.png>]
-<Images/user_interface_settings_parameters_tab.png, id=370, 770.88pt x 451.6875
+<Images/user_interface_settings_parameters_tab.png, id=562, 770.88pt x 451.6875
 pt>
 File: Images/user_interface_settings_parameters_tab.png Graphic file (type png)
 
  <use Images/user_interface_settings_parameters_tab.png>
 Package pdftex.def Info: Images/user_interface_settings_parameters_tab.png used
- on input line 636.
+ on input line 754.
 (pdftex.def)             Requested size: 385.43906pt x 225.84319pt.
- [26 <./Images/user_interface_settings_parameters_tab.png>] [27]
-Underfull \hbox (badness 10000) in paragraph at lines 683--684
+ [33 <./Images/user_interface_settings_parameters_tab.png>] [34] [35] [36]
+Underfull \hbox (badness 10000) in paragraph at lines 809--810
 []\T1/ptm/m/n/12 https://www.elmelectronics.com/wp-content/uploads/2016/07/ELM3
 27DS.pdf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--689
+Underfull \hbox (badness 10000) in paragraph at lines 812--815
 []\T1/ptm/m/n/12 http://www.st.com/content/ccc/resource/technical/document/data
 sheet/33/d4/6f/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 686--689
+Underfull \hbox (badness 10000) in paragraph at lines 812--815
 \T1/ptm/m/n/12 1d/d-f/0b/4c/6d/CD00161566.pdf/files/CD00161566.pdf/jcr:content/
 translations/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--697
+Underfull \hbox (badness 10000) in paragraph at lines 820--823
 []\T1/ptm/m/n/12 http://www.st.com/content/ccc/resource/technical/document/data
 sheet/4a/80/83/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 694--697
+Underfull \hbox (badness 10000) in paragraph at lines 820--823
 \T1/ptm/m/n/12 26/e0/78/4d/18/CD00000234.pdf/files/CD00000234.pdf/jcr:content/t
 ranslations/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 699--700
+Underfull \hbox (badness 10000) in paragraph at lines 825--826
 []\T1/ptm/m/n/12 http://pdf.datasheetcatalog.com/datasheet2/9/0p4t1g1lw0spoo5uk
 h2s1uxchzky.pdf
  []
 
-[28] [29] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof)
+[37] [38] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof)
 \tf@lof=\write5
 \openout5 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof'.
 
@@ -1052,7 +1125,7 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[30] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot
+[39] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot
 Overfull \hbox (2.73532pt too wide) in paragraph at lines 7--7
  [][] [][]\T1/ptm/m/n/12 Wykaz wy-ko-rzy-sta-nych ele-men-tów wraz z opi-sem ob
 u-do-wy, ro-dza-ju mon- 
@@ -1062,43 +1135,44 @@ u-do-wy, ro-dza-ju mon-
 \tf@lot=\write6
 \openout6 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot'.
 
- [31]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 732.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 732.
+ [40]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 858.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 858.
  (InzynierskaPracaDyplomowa_MateuszBartosz_2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 732.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 732.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 858.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 858.
 Package rerunfilecheck Info: File `InzynierskaPracaDyplomowa_MateuszBartosz_201
 7.out' has not changed.
-(rerunfilecheck)             Checksum: 0A347F2B492F726741C960F8F1762726;1498.
+(rerunfilecheck)             Checksum: 8D5EAD34DE7F615923DF95FB6F4E3D72;1868.
 
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 732.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 858.
  ) 
 Here is how much of TeX's memory you used:
- 10391 strings out of 493333
- 150455 string characters out of 3139195
- 257528 words of memory out of 3000000
- 13630 multiletter control sequences out of 15000+200000
- 40164 words of font info for 62 fonts, out of 3000000 for 9000
+ 11043 strings out of 493333
+ 158455 string characters out of 3139195
+ 348954 words of memory out of 3000000
+ 14134 multiletter control sequences out of 15000+200000
+ 41429 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 36i,15n,43p,2240b,447s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 36i,15n,48p,2240b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/base/8r.enc}<C:/Program Files/Mi
 KTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/Program Files/MiKTeX 2.9
 /fonts/type1/public/amsfonts/cm/cmmi8.pfb><C:/Program Files/MiKTeX 2.9/fonts/ty
 pe1/public/amsfonts/cm/cmr12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publi
 c/amsfonts/cm/cmr8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
 /cm/cmsy10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy
-8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program
- Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9
-/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/
-times/utmri8a.pfb>
-Output written on InzynierskaPracaDyplomowa_MateuszBartosz_2017.pdf (31 pages, 
-1727312 bytes).
+8.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Progr
+am Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2
+.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
+w/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
+fb>
+Output written on InzynierskaPracaDyplomowa_MateuszBartosz_2017.pdf (40 pages, 
+1867793 bytes).
 PDF statistics:
- 498 PDF objects out of 1000 (max. 8388607)
- 106 named destinations out of 1000 (max. 500000)
- 231 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 731 PDF objects out of 1000 (max. 8388607)
+ 223 named destinations out of 1000 (max. 500000)
+ 291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

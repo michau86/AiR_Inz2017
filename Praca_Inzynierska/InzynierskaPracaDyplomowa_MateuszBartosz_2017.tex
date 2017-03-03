@@ -28,32 +28,29 @@
 
 %Definiowanie stylu Arduino dla listings*********************************************
 \usepackage{xcolor}
-\definecolor{dkgreen}{rgb}{0,0.6,0}
-\definecolor{dred}{rgb}{0.545,0,0}
-\definecolor{dblue}{rgb}{0,0,0.545}
-\definecolor{lgrey}{rgb}{0.95,0.95,0.95}
-\definecolor{gray}{rgb}{0.4,0.4,0.4}
-\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
-\definecolor{ArdOr}{rgb}{1,0.451,0.0}
-\lstdefinelanguage{Arduino}{
-      backgroundcolor=\color{lgrey},  
+\definecolor{stringColor}{rgb}{0.81,0.48,0}
+\definecolor{kwordColor}{rgb}{0,0,0.90}
+\definecolor{commentColor}{rgb}{0.59,0.59,0.59}
+\definecolor{fieldColor}{rgb}{0,0.59,0}
+\lstdefinelanguage{JavaL}{
+      backgroundcolor=\color{white},  
       basicstyle=\footnotesize \ttfamily \color{black} \bfseries,   
       breakatwhitespace=false,       
       breaklines=true,               
       captionpos=b,                   
-      commentstyle=\color{dkgreen},   
+      commentstyle=\color{commentColor},   
       deletekeywords={...},          
       escapeinside={\%*}{*)},                  
       frame=single,                  
-      language=C++,                
-      keywordstyle=\color{ArdOr},  
+      language=Java,                
+      keywordstyle=\color{kwordColor},  
       morekeywords={BRIEFDescriptorConfig,string,TiXmlNode,DetectorDescriptorConfigContainer,istringstream,cerr,exit}, 
       identifierstyle=\color{black},
-      stringstyle=\color{blue},      
+      stringstyle=\color{stringColor},      
       numbers=left,                 
       numbersep=5pt,                  
       numberstyle=\color{black}, 
-      rulecolor=\color{black},        
+      rulecolor=\color{fieldColor},        
       showspaces=false,               
       showstringspaces=false,        
       showtabs=false,                
@@ -404,13 +401,13 @@ F                                                                            & U
 		\label{rys_schemat_ukladu}
 		\end{figure}
 	
-	W pierwszej fazie projektu planowano wykonać autorski moduł do komunikacji ze złączem diagnostycznym. W tym celu zaprojektowany został układ oparty o mikroprocesor STM32F103CBT6 opisany w rozdziale \ref{rozdzial_uklad_stm}. Niestety ze względu na zbyt wysoką cenę wykonania jednej tylko jednej sztuki prace zakończono na projekcie schematu elektrycznego oraz obwodu drukowanego. Jako zamiennik autorskiego układu w pracy wykorzystano popularne urządzenie ELM327 v2.1 udostępniające komunikację bezprzewodową bluetooth. 
+	W pierwszej fazie projektu planowano wykonać autorski moduł do komunikacji ze złączem diagnostycznym. W tym celu zaprojektowany został układ oparty o mikroprocesor STM32F103CBT6 opisany w rozdziale \ref{rozdzial_uklad_stm}. Niestety ze względu na zbyt wysoką cenę wykonania tylko jednej sztuki prace zakończono na projekcie schematu elektrycznego oraz obwodu drukowanego. Jako zamiennik autorskiego układu w pracy wykorzystano popularne urządzenie ELM327 v2.1 udostępniające komunikację bezprzewodową bluetooth. 
 	
 	\newpage
 	
-	Jako moduł główny w projekcie zdecydowano się wykorzystać komputer \mbox{Raspberry Pi 3} ze względu na jego dobry stosunek jakości do ceny. Przy wyborze tego układu ważna również była możliwość podłączenia zewnętrznego ekranu, a także możliwość komunikacji bluetooth. Oprogramowanie obsługujące funkcjonalność napisane zostało w języku Java SE 8 z wykorzystaniem dodatkowej biblioteki pi4j umożliwiającej dostęp dostęp do funkcji wbudowanych komputera Raspberry Pi, takich jak komunikacja bluetooth, czy zarządzanie portami GPIO. Dodatkowo oprogramowanie wykorzystuje bibliotekę jbidibc-rxtx-2.2 umożliwiającą wykorzystanie portów szeregowych komputera, które były niezbędne do komunikacji z urządzeniem ELM327. Dokładny opis funkcjonalności stworzonego oprogramowania znajduje się w rozdziale \ref{rozdzial_raspberry_software}.
+	Jako moduł główny w projekcie zdecydowano się wykorzystać komputer \mbox{Raspberry Pi 3} ze względu na jego dobry stosunek jakości do ceny. Przy wyborze tego układu ważna również była możliwość podłączenia zewnętrznego ekranu, a także dostępność komunikacji bluetooth. Oprogramowanie obsługujące funkcjonalność napisane zostało w języku Java SE 8 z wykorzystaniem dodatkowej biblioteki pi4j umożliwiającej dostęp dostęp do funkcji wbudowanych komputera Raspberry Pi, takich jak komunikacja bluetooth, czy zarządzanie portami GPIO. Dodatkowo oprogramowanie wykorzystuje bibliotekę jbidibc-rxtx-2.2 umożliwiającą wykorzystanie portów szeregowych komputera, które były niezbędne do komunikacji z urządzeniem ELM327. Dokładny opis funkcjonalności stworzonego oprogramowania znajduje się w rozdziale \ref{rozdzial_raspberry_software}.
 	
-	Ostatni moduł - interfejs graficzny użytkownika - stworzony został w języku Java SE 8 z wykorzystaniem nowego frameworku do tworzenia zaawansowanych interfejsów graficznych JavaFX 8. Interfejs użytkownika dostosowany został do wykorzystywania na urządzeniach wyposażonych w ekran dotykowy o rozdzielczości 1024x600 pikseli. Do umożliwienie zapisywania danych w celu sporządzania dalszych statystyk stworzona została relacyjna baza danych wykorzystująca darmowy serwer MySQL Community Server w wersji 5.7 firmy Oracle. Dokładny opis funkcjonalności stworzonego oprogramowania wraz z przykładowymi widokami panelu użytkownika znajduje się w rozdziale \ref{rozdzial_hmi_software}.
+	Ostatni moduł - interfejs graficzny użytkownika - stworzony został w języku \mbox{Java SE 8} z wykorzystaniem nowego frameworku do tworzenia zaawansowanych interfejsów graficznych JavaFX 8. Interfejs użytkownika dostosowany został do wykorzystywania na urządzeniach wyposażonych w ekran dotykowy o rozdzielczości 1024x600 pikseli. Do umożliwienia zapisywania danych w celu sporządzania dalszych statystyk stworzona została relacyjna baza danych wykorzystująca darmowy serwer MySQL Community Server w wersji 5.7 firmy Oracle. Dokładny opis funkcjonalności stworzonego oprogramowania wraz z przykładowymi widokami panelu użytkownika znajduje się w rozdziale \ref{rozdzial_hmi_software}.
 	
 	
 	
@@ -601,26 +598,147 @@ Pokrycie dolne                                                    &             
 
 \section{Oprogramowanie}
 
-\hspace{0.5cm}W ramach pracy stworzono oprogramowanie umożliwiające komunikację ze złączem diagnostycznym poprzez urządzenie ELM327, zapisywanie danych pomiarowych oraz wizualizację odczytywanych parametrów. Zgodnie z przyjętymi standardami dobrego wytwarzania oprogramowania, aplikacja podzielona została na dwa osobne moduły. Moduł pierwszy odpowiedzialny jest za zarządzanie logiką aplikacji, drugi natomiast za komunikację z użytkownikiem za pomocą graficznego interfejsu. W kolejnych dwóch podrozdziałach znajduje się dokładny opis zastosowanego rozwiązania.
+\hspace{0.5cm}W ramach pracy stworzono oprogramowanie umożliwiające komunikację ze złączem diagnostycznym poprzez urządzenie ELM327, zapisywanie danych pomiarowych oraz wizualizację odczytywanych parametrów. Zgodnie z przyjętymi standardami dobrego wytwarzania oprogramowania, aplikacja podzielona została na dwa osobne moduły. Moduł pierwszy odpowiedzialny jest za zarządzanie logiką aplikacji, drugi natomiast za komunikację z użytkownikiem za pomocą graficznego interfejsu. Na Rys. \ref{rys_ogolny_schemat_aplikacji} przedstawiony został schemat ideowy aplikacji.
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.75]{Images/rys_ogolny_schemat_aplikacji.pdf}
+			\caption{Schemat ideowy aplikacji.}
+			\label{rys_ogolny_schemat_aplikacji}
+		\end{figure}
+
+W kolejnych dwóch podrozdziałach znajduje się dokładny opis zastosowanych rozwiązań.
+
+\newpage
 
 %---------------------------------------------------APLIKACJA KOMUNIKACYJNA-------------------------------------------------------------	
 	
 \subsection{Moduł komunikacji i przetwarzania danych}\label{rozdzial_raspberry_software}
-	\hspace{0.5cm}
+	\subsubsection{Struktura aplikacji}\label{rozdzial_pakiety_api}
+	\hspace{0.5cm}Zadaniem omawianego w tym rozdziale modułu jest dostarczenie aplikacji usług niezbędnych do komunikowania się z interfejsem ELM 327 oraz przechowywania odczytywanych wyników pomiarów. Aplikacja napisana została w języku Java 8 kompilowana z wykorzystaniem narzędzia Maven z wykorzystaniem dodatkowych bibliotek:
+
+	\begin{itemize}
+		\item{do obsługi portu szeregowego: jbidibc-rxtx-2.2 1.6.0 implementująca bibliotekę rxtx 2.1.7,}
+		\item{do obsługi loggera aplikacji: log4j 1.2.17}
+		\item{do obsługi połączenia z bazą danych: hibernate-core 5.2.6 oraz mysql-connector-java 5.1.38.}
+	\end{itemize}
+	
+	Moduł został podzielony na pakiety zgodnie z przedstawionym na Rys. \ref{rys_pakiety_api}.
+	
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=1]{Images/rys_pakiety_api.png}
+			\caption{Schemat ideowy aplikacji.}
+			\label{rys_pakiety_api}
+		\end{figure}
+		
+	W folderze Source Packages znajdują się wszystkie pakiety aplikacji:
+	
+	\begin{itemize}
+		\item{pl.mbartosz.api.ElmService - zawiera wszystkie klasy obsługujące komunikację z interfejsem ELM 327,}
+		\item{pl.mbartosz.api.dao - zawiera klasy interfejsów operujących na bazie danych,}
+		\item{pl.mbartosz.api.domain - zawiera klasy encji bazy danych. Klasy te generują automatycznie tabele w bazie danych jeżeli jeszcze nie istnieją,}
+		\item{pl.mbartosz.api.raspberry.serialservices - zawiera klasy obsługujące konfigurację, połączenie i komunikację z wykorzystaniem portu szeregowego,}
+		\item{pl.mbartosz.api.services - zawiera interfejsy pośredniczące w wymianie danych pomiędzy klasami operującymi bezpośrednio na bazie danych, a klasami aplikacji, }
+		\item{pl.mbartosz.api.services.impl - zawiera klasy implementujące interfejsy z pakieto *.services,}
+		\item{pl.mbartosz.api.services.util - zawiera klasę konfiguracyjną połączenia z bazą danych.}
+	\end{itemize}
+	
+	Folder Test Packages zawiera klasy automatycznych testów. Do aplikacji nie zostały napisane żadne testy, dlatego folder ten jest pusty. Kolejny folder - Other Sources - zawiera plik konfiguracyjny biblioteki hibernate umożliwiający połączenie aplikacji z bazą danych. W folderze Project Files znajdują się pliki konfiguracyjne dla narzędzia Maven, oraz środowiska NetBeans.
+	
+	\subsubsection{Funkcjonalność aplikacji}	
+	
+	\hspace{0.5cm}Aplikacja udostępnia trzy funkcjonalności: komunikację z portem szeregowym, komunikacje z ELM 327 wykorzystująca port szeregowy oraz obsługę zapisywania i pozyskiwania danych z bazy. Obsługa komunikacji z portem szeregowym zawarta w pakiecie pl.mbartosz.api.raspberry.serialservices umożliwia połączenie z portem wykorzystując wykorzystując zdefiniowane przez użytkownika parametry, a także wysyłanie danych do portu oraz odbieranie informacji zwrotnych w trybie zapytania i oczekiwania na odpowiedź. W pakiecie znajdują się trzy klasy:
+	
+	\begin{itemize}
+		\item{SerialPortComm - zawiera funkcje umożliwiające wyszukiwanie dostępnych w systemie portów, podłączenie oraz rozłączenie od portu szeregowego,}
+		\item{SerialPortCongurationParameters - zawiera obiekty konfiguracyjne dla połączenia z portem,}
+		\item{AtCommandPort - zawiera funkcje umożliwiające komunikację z wykorzystaniem portu szeregowego.}
+	\end{itemize}
+	
+	Najistotniejsze z punktu widzenia funkcjonalności aplikacji są metody odpowiedzialne za wysyłanie instrukcji do portu szeregowego oraz odbieranie informacji zwrotnych. Funkcja wysyłająca dane do portu zaprezentowana została na Listingu \ref{listing_put_command}. Przyjmuje ona jeden argument w postaci łańcucha znaków. Podawana jest tutaj instrukcja, która ma zostać wysłana do portu. Zmienna responseData służy do przechowywania otrzymanej odpowiedzi w postaci listy tablic typu byte. Na początku następuje wyzerowanie zmiennej przechowującej liczbę otrzymanych odpowiedzi, a następnie do portu wysyłana jest żądana komenda po konwersji to tablicy typu byte. W kolejnym kroku wykonywana jest pętla, powtarzająca się dopóki nie liczba otrzymanych odpowiedzi nie jest równa liczbie oczekiwanych odpowiedzi. Takie rozwiązanie umożliwia wysłanie jednej komendy i otrzymanie kilku linii odpowiedzi co jest wykorzystywane przy wysyłaniu niektórych instrukcji do OBD-II. Po wysłaniu instrukcji wątek przechodzi w stan oczekiwania na odpowiedź.
+	
+	\newpage
+	
+	\lstinputlisting[language=JavaL, caption={Funkcja wysyłająca dane do portu szeregowego. Opis w tekście.}, label={listing_put_command}]{Listings/put_command.java}
+	
+	Funkcja odpowiadająca za odbieranie danych z portu szeregowego implementuje interfejs SerialPortEventListener, dzięki czemu możliwa jest wykonanie określonych instrukcji dokładnie w momencie pojawienia się danych na porcie. Wysyłanie danych oraz ich odbieranie synchronizowane jest poprzez obiekt responseSync. W każdym wywołaniu wydarzenia na porcie odbierana jest tylko jedna linia danych i zapisywana do listy tablic typu byte. Następnie zwalniana jest blokada obiektu responseSync i program wraca do linii siódmej funkcji wysyłającej dane do portu. Obsługa odbierania danych przestawiona została na Listingu \ref{listing_serial_listener}. \\
+	
+	\lstinputlisting[language=JavaL, caption={Funkcja odbierająca dane z portu szeregowego.  Opis w tekście.}, label={listing_serial_listener}]{Listings/serial_listener.java}
+	
+	\newpage
+	
+	Realizacja komunikacji z interfejsem ELM 327 zawarta jest w pakiecie pl.mbartosz.api.ElmService, który zawiera następujące klasy:
+	
+	\begin{itemize}
+		\item{AT\_ COMMANDS - jest to klasa wyliczeniowa, w której zdefiniowane są komendy AT, ich opis, a także oczekiwana odpowiedź dla każdej komendy,}
+		\item{CommandObject - obiekt przechowujący komendę, oraz oczekiwaną liczbę linii odpowiedzi,}
+		\item{ResponseObject - obiekt przechowujący listę odpowiedzi oraz ich status,}
+		\item{CommunicationMode - klasa wyliczeniowa, w której zdefiniowane są tryby pracy z urządzeniem : AUTO, MANUAL i WAIT,}
+		\item{CommunicationState - klasa wyliczeniowa, w której zdefiniowany jest stan połączenia z urządzeniem: CONNECTED, DISSCONNCTED,}
+		\item{ElmMessageService - klasa udostępniająca metody do wysyłania i odbierania danych z urządzenia.}
+	\end{itemize}
+	
+	Większość klas w tym pakiecie to obiekty przechowujące parametry pracy aplikacji. Najważniejsza z punktu widzenia funkcjonalności jest klasa ElmMessageService, która zarządza wątkiem wysyłającym instrukcje do interfejsu ELM 327, generuje instrukcje do wysłania, a także przetwarza odebrane informacje. W celu optymalizacji pracy aplikacji komunikacja przeniesiona jest do osobnego wątku, który widocznym jest na Listingu \ref{listing_communication_thread}. \\
+	
+	\lstinputlisting[language=JavaL, caption={Wątek komunikacji z ELM 327.  Opis w tekście.}, label={listing_communication_thread}]{Listings/communication_thread.java}
+	
+	
+	\newpage
+	
+	Metoda run() jest implementacją interfejsu Runnable pozwalającego na uruchamianie nowych wątków. Po uruchomieniu wątku wykonywana jest instrukcja nieskończonej pętli, której działanie może zakończyć tylko wyłączenie programu. W pętli tej sprawdzane są warunki stanu aplikacji. Jeżeli aplikacja jest w trybie pracy automatycznej to znaczy w przypadku wyświetlania panelu głównego lub zaznaczenia odpowiedniej opcji w ustawieniach aplikacji(rozdział \ref{rozdzial_hmi_software}) do urządzenia wysyłana jest instrukcja w trybie ciągłym, synchronizowanym obiektem responseSync. W przypadku gdy aplikacja pracuje w trybie ręcznym lista instrukcji zostaje wysłana do urządzenia tylko raz. Następnie aplikacja zmienia stan pracy na oczekiwanie. W trybie oczekiwania wątek jest wstrzymywany na 10ms, po czym następuje ponowne sprawdzenie warunków wykonywania instrukcji \mbox{wątku}. 
+	
+	Za generowanie oraz wysyłanie instrukcji do urządzenia odpowiada funkcja sendToPort, której struktura przedstawiona na Listingu \ref{listing_send_to_port}. W metodzie tej najważniejszą funkcję pełni pętla for. Ponieważ pojedyncze zapytanie do urządzenia może zawierać kilka instrukcji, pętla ma za zadanie pobierać z listy instrukcji po kolei każdą z nich i wysyłania jej metodą putAtCommand. Funkcja ta zwraca obiekt typu ResponseObject, który następnie dodawany jest do listy otrzymanych odpowiedzi. Kiedy wykonane zostają wszystkie instrukcje z zapytania i otrzymano odpowiedzi od urządzenia wywoływana jest metoda sprawdzająca poprawność odebranych informacji executeResponse. 
+	\\
+	
+	\lstinputlisting[language=JavaL, caption={Funkcja generująca instrukcje do wysłania. Opis w tekście.}, label={listing_send_to_port}]{Listings/send_to_port.java}
+	
+	\newpage
+	
+	Zadaniem metody executeResponse jest sprawdzenie poprawności otrzymanych odpowiedzi dla każdej instrukcji oraz wymuszenie odświeżenia komponentów interfejsu użytkownika. Metoda ta w pętli sprawdza w pierwszej kolejności czy flaga poprawności w każdym odebranym obiekcie 	jest zaznaczona. Następnie w kolejnej pętli porównuje wszystkie odebrane odpowiedzi dla jednego obiektu responseObject z oczekiwanymi odpowiedziami. Odpowiedzialna jest za to funkcja checkResponse, która jako argument przyjmuje dwa łańcuchy znaków. Pierwszy argument to otrzymana odpowiedź, drugi natomiast to odpowiedź oczekiwana w postaci wyrażenia regularnego zdefiniowanego dla każde instrukcji w klasie AT\_ COMMANDS. Po sprawdzeniu poprawności odpowiedzi następuje wymuszenie odświeżenia interfejsu użytkownika. Omawiane funkcje przedstawione są na Listinigu \ref{listing_execute_response}.
+	\\
+	
+	\lstinputlisting[language=JavaL, caption={Funkcja sprawdzająca poprawność odpowiedzi i wymuszająca odświeżenie interfejsu użytkownika. Opis w tekście.}, label={listing_execute_response}]{Listings/execute_response.java}	
+	
+	Pozostałe pakiety wymienione w podrozdziale \ref{rozdzial_pakiety_api} odpowiadają za komunikację aplikacji z bazą danych i są w istocie implementacją framworku Hibernate, dlatego ich dokładny opis został w pracy pominięty.
+	
+	\newpage
+	
+	\subsubsection{Baza danych}
+	
+	\hspace{0.5cm}Aplikacja połączona jest z relacyjną bazą danych MySQL umożliwiającą zapisywanie odczytywanych wyników w celu ich dalszej analizy. Na Rys. \ref{rys_database_model} przedstawiony został model logiczny oraz fizyczny bazy danych.
+	
+		\begin{figure}[!h]
+			\centering
+			\subfigure[]{
+				\includegraphics[scale=0.8]{Images/rys_logical_database_model.png}
+			} 
+			\subfigure[]{
+				\includegraphics[scale=0.8]{Images/rys_physical_database_model.png}
+			} 
+			\caption{Model logiczny (a) oraz fizyczny (b) bazy danych. Opis w tekście.}
+			\label{rys_database_model}
+		\end{figure} 	
+	
+	Baza danych składa się z trzech tabel. Tabela vehicle zawiera podstawowe informację o pojeździe. Tabela state przechowuje informacje o odczytanych prędkościach i obrotach silnika pojazdu. Tabela trouble\_ codes odczytanych kodach błędów pojazdu. Tabela vehicle jest połączona relacją jeden do wielu z pozostałymi tabelami.
+	
+		
 	
 	\newpage
 	
 %---------------------------------------------------INTERFEJS GRAFICZNY-------------------------------------------------------------	
 	
 \subsection{Moduł interfejsu użytkownika}\label{rozdzial_hmi_software}
-	\hspace{0.5cm}
+	\hspace{0.5cm}Moduł interfejsu użytkownika napisany został w języku Java z wykorzystaniem najnowszego framweworku do tworzenia interfejsów graficznych JavaFX 8. Wygląda oraz obsługa aplikacji zostały dostosowane ekranu o rozdzielczości 1024x600 pikseli. Po uruchomieniu użytkownikowi ukazuje się ekran przedstawiony na Rys. \ref{user_interface_dashboard}.
 	
-	\begin{figure}[!h]
+		\begin{figure}[!h]
 			\centering
-			\includegraphics[scale=0.5]{Images/user_interface_dashboard.png}
+			\includegraphics[scale=0.4]{Images/user_interface_dashboard.png}
 			\caption{Panel główny interfejsu użytkownika.}
 			\label{user_interface_dashboard}
 		\end{figure}
+		
+		Na zaprezentowanym widoku przedstawiony jest panel główny z zaznaczonymi poszczególnymi sekcjami. 
 		
 		\begin{figure}[!h]
 			\centering
@@ -641,7 +759,15 @@ Pokrycie dolne                                                    &             
 	
 	\newpage
 	
-\section{Podsumowanie}
+	\section{Wyniki testów układu}	
+	
+	\newpage
+	
+	\section{Dyskusja potencjalnych zastosowań}
+	
+	\newpage
+	
+	\section{Podsumowanie}
 	
 	\hspace{0.5cm} 
 	
