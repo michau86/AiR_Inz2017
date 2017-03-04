@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.8)  3 MAR 2017 16:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.17 (MiKTeX 2.9.6210 64-bit) (preloaded format=pdflatex 2017.2.8)  4 MAR 2017 01:20
 entering extended mode
 **./InzynierskaPracaDyplomowa_MateuszBartosz_2017.tex
 (InzynierskaPracaDyplomowa_MateuszBartosz_2017.tex
@@ -1059,62 +1059,68 @@ File: Images/user_interface_dashboard.png Graphic file (type png)
 <use Images/user_interface_dashboard.png>
 Package pdftex.def Info: Images/user_interface_dashboard.png used on input line
  736.
-(pdftex.def)             Requested size: 385.43317pt x 226.04048pt.
-
-<Images/user_interface_settings_elm_tab.png, id=552, 770.88pt x 451.6875pt>
-File: Images/user_interface_settings_elm_tab.png Graphic file (type png)
-
-<use Images/user_interface_settings_elm_tab.png>
-Package pdftex.def Info: Images/user_interface_settings_elm_tab.png used on inp
-ut line 745.
-(pdftex.def)             Requested size: 385.43906pt x 225.84319pt.
- [32 <./Images/user_interface_dashboard.png> <./Images/user_interface_settings_
-elm_tab.png>]
-<Images/user_interface_settings_parameters_tab.png, id=562, 770.88pt x 451.6875
+(pdftex.def)             Requested size: 423.98532pt x 248.64972pt.
+ [32 <./Images/user_interface_dashboard.png>]
+<Images/user_interface_settings_parameters_tab.png, id=565, 770.88pt x 451.6875
 pt>
 File: Images/user_interface_settings_parameters_tab.png Graphic file (type png)
 
  <use Images/user_interface_settings_parameters_tab.png>
 Package pdftex.def Info: Images/user_interface_settings_parameters_tab.png used
- on input line 754.
-(pdftex.def)             Requested size: 385.43906pt x 225.84319pt.
- [33 <./Images/user_interface_settings_parameters_tab.png>] [34] [35] [36]
-Underfull \hbox (badness 10000) in paragraph at lines 809--810
+ on input line 771.
+(pdftex.def)             Requested size: 423.98532pt x 248.42888pt.
+ [33 <./Images/user_interface_settings_parameters_tab.png>]
+<Images/user_interface_settings_elm_tab.png, id=574, 770.88pt x 451.6875pt>
+File: Images/user_interface_settings_elm_tab.png Graphic file (type png)
+
+<use Images/user_interface_settings_elm_tab.png>
+Package pdftex.def Info: Images/user_interface_settings_elm_tab.png used on inp
+ut line 784.
+(pdftex.def)             Requested size: 423.98532pt x 248.42888pt.
+ [34 <./Images/user_interface_settings_elm_tab.png>]
+File: Images/user_interface_settings_elm_tab.png Graphic file (type png)
+ <use Images/user_interface_settings_elm_tab.png>
+Package pdftex.def Info: Images/user_interface_settings_elm_tab.png used on inp
+ut line 798.
+(pdftex.def)             Requested size: 423.98532pt x 248.42888pt.
+ [35]
+[36] [37]
+Underfull \hbox (badness 10000) in paragraph at lines 848--849
 []\T1/ptm/m/n/12 https://www.elmelectronics.com/wp-content/uploads/2016/07/ELM3
 27DS.pdf
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 812--815
+Underfull \hbox (badness 10000) in paragraph at lines 851--854
 []\T1/ptm/m/n/12 http://www.st.com/content/ccc/resource/technical/document/data
 sheet/33/d4/6f/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 812--815
+Underfull \hbox (badness 10000) in paragraph at lines 851--854
 \T1/ptm/m/n/12 1d/d-f/0b/4c/6d/CD00161566.pdf/files/CD00161566.pdf/jcr:content/
 translations/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--823
+Underfull \hbox (badness 10000) in paragraph at lines 859--862
 []\T1/ptm/m/n/12 http://www.st.com/content/ccc/resource/technical/document/data
 sheet/4a/80/83/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 820--823
+Underfull \hbox (badness 10000) in paragraph at lines 859--862
 \T1/ptm/m/n/12 26/e0/78/4d/18/CD00000234.pdf/files/CD00000234.pdf/jcr:content/t
 ranslations/
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 825--826
+Underfull \hbox (badness 10000) in paragraph at lines 864--865
 []\T1/ptm/m/n/12 http://pdf.datasheetcatalog.com/datasheet2/9/0p4t1g1lw0spoo5uk
 h2s1uxchzky.pdf
  []
 
-[37] [38] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof)
+[38] [39] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof)
 \tf@lof=\write5
 \openout5 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.lof'.
 
@@ -1125,7 +1131,7 @@ Package Fancyhdr Warning: \headheight is too small (14.49998pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[39] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot
+[40] (InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot
 Overfull \hbox (2.73532pt too wide) in paragraph at lines 7--7
  [][] [][]\T1/ptm/m/n/12 Wykaz wy-ko-rzy-sta-nych ele-men-tów wraz z opi-sem ob
 u-do-wy, ro-dza-ju mon- 
@@ -1135,12 +1141,12 @@ u-do-wy, ro-dza-ju mon-
 \tf@lot=\write6
 \openout6 = `InzynierskaPracaDyplomowa_MateuszBartosz_2017.lot'.
 
- [40]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 858.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 858.
+ [41]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 897.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 897.
  (InzynierskaPracaDyplomowa_MateuszBartosz_2017.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 858.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 858.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 897.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 897.
 Package rerunfilecheck Info: File `InzynierskaPracaDyplomowa_MateuszBartosz_201
 7.out' has not changed.
 (rerunfilecheck)             Checksum: 8D5EAD34DE7F615923DF95FB6F4E3D72;1868.
@@ -1148,13 +1154,13 @@ Package rerunfilecheck Info: File `InzynierskaPracaDyplomowa_MateuszBartosz_201
 
 LaTeX Warning: There were multiply-defined labels.
 
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 858.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 897.
  ) 
 Here is how much of TeX's memory you used:
- 11043 strings out of 493333
- 158455 string characters out of 3139195
- 348954 words of memory out of 3000000
- 14134 multiletter control sequences out of 15000+200000
+ 11051 strings out of 493333
+ 158536 string characters out of 3139195
+ 349033 words of memory out of 3000000
+ 14135 multiletter control sequences out of 15000+200000
  41429 words of font info for 66 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  36i,15n,48p,2240b,1250s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1169,10 +1175,10 @@ am Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2
 .9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ur
 w/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.p
 fb>
-Output written on InzynierskaPracaDyplomowa_MateuszBartosz_2017.pdf (40 pages, 
-1867793 bytes).
+Output written on InzynierskaPracaDyplomowa_MateuszBartosz_2017.pdf (41 pages, 
+1855793 bytes).
 PDF statistics:
- 731 PDF objects out of 1000 (max. 8388607)
- 223 named destinations out of 1000 (max. 500000)
+ 747 PDF objects out of 1000 (max. 8388607)
+ 230 named destinations out of 1000 (max. 500000)
  291 words of extra memory for PDF output out of 10000 (max. 10000000)
 

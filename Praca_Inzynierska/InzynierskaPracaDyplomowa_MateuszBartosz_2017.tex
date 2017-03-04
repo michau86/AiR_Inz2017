@@ -733,25 +733,55 @@ W kolejnych dwóch podrozdziałach znajduje się dokładny opis zastosowanych ro
 	
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[scale=0.4]{Images/user_interface_dashboard.png}
+			\includegraphics[scale=0.44]{Images/user_interface_dashboard.png}
 			\caption{Panel główny interfejsu użytkownika.}
 			\label{user_interface_dashboard}
 		\end{figure}
 		
-		Na zaprezentowanym widoku przedstawiony jest panel główny z zaznaczonymi poszczególnymi sekcjami. 
+		Na zaprezentowanym widoku przedstawiony jest panel główny z zaznaczonymi poszczególnymi sekcjami:
+		
+		\begin{enumerate}
+			\item{Nagłówek okna. Widoczne są tutaj data, lokalizacja oraz aktualny czas.}
+			\item{Okno główne. Prezentuje treść odpowiednią do wybranej opcji z menu. Widok na Rys. \ref{user_interface_dashboard} prezentuje domyślne okno główne.}
+			\item{Lewy panel przycisków menu. Znajdują się tutaj kolejno od góry:
+				\begin{itemize}
+					\item{Przycisk informacyjny. Po jego naciśnięciu w oknie głównym pokazany jest widok domyślny.}
+					\item{Przycisk przeglądarki. W oknie pokazana jest przeglądarka. Nieobsłużony.}
+					\item{Przycisk nawigacji. W oknie pokazana jest nawigacja. Nieobsłużony.}
+					\item{Przycisk radia. W oknie pokazana jest panel sterowania radiem. Nieobsłużony.}
+				\end{itemize}						
+			}
+			\item{Prawy panel przycisków menu. Znajdują się tutaj kolejno od góry:
+				\begin{itemize}
+					\item{Przycisk ustawień. Po jego naciśnięciu w oknie głównym jest panel ustawień.}
+					\item{Przycisk multimediów. W oknie pokazana jest panel zarządzania multimediami. Nieobsłużony.}
+					\item{Przycisk statystyk. W oknie pokazana jest panel prezentujący statystki zebranych danych. Nieobsłużony.}
+					\item{Przycisk czujników. W oknie pokazana jest stan czujników parkowania. Nieobsłużony.}
+				\end{itemize}						
+			}
+			\item{Panel statusu. Informuje o podłączeniu urządzenia ELM 327 oraz dostępie do sieci.}
+		\end{enumerate}
+		
+		Przełączanie widoków okna polega na zmianie zawartości okna głównego. Panele przycisków nie zmieniają swojej zawartości. Widok przycisków zmienia się tylko w przypadku najechania na przycisk lub jego naciśnięcia. W panelu statusu kolorem niebieskim zaznaczone jest uzyskanie połączenia, natomiast białym brak połączenia. Wartości widoczne na widoku NaN oznaczają, że dane nie są odbierane od urządzenia ELM 327. Kiedy aplikacja pracuje w trybie automatycznym dane te są automatycznie odświeżane po odebraniu kolejnych wyników. 
+		
+		Po naciśnięciu przycisku ustawień okno główne zmienia zawartość i ukazuje się widok przedstawiony na Rys. \ref{user_interface_dashboard}
 		
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[scale=0.5]{Images/user_interface_settings_elm_tab.png}
+			\includegraphics[scale=0.55]{Images/user_interface_settings_parameters_tab.png}
 			\caption{Panel główny interfejsu użytkownika.}
 			\label{user_interface_dashboard}
-		\end{figure}
+		\end{figure}		
+		
+		W panelu ustawień dostępne są dwie zakładki. Pierwsza z nich umożliwia skonfigurowanie urządzenia ELM 327, a także prezentuje opis oraz identyfikator podłączonego urządzenia. W celu wysłania ustawień do interfejsu należy nacisnąć przycisk Apply. Naciśnięcie przycisku Cancel powoduje powrót wszystkich kontrolek do poprzedniego stanu natomiast naciśnięcie przycisku Default powoduje przywrócenie wszystkich domyślnych ustawień.
 		
 		\newpage
 		
+		Druga zakładka dostępna w panelu ustawień umożliwia podgląd odbieranych danych od urządzenia ELM, a także pracę w trybie ręcznego wysyłania żądań. Zakładka ta podzielona jest na dwie części. Strona lewa odpowiada za wybór portu szeregowego do którego aplikacja ma się podłączyć. Przyciski Connect i Dissconnect odpowiadają za ustanawianie połączenia lub jego zakończenie. Przycisk Refresh wywołuje funkcję wyszukującą wszystkie dostępne w systemie porty szeregowe. W drugim wierszu znajduje się pole tekstowe Cmd w które należy wpisać instrukcję do wysłania do interfejsu. Przycisk Send wywołuje metodę wysyłającą instrukcję poprzez ustawienie stanu aplikacji na ręczny. Poniżej znajduje się pole tekstowe wyświetlające odpowiedzi urządzenia ELM. Pole to można wyczyścić naciskając na przycisk Clear lub zapisać jego zawartość do pliku poprzez naciśnięcie przycisku Save. W panelu znajduje się dodatkowo kontrolka Auto, której zaznaczenie przełącza aplikację w tryb pracy automatycznej. W panelu po prawej można skonfigurować parametry połączenia szeregowego. Dostępne opcje to: szybkość transmisji, liczba bitów danych, parzystość, liczba bitów stopu oraz kontrola przepływu. Aby nowe ustawienia zostały wprowadzone należy zakończyć bieżące połączenie z portem i zainicjować je na nowo. Widok drugiej zakładki panelu ustawień widoczny jest na Rys. \ref{user_interface_dashboard}.
+		
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[scale=0.5]{Images/user_interface_settings_parameters_tab.png}
+			\includegraphics[scale=0.55]{Images/user_interface_settings_elm_tab.png}
 			\caption{Panel główny interfejsu użytkownika.}
 			\label{user_interface_dashboard}
 		\end{figure}
@@ -760,6 +790,15 @@ W kolejnych dwóch podrozdziałach znajduje się dokładny opis zastosowanych ro
 	\newpage
 	
 	\section{Wyniki testów układu}	
+	
+	\hspace{0.5cm}Stworzone oprogramowanie poddane zostało testom praktyczny w samochodzie Seat Cordoba II. Połączenie zostało skonfigurowane tak, aby w odpowiedzi nie odsyłane było echo żądania oraz znaki białe. Z odpowiedzi dodatkowo usunięty jest nagłówek, ale dopiero po sprawdzeniu czy spełnia ona warunek podany w wyrażeniu regularnym. Sprawdzone zostały oba tryby pracy: automatyczny i ręczny. W pierwszy kroku wykonany został test trybu ręcznego pracy aplikacji. Wyniki kilku przykładowych zapytań przedstawiono na Rys. \ref{rys_wyniki_testu_recznego}.
+	
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.55]{Images/user_interface_settings_elm_tab.png}
+			\caption{Wyniki testu ręcznego trybu pracy programu.}
+			\label{rys_wyniki_testu_recznego}
+		\end{figure}
 	
 	\newpage
 	
