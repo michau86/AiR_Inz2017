@@ -795,15 +795,82 @@ W kolejnych dwóch podrozdziałach znajduje się dokładny opis zastosowanych ro
 	
 		\begin{figure}[!h]
 			\centering
-			\includegraphics[scale=0.55]{Images/user_interface_settings_elm_tab.png}
+			\includegraphics[scale=0.55]{Images/rys_test_reczny.png}
 			\caption{Wyniki testu ręcznego trybu pracy programu.}
 			\label{rys_wyniki_testu_recznego}
 		\end{figure}
+		
+		Pierwsza instrukcja wysłana to zapytanie o identyfikator urządzenia. Następnie wysłane zostały dwie instrukcje konfigurujące strukturę odpowiedzi. Instrukcja 0100 to pytanie o dostępne kody PID z zakresu 01-20. Na podstawie odpowiedzi wyznaczono dostępne kody dla testowanego samochodu.
+		
+\begin{table}[!h]
+\centering
+\caption{Kodu PID udostępnione w samochodzie testowym.}
+\label{tabela_test_pids}
+\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multicolumn{4}{|c|}{9} & \multicolumn{4}{c|}{8} & \multicolumn{4}{c|}{3} & \multicolumn{4}{c|}{B} \\ \hline
+1    & 0    & 0   & 1   & 1    & 0   & 0   & 0   & 0    & 0   & 1   & 1   & 1    & 0   & 1   & 1   \\ \hline
+01   & 02   & 03  & 04  & 05   & 06  & 07  & 08  & 09   & 0A  & 0B  & 0C  & 0D   & 0E  & 0F  & 10  \\ \hline \hline
+\multicolumn{4}{|c|}{8} & \multicolumn{4}{c|}{0} & \multicolumn{4}{c|}{1} & \multicolumn{4}{c|}{1} \\ \hline
+1    & 0    & 0   & 0   & 0    & 0   & 0   & 0   & 0    & 0   & 0   & 1   & 0    & 0   & 0   & 1   \\ \hline
+11   & 12   & 13  & 14  & 15   & 16  & 17  & 18  & 19   & 1A  & 1B  & 1C  & 1D   & 1E  & 1F  & 20  \\ \hline
+\end{tabular}
+\end{table}
+
+	
+	
+	\newpage
+	
+	Kolejna instrukcja 0101 to instrukcja sprawdzająca stan diody kontrolnej silnika. Następnie wysłanych zostało kilka instrukcji o bieżące parametry pracy samochodu. Na podstawie przeprowadzonych testów można powiedzieć, że tryb pracy ręcznej zachowuje się poprawnie.	
+	
+	W kolejnym kroku wykonano test automatycznego trybu pracy aplikacji dla parametrów udostępnionych w testowym pojeździe. Mierzonymi parametrami były: obciążenie silnika podawane w (0 - 100\%), temperatura cieczy chłodzącej (-40 - 215${}^\circ C$), prędkość obrotowa silnika (0 - 16383 obr/min), prędkość silnika (0 - 255 km/h) oraz temperatura powietrza zasysanego (-40 - 215${}^\circ C$). Otrzymane rezultaty zaprezentowane zostały na Rys. \ref{rys_wyniki_testu_automatycznego}
+	
+	\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.55]{Images/rys_test_auto.png}
+			\caption{Wyniki testu automatycznego trybu pracy programu.}
+			\label{rys_wyniki_testu_automatycznego}
+		\end{figure}
+	
+	
+	Na podstawie obserwacji pracy programu można powiedzieć, że automatyczny tryb pracy programu również zachowuje się poprawnie.
 	
 	\newpage
 	
 	\section{Dyskusja potencjalnych zastosowań}
 	
+	\hspace{0.5cm}Podstawowym zastosowanie układu omawianego w niniejszej pracy mogłoby być wczesne informowanie o wystąpieniu błędu w pojeździe. W tym celu należałoby cyklicznie odpytywać komputer pokładowy czy wystąpił jakieś błędy. Takie odpytywanie mogłoby się odbywać na przykład przy każdym uruchomieniu pojazdu. W tym celu należałoby dodatkowo doprowadzić do komputera sterującego programem sygnał zapłonu. Jeżeli w pojeździe zostałby wykryty błąd to na wyświetlaczu pojawiłby się stosowny napis z informacją o błędzie oraz jego źródle.
+	
+	Innym zastosowaniem mogłoby być obliczanie wartości średniego spalania czy zasięgu pojazdu. W tym celu można wykorzystać następujące komendy:
+	
+	\begin{itemize}
+		\item{01 5E - zwraca wartość aktualnego przepływu paliwa w l/h,}
+		\item{01 0D - zwraca wartość aktualnej prędkości pojazdu w km/h,}
+		\item{01 2F - zwraca wartość ilości paliwa w zbiorniku jako wartość procentowa pojemności zbiornika.}
+	\end{itemize}
+	
+	Pobierając wartość aktualnego przepływu paliwa dostatecznie często przez określony okres czasu można z dobrą dokładnością wyliczyć spalanie średnie korzystając z wzoru:
+	
+	\begin{equation}
+		Q_{sr} = \frac{\sum{Q_{ch}}}{n} \bigg[\frac{l}{h}\bigg],
+	\end{equation}		
+
+gdzie: $Q_{sr}$ to średnia wartość przepływu paliwa w l/h, $Q_{ch}$ to wartość chwilowa wartość przepływu paliwa w l/h, n to liczba próbek. Następnie w analogiczny sposób można obliczyć średnią prędkość pojazdu. Korzystając z obliczonych wartości można wyznaczyć wartość średniego spalania na kilometr oraz na każde 100 kilometrów:
+	
+	\begin{equation}
+		C_{sr} = \frac{Q_{sr}}{v_{śr}} \bigg[\frac{l}{km}\bigg],
+	\end{equation}
+
+gdzie: $C_{sr}$ to średnia spalanie w l/km, $c_{sr}$ obliczona średnia prędkość pojazdu. Wartość tę można w łatwy sposób przeliczyć na spalanie pojazdu w litrach na 100 kilometrów.
+
+	Wykorzystując obliczoną wartość średniego spalania samochodu na 100 kilometrów można wyznaczyć zasięg samochodu. Pobierając wartość ilości paliwa w zbiorniku i znając pojemność maksymalną zbiornika można wykorzystać wzory:
+	
+	\begin{equation}
+		d = \frac{\frac{V_{a}}{100} * V_{max}}{C_{sr}} [km],
+	\end{equation}
+	
+	gdzie: d - obliczony zasięg pojazdu, $V_{a}$ - aktualna ilość paliwa w zbiorniku jako wartość procentowa pojemności zbiornika.
+		
 	\newpage
 	
 	\section{Podsumowanie}
