@@ -11,10 +11,10 @@
 \BOOKMARK [2][-]{subsection.2.4}{Interfejs komunikacyjny ELM 327}{section.2}% 11
 \BOOKMARK [1][-]{section.3}{Struktura projektu}{}% 12
 \BOOKMARK [1][-]{section.4}{Projekt uk\233adu do komunikacji ze z\233aczem diagnostycznym}{}% 13
-\BOOKMARK [2][-]{subsection.4.1}{Zastosowane elementy}{section.4}% 14
-\BOOKMARK [2][-]{subsection.4.2}{Schemat elektryczny}{section.4}% 15
+\BOOKMARK [2][-]{subsection.4.1}{Schemat elektryczny}{section.4}% 14
+\BOOKMARK [2][-]{subsection.4.2}{Zastosowane elementy}{section.4}% 15
 \BOOKMARK [2][-]{subsection.4.3}{Projekt obwodu drukowanego}{section.4}% 16
-\BOOKMARK [1][-]{section.5}{Oprogramowanie}{}% 17
+\BOOKMARK [1][-]{section.5}{Zbudowany uk\233ad i oprogramowanie}{}% 17
 \BOOKMARK [2][-]{subsection.5.1}{Modu\233 komunikacji i przetwarzania danych}{section.5}% 18
 \BOOKMARK [3][-]{subsubsection.5.1.1}{Struktura aplikacji}{subsection.5.1}% 19
 \BOOKMARK [3][-]{subsubsection.5.1.2}{Funkcjonalnosc aplikacji}{subsection.5.1}% 20

@@ -120,10 +120,14 @@
 \thispagestyle{empty}
 \section*{Streszczenie}
 \vspace{0.5cm}
-\hspace{0.5cm}
+\hspace{0.5cm}W ramach niniejszej pracy zbudowany został układ umożliwiający komunikację ze złączem diagnostycznym OBD-II. Częściami układu są interfejs obsługujący połączenie z komputerem pokładowym samochodu oraz oprogramowanie umożliwiające pracę w trybie ręcznego wysyłania komend do interfejsu lub pracę w trybie automatycznym. Oprogramowanie składa się z dwóch współpracujących ze sobą modułów: interfejsu komunikacyjnego oraz graficznego interfejsu użytkownika. W ramach pracy omówiono strukturę zapytać wysyłanych do złącza diagnostycznego, otrzymywanych odpowiedzi, a także kodów błędów wysyłanych przez sterownik pojazdu. Dodatkowo zaprojektowano własny układ umożliwiający połączenie z pojazdami udostępniającymi do komunikacji linię K protokołu ISO 9141-2. Przeprowadzono również testy stworzonego oprogramowania i omówiono potencjalne zastosowania układu w realizacji zadań wspomagających prowadzenie pojazdu.
 \newpage
 
 \section*{Abstract}
+\vspace{0.5cm}
+\hspace{0.5cm}As part of this thesis system which enable coummunication with OBD-II connector was built. Parts of the system are the interface that supports connection to vehicle on-board computer and the software which allows to work in manual mode or automatic mode. The software consist of two cooperating modules: communication interface and graphical user interface. As part of disseration discusses the structure of requests sent to the diagnostic interface, receive responses and trouble code sent by the driver of the vehicle. In addition, own system for connecting to vehicles which provides communication via K-line ISO 9141-2 protocol was designed. Furthermote created software was tested in vehicle and potential applications of the system in the implementation of tasks to support driving was discussed. 
+
+
 \thispagestyle{empty}
 \vspace{0.5cm}
 \hspace{0.5cm}
@@ -137,10 +141,10 @@
 		\hspace{0.5cm}Głównym czynnikiem decydującym o wyborze tematu było zainteresowanie rozwiązaniami elektronicznymi stosowanymi we współczesnej motoryzacji oraz chęć podjęcia próby zbudowania układu opartego o własną koncepcję pracującego jako komputer pokładowy w samochodzie osobowym. Kolejnym czynnikiem było umożliwienie cyklicznego badania i kontroli parametrów pracy poszczególnych układów pojazdu, w celu uniknięcia lub wczesnego wykrycia potencjalnych usterek. Dodatkową motywacją była chęć zbudowania układu, który mógłby być w przyszłości praktycznie wykorzystywany w samochodach niewyposażonych w wbudowany komputer pokładowy. 	
 	
 	\subsection{Cel i zakres pracy}
-		\hspace{0.5cm}Celem pracy było zaprojektowanie oraz wykonanie układu przyłącza do gniazda diagnostycznego w samochodzie osobowym Seat Cordoba III oraz zbudowanie interfejsu użytkownika umożliwiającego wizualizację odczytywanych parametrów, kontrolę wartości granicznych, a także przechowanie ich w celach dalszej diagnostyki. Dodatkowym celem było określenie możliwości wykorzystania odbieranych parametrów do opracowania algorytmów umożliwiających wspomaganie kierującego pojazdem, aby zoptymalizować jazdę, zwiększyć bezpieczeństwo podróży oraz zminimalizować ryzyko wystąpienia usterek. 
+		\hspace{0.5cm}Celem pracy było zaprojektowanie oraz wykonanie układu przyłącza do gniazda diagnostycznego w samochodzie osobowym Seat Cordoba II oraz zbudowanie interfejsu użytkownika umożliwiającego wizualizację odczytywanych parametrów, kontrolę wartości granicznych, a także przechowanie ich w celach dalszej diagnostyki. Dodatkowym celem było określenie możliwości wykorzystania odbieranych parametrów do opracowania algorytmów umożliwiających wspomaganie kierującego pojazdem, aby zoptymalizować jazdę, zwiększyć bezpieczeństwo podróży oraz zminimalizować ryzyko wystąpienia usterek. 
 	
 	\subsection{Założenia i wymagania}
-		\hspace{0.5cm}Założeniem pracy jest opracowanie kompleksowego układu umożliwiającego odczytywanie, wizualizację oraz kontrolę parametrów odbieranych przez złącze diagnostyczne w samochodzie osobowym Seat Cordoba III, a także określenie możliwości wykorzystania tych parametrów do opracowania algorytmów wspomagających prowadzenie pojazdu.
+		\hspace{0.5cm}Założeniem pracy jest opracowanie kompleksowego układu umożliwiającego odczytywanie, wizualizację oraz kontrolę parametrów odbieranych przez złącze diagnostyczne w samochodzie osobowym Seat Cordoba II, a także określenie możliwości wykorzystania tych parametrów do opracowania algorytmów wspomagających prowadzenie pojazdu.
 	
 		\newpage
 
@@ -353,7 +357,7 @@ F                                                                            & U
 	
 	\newpage	
 	
-	\subsection{Interfejs komunikacyjny ELM 327}
+	\subsection{Interfejs komunikacyjny ELM 327}\label{rozdzial_elm}
 	
 	\hspace{0.5cm}Do komunikacji ze złączem diagnostyczny można wykorzystać popularny interfejs ELM327 firmy ELM Electronics. Dostępny jest w dwóch wariantach: RS232 lub bluetooth. Jądrem urządzenia jest mikroprocesor PIC18F2480 firmy Microchip Technology. W niniejszej pracy wykorzystany zostało urządzenie udostępniające komunikację bluetooth pokazane na Rys. \ref{rys_elm327}.
 	
@@ -407,14 +411,69 @@ F                                                                            & U
 	
 	Jako moduł główny w projekcie zdecydowano się wykorzystać komputer \mbox{Raspberry Pi 3} ze względu na jego dobry stosunek jakości do ceny. Przy wyborze tego układu ważna również była możliwość podłączenia zewnętrznego ekranu, a także dostępność komunikacji bluetooth. Oprogramowanie obsługujące funkcjonalność napisane zostało w języku Java SE 8 z wykorzystaniem dodatkowej biblioteki pi4j umożliwiającej dostęp dostęp do funkcji wbudowanych komputera Raspberry Pi, takich jak komunikacja bluetooth, czy zarządzanie portami GPIO. Dodatkowo oprogramowanie wykorzystuje bibliotekę jbidibc-rxtx-2.2 umożliwiającą wykorzystanie portów szeregowych komputera, które były niezbędne do komunikacji z urządzeniem ELM327. Dokładny opis funkcjonalności stworzonego oprogramowania znajduje się w rozdziale \ref{rozdzial_raspberry_software}.
 	
-	Ostatni moduł - interfejs graficzny użytkownika - stworzony został w języku \mbox{Java SE 8} z wykorzystaniem nowego frameworku do tworzenia zaawansowanych interfejsów graficznych JavaFX 8. Interfejs użytkownika dostosowany został do wykorzystywania na urządzeniach wyposażonych w ekran dotykowy o rozdzielczości 1024x600 pikseli. Do umożliwienia zapisywania danych w celu sporządzania dalszych statystyk stworzona została relacyjna baza danych wykorzystująca darmowy serwer MySQL Community Server w wersji 5.7 firmy Oracle. Dokładny opis funkcjonalności stworzonego oprogramowania wraz z przykładowymi widokami panelu użytkownika znajduje się w rozdziale \ref{rozdzial_hmi_software}.
+	Ostatni moduł - interfejs graficzny użytkownika - stworzony został w języku \mbox{Java SE 8} z wykorzystaniem nowego frameworku do tworzenia zaawansowanych interfejsów graficznych JavaFX 8. Interfejs użytkownika dostosowany został do wykorzystywania na urządzeniach wyposażonych w ekran dotykowy o rozdzielczości 1024x600 pikseli. Do umożliwienia zapisywania danych w celu sporządzania dalszych statystyk stworzona została relacyjna baza danych wykorzystująca darmowy serwer MySQL Community Server w wersji 5.7 firmy Oracle. Dokładny opis funkcjonalności stworzonego oprogramowania wraz z przykładowymi widokami panelu użytkownika znajduje się w rozdziale \ref{rozdzial_hmi_software}. Poszczególne elementy układu przedstawione zostały na Rys. \ref{rys_uklad_widok}.
 	
-	
+	\begin{figure}[!h]
+		\centering
+		\includegraphics[scale=0.14]{Images/rys_uklad_widok.png}
+		\caption{Poszczególne elementy układu.}
+		\label{rys_uklad_widok}
+		\end{figure}
 	
 	\newpage	
 	
 %---------------------------------------------------PROJEKT PŁYTKI-------------------------------------------------------------	
 \section{Projekt układu do komunikacji ze złączem diagnostycznym} \label{rozdzial_uklad_stm}
+	
+	\hspace{0.5cm}W ramach pracy planowano wykonać interfejs komunikacyjny umożliwiający połączenie komputera pokładowego pojazdu z komputerem Raspberry Pi. Ze względów finansowych ostatecznie zaniechano wykonania modułu, a prace zakończono na etapie projektu, którego opis przedstawiony został w niniejszym rozdziale. Jako zamiennik własnego układu zastosowano popularny moduł ELM 327, którego opis znajduje się w rozdziale \ref{rozdzial_elm}.
+	
+	Schemat ideowy zaprojektowanego interfejsu komunikacyjnego w postaci blokowej przedstawiono na Rys. \ref{rys_schemat_blokowy_plytki}.
+	
+	\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.6]{Images/SchematBlokowyPlytki.pdf}
+			\caption{Schemat blokowy zaprojektowanego interfejsu komunikacyjnego. Opis w tekście.}
+			\label{rys_schemat_blokowy_plytki}
+		\end{figure}	
+	
+	Na schemacie zaprezentowano następujące elementy: 
+	
+	\begin{itemize}
+		\item{OBD - komputer pokładowy pojazdu,}
+		\item{R1 - regulator napięcia 5V - źródło zasilania dla interfejsu komunikacyjnego I1,}
+		\item{R2 - regulator napięcia 3.3V - źródło zasilania dla mikroprocesora MCU oraz modułu bluetooth B1,}
+		\item{I1 - interfejs komunikacyjny ISO9141,}
+		\item{MCU - mikroprocesor,}
+		\item{B1 - moduł komunikacyjny bluetooth.}
+	\end{itemize}
+	
+	W założeniach interfejs miał umożliwić bezprzewodową komunikację pomiędzy komputerem Raspberry Pi, a złączem diagnostycznym. W kolejnych podrozdziałach znajduje się dokładny opis projektu.	
+	
+	\newpage
+	\subsection{Schemat elektryczny}
+	
+		\hspace{0.5cm}Celem zaprojektowanego układu było umożliwienie komunikacji z samochodowym komputerem pokładowym poprzez złącze diagnostyczne. Głównym elementem układu jest mikroprocesor U1, którego zadaniem jest odbieranie danych ze złącza diagnostycznego oraz przesyłanie odebranych danych za pomocą modułu bluetooth do układu wizualizacji danych. Mikroprocesor zasilany jest napięciem 3.3V. Układ został zaprojektowany do obsługi tylko jednego protokołu komunikacyjnego udostępnianego przez złącze diagnostyczne - ISO 9141-2. Wynika to z potrzeby minimalizacji całego układu, a także minimalizacji ceny jego wykonania. Sygnał protokołu komunikacyjnego doprowadzony jest do złącza P1 wraz z napięciem 12V - którego źródłem jest akumulator - oraz wyprowadzeniami masy układu. Sygnał zasilania złącza P1 doprowadzony jest to dwóch regulatorów napięcia U4 oraz U5, dzięki którym w układzie dostępne są napięcia zasilające odpowiednio 5V oraz 3.3V. W obwodzie wejściowym oraz wyjściowym umieszczone zostały kondensatory C1, C2 i C3 zgodnie z zaleceniami producenta \cite{MC7805}\cite{MCP17}. W obwodzie zasilania znajduje się dioda prostownicza D8 oraz dodatkowo dwie czerwone diody LED D4 i D5 wraz z odpowiadającymi im rezystorami R4 i R5, których zadaniem jest sygnalizowanie obecności napięcia.
+		
+		Sygnał linii k protokołu ISO 9141-2 wychodzący ze złącza P1 doprowadzony jest do układu interfejsu magistrali ISO 9141. Układ ten zasilany jest napięciem 5V, a jego zadaniem jest przetwarzanie sygnału wyprowadzonego ze złącza diagnostycznego. Zastosowanie takiego rozwiązania umożliwia wygodne programowanie komunikacji ze złączem diagnostycznym przy użyciu interfejsu UART, które  jest bezpośrednio dostępne w zastosowanym mikroprocesorze. Ze względu na różnicę napięć pracy układu L9637D oraz mikroprocesora do odbierania danych z wyprowadzenia Rx interfejsu ISO należy dodatkowo obniżyć napięcie sygnału. Do tego celu wykorzystano rezystancyjny dzielnik napięcia R8 i R9. Wysyłanie danych z mikroprocesora może odbywać się bezpośrednio, ponieważ napięcie 3.3V jest wystarczające do zmiany stanu na wejściu Tx układu U3. W obwodzie komunikacji pomiędzy modułami umieszczono dodatkowo złącze umożliwiające bezpośrednie odczytywanie danych na liniach Rx oraz Tx, które może być wykorzystywane w celach diagnostycznych lub jako wyprowadzenie do dodatkowego mikroprocesora. Dokładny opis układu można znaleźć w nocie katalogowej producenta \cite{L9637D}.
+		
+		Układ U2 znajdujący się na schemacie to moduł komunikacyjny bluetooth. Jego zadaniem jest odbieranie wstępnie opracowanych wyników ze złącza diagnostycznego do układu wizualizacji danych. Moduł charakteryzuje się małym poborem prądu w stanie pracy(12mA), bardzo małym w stanie spoczynku(<0.5A), a także dużą szybkością przesyłania danych(do 1Mbps). Dokładną specyfikację urządzenia można znaleźć w nocie katalogowej producenta \cite{RN4020}. Układ zasilany jest napięciem 3.3V oraz komunikuje się z mikroprocesorem wykorzystując magistralę UART. Dodatkowo do modułu U2 doprowadzony jest sygnał wybudzający ze stanu czuwania(7:WAKE\_ SW) oraz sygnał wejścia resetującego układ(8:CMD/MLDP). Wyprowadzenia PIO1, PIO2, PIO3 wykorzystane zostały do sygnalizowania stanu komunikacji układu. Dodatkowo moduł bluetooth posiada wyprowadzenia magistrali SPI, które w zaprojektowanym układzie nie zostały wykorzystane. 
+		
+		\newpage		
+		
+		W układzie znajdują się również elementu obsługi mikroprocesora. Złącze P3 umożliwia programowanie mikroprocesora z wykorzystaniem zewnętrznego programatora dostępnego w zestawach STM32 NUCLEO lub DISCOVERY lub programatora ST-LINK/V2. Dodatkowo w układzie znajdują się dwa rezonatory kwarcowe(Q1, Q2) wraz kondensatorami(C7, C8, C9, C10) zgodne z zaleceniami producenta, a także przycisk umożliwiający resetowanie układu(S1). 
+		
+		Rys. \ref{rys_schemat_ukladu_elektrycznego} przedstawia schemat zaprojektowanego układu. Schemat w większym rozmiarze dodany został również do załączników na końcu dokumentu.
+		
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.6, angle=90]{Images/SchematUkladuElektrycznego.pdf}
+			\caption{Schemat obwodu układu do komunikacji ze złączem diagnostycznym. Opis w tekście.}
+			\label{rys_schemat_ukladu_elektrycznego}
+		\end{figure}
+	
+		\newpage
+	
+	
 	\subsection{Zastosowane elementy}W projekcie układu do komunikacji ze złączem diagnostycznym wykorzystane zostały układy scalone wymienione poniżej(w nawiasie znajduje się symbol odpowiadający danemu elementowi na Rys. \ref{rys_schemat_ukladu_elektrycznego}.
 	
 	\begin{itemize}
@@ -453,7 +512,7 @@ F                                                                            & U
 	\item{Interfejs protokołu ISO9141-2, L9637D firmy STMicroelectronics(U3). Dane katalogowe tego układu znaleźć można w odnośniku \cite{L9637D}.}
 	\item{Regulator napięcia 5V MC7805BDTRK(U4). Dane katalogowe tego układu znaleźć można w odnośniku \cite{MC7805}.}
 	
-	\item{Regulator napięcia 3V MCP1703T-3302E/CB(U5). Dane katalogowe tego układu znaleźć można w odnośniku \cite{MCP17}.}
+	\item{Regulator napięcia 3.3V MCP1703T-3302E/CB(U5). Dane katalogowe tego układu znaleźć można w odnośniku \cite{MCP17}.}
 	
 	\end{itemize}	
 	
@@ -501,31 +560,8 @@ CB1                 & Button PS11ABK         & SPST-NO          & THT           
 \end{table}
 
 \newpage
-	
-	\newpage
-	\subsection{Schemat elektryczny}
-	
-		\hspace{0.5cm}Celem zaprojektowanego układu było umożliwienie komunikacji z samochodowym komputerem pokładowym poprzez złącze diagnostyczne. Głównym elementem układu jest mikroprocesor U1, którego zadaniem jest odbieranie danych ze złącza diagnostycznego oraz przesyłanie odebranych danych za pomocą modułu bluetooth do układu wizualizacji danych. Mikroprocesor zasilany jest napięciem 3.3V. Układ został zaprojektowany do obsługi tylko jednego protokołu komunikacyjnego udostępnianego przez złącze diagnostyczne - ISO 9141-2. Wynika to z potrzeby minimalizacji całego układu, a także minimalizacji ceny jego wykonania. Sygnał protokołu komunikacyjnego doprowadzony jest do złącza P1 wraz z napięciem 12V - którego źródłem jest akumulator - oraz wyprowadzeniami masy układu. Sygnał zasilania złącza P1 doprowadzony jest to dwóch regulatorów napięcia U4 oraz U5, dzięki którym w układzie dostępne są napięcia zasilające odpowiednio 5V oraz 3.3V. W obwodzie wejściowym oraz wyjściowym umieszczone zostały kondensatory C1, C2 i C3 zgodnie z zaleceniami producenta \cite{MC7805}\cite{MCP17}. W obwodzie zasilania znajduje się dioda prostownicza D8 oraz dodatkowo dwie czerwone diody LED D4 i D5 wraz z odpowiadającymi im rezystorami R4 i R5, których zadaniem jest sygnalizowanie obecności napięcia.
-		
-		Sygnał linii k protokołu ISO 9141-2 wychodzący ze złącza P1 doprowadzony jest do układu interfejsu magistrali ISO 9141. Układ ten zasilany jest napięciem 5V, a jego zadaniem jest przetwarzanie sygnału wyprowadzonego ze złącza diagnostycznego. Zastosowanie takiego rozwiązania umożliwia wygodne programowanie komunikacji ze złączem diagnostycznym przy użyciu interfejsu UART, które  jest bezpośrednio dostępne w zastosowanym mikroprocesorze. Ze względu na różnicę napięć pracy układu L9637D oraz mikroprocesora do odbierania danych z wyprowadzenia Rx interfejsu ISO należy dodatkowo obniżyć napięcie sygnału. Do tego celu wykorzystano rezystancyjny dzielnik napięcia R8 i R9. Wysyłanie danych z mikroprocesora może odbywać się bezpośrednio, ponieważ napięcie 3.3V jest wystarczające do zmiany stanu na wejściu Tx układu U3. W obwodzie komunikacji pomiędzy modułami umieszczono dodatkowo złącze umożliwiające bezpośrednie odczytywanie danych na liniach Rx oraz Tx, które może być wykorzystywane w celach diagnostycznych lub jako wyprowadzenie do dodatkowego mikroprocesora. Dokładny opis układu można znaleźć w nocie katalogowej producenta \cite{L9637D}.
-		
-		Układ U2 znajdujący się na schemacie to moduł komunikacyjny bluetooth. Jego zadaniem jest odbieranie wstępnie opracowanych wyników ze złącza diagnostycznego do układu wizualizacji danych. Moduł charakteryzuje się małym poborem prądu w stanie pracy(12mA), bardzo małym w stanie spoczynku(<0.5A), a także dużą szybkością przesyłania danych(do 1Mbps). Dokładną specyfikację urządzenia można znaleźć w nocie katalogowej producenta \cite{RN4020}. Układ zasilany jest napięciem 3.3V oraz komunikuje się z mikroprocesorem wykorzystując magistralę UART. Dodatkowo do modułu U2 doprowadzony jest sygnał wybudzający ze stanu czuwania(7:WAKE\_ SW) oraz sygnał wejścia resetującego układ(8:CMD/MLDP). Wyprowadzenia PIO1, PIO2, PIO3 wykorzystane zostały do sygnalizowania stanu komunikacji układu. Dodatkowo moduł bluetooth posiada wyprowadzenia magistrali SPI, które w zaprojektowanym układzie nie zostały wykorzystane. 
-		
-		\newpage		
-		
-		W układzie znajdują się również elementu obsługi mikroprocesora. Złącze P3 umożliwia programowanie mikroprocesora z wykorzystaniem zewnętrznego programatora dostępnego w zestawach STM32 NUCLEO lub DISCOVERY lub programatora ST-LINK/V2. Dodatkowo w układzie znajdują się dwa rezonatory kwarcowe(Q1, Q2) wraz kondensatorami(C7, C8, C9, C10) zgodne z zaleceniami producenta, a także przycisk umożliwiający resetowanie układu(S1). 
-		
-		Rys. \ref{rys_schemat_ukladu_elektrycznego} przedstawia schemat zaprojektowanego układu. Schemat w większym rozmiarze dodany został również do załączników na końcu dokumentu.
-		
-		\begin{figure}[!h]
-			\centering
-			\includegraphics[scale=0.6, angle=90]{Images/SchematUkladuElektrycznego.pdf}
-			\caption{Schemat obwodu układu do komunikacji ze złączem diagnostycznym. Opis w tekście.}
-			\label{rys_schemat_ukladu_elektrycznego}
-		\end{figure}
-	
-		\newpage
-	
+
+
 	\subsection{Projekt obwodu drukowanego}
 		\hspace{0.5cm}Na podstawie zaprojektowanego schematu elektrycznego zaprojektowany został obwód drukowany. Przy projektowaniu istotnym aspektem był rozmiar oraz kształt wykonanej płytki, aby układ mógł zostać umieszczony w obudowie, której widok oraz przekrój poprzeczny wraz z wymiarami przedstawiony został na Rys. \ref{widok_wtyczka_obd}.
 		
@@ -596,7 +632,56 @@ Pokrycie dolne                                                    &             
 
 %---------------------------------------------------OPROGRAMOWANIE-------------------------------------------------------------	
 
-\section{Oprogramowanie}
+\section{Zbudowany układ i oprogramowanie}
+
+\hspace{0.5cm}Jako jednostkę centralną w układzie zastosowano komputer Raspberry Pi 3, na którym zainstalowano system Raspbian Jessie. Główną zaletą tego urządzenia jest wbudowany moduł bluetooth, dzięki czemu zbędne stają się dodatkowe urządzenia do komunikacji z interfejsem ELM 327.  W tabeli \ref{tab_raspberry_pi} pokazano najważniejsze parametry komputera, a na Rys. \ref{rys_raspberry_pi} przedstawiono jego widok.
+
+\begin{table}[!h]
+\centering
+\caption{Wybrane parametry komputera Raspberry Pi 3 \cite{raspberrypiwidok}.}
+\label{tab_raspberry_pi}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Procesor}                                                  & \textbf{Bluetooth}                                       & \textbf{Wifi} & \textbf{Display} \\ \hline 
+\begin{tabular}[c]{@{}c@{}}4 x 1.2GHz \\ 64-bit ARMv8\end{tabular} & 4.1 BLE                                                  & 802.11n       & Full HDMI        \\ \hline \hline
+\textbf{GPIO}                                                      & \textbf{Interfejsy}                                      & \textbf{RAM}  & \textbf{Dysk}    \\ \hline
+40                                                                 & \begin{tabular}[c]{@{}c@{}}I2C, UART,\\ SPI\end{tabular} & 1 GB          & Micro SD         \\ \hline
+\end{tabular}
+\end{table}	
+	
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.6]{Images/rys_raspberry_pi.png}
+			\caption{Widok komputera Raspberry Pi 3 \cite{raspberrypiwidok}.}
+			\label{rys_raspberry_pi}
+		\end{figure}	
+
+\newpage
+
+	Do wyświetlania interfejsu komunikacyjnego wykorzystano siedmiocalowy, dotykowy wyświetlacz ciekłokrystaliczny firmy waveshare, którego wybrane parabetry przedstawiono w tabeli \ref{tab_wyswietlacz}, natomiast na Rys. \ref{rys_wyswietlacz} pokazano jego widok.
+
+	\begin{table}[!h]
+\centering
+\caption{Wybrane parametry wyświetlacza waveshare \cite{wyswietlaczwidok}.}
+\label{tab_wyswietlacz}
+\begin{tabular}{|c|c|c|c|}
+\hline
+\textbf{Przekątna} & \textbf{Rozdzielczość} & \textbf{\begin{tabular}[c]{@{}c@{}}Typ\\ wyświetlacza\end{tabular}}    & \textbf{Złącze} \\ \hline
+7''                & 1024x600px             & \begin{tabular}[c]{@{}c@{}}IPS, dotykowy,\\ pojemnościowy\end{tabular} & HDMI            \\ \hline
+\end{tabular}
+\end{table}
+
+		\begin{figure}[!h]
+			\centering
+			\includegraphics[scale=0.25]{Images/rys_wyswietlacz.png}
+			\caption{Widok komputera Raspberry Pi 3 \cite{wyswietlaczwidok}.}
+			\label{rys_wyswietlacz}
+		\end{figure}
+		W celu umożliwienia poprawnej współpracy wyświetlacza z komputerem Raspberry niezbędna była zmiana konfiguracji systemu, zgodnie z zaleceniami producenta \cite{wyswietlaczconf}.
+		
+		Ostatnim elementem zbudowanego układu jest interfejs komunikacyjny ELM 327, którego dokładny opis znajduje się w rozdziale \ref{rozdzial_elm}.
+
+\newpage
 
 \hspace{0.5cm}W ramach pracy stworzono oprogramowanie umożliwiające komunikację ze złączem diagnostycznym poprzez urządzenie ELM327, zapisywanie danych pomiarowych oraz wizualizację odczytywanych parametrów. Zgodnie z przyjętymi standardami dobrego wytwarzania oprogramowania, aplikacja podzielona została na dwa osobne moduły. Moduł pierwszy odpowiedzialny jest za zarządzanie logiką aplikacji, drugi natomiast za komunikację z użytkownikiem za pomocą graficznego interfejsu. Na Rys. \ref{rys_ogolny_schemat_aplikacji} przedstawiony został schemat ideowy aplikacji.
 
@@ -875,7 +960,22 @@ gdzie: $C_{sr}$ to średnia spalanie w l/km, $c_{sr}$ obliczona średnia prędko
 	
 	\section{Podsumowanie}
 	
-	\hspace{0.5cm} 
+	\hspace{0.5cm}Układ umożliwiający komunikację ze złączem diagnostycznym został wykonany prawie w całości zgodnie z założeniami pracy inżynierskiej. W skład stworzonego układu wchodzą następujące elementy:
+
+	\begin{itemize}
+		\item{komputer Raspberry Pi 3,}
+		\item{dotykowy, siedmiocalowy wyświetlacz LCD,}
+		\item{interfejs komunikacyjny ELM 327.}
+	\end{itemize}	
+	W celu zrealizowania założonych zadań wykonano:
+	
+	\begin{itemize}
+		\item{projekt układu do komunikacji ze złączem diagnostycznym składający się z schematu elektrycznego i obwodu drukowanego,}
+		\item{oprogramowanie umożliwiające komunikację ze złączem diagnostycznym, wyświetlanie danych oraz interakcję z użytkownikiem,}
+		\item{testy stworzonego oprogramowania.}
+	\end{itemize}
+	
+	Założeniem było wykonanie własnego modułu umożliwiającego komunikację ze złączem diagnostycznym, jednakże ze względów finansowych prace zakończono na etapie projektu. Projekt jest kompletnym rozwiązaniem, którego wykonanie zostało przesłane do wyceny. Oprogramowanie wgrane na komputer Raspberry Pi 3 połączony dotykowym wyświetlaczem testowane było w samochodzie Seat Cordoba II. Stworzony układ pozwala na ciągłe wysyłanie zdefiniowanych zapytań do złącza i obserwowanie zwracanych informacji na wyświetlaczu, lub ręczne wprowadzenie dowolnego żądania. Dodatkowo w pracy omówiono potencjalne zastosowania stworzonego układu pod kątem wspomagania kierowania pojazdem. 
 	
 	\newpage	
 	
@@ -901,6 +1001,15 @@ gdzie: $C_{sr}$ to średnia spalanie w l/km, $c_{sr}$ obliczona średnia prędko
 		
 		\bibitem{raspberrypi}
 		https://www.raspberrypi.org/documentation/
+		
+		\bibitem{raspberrypiwidok}
+		https://www.raspberrypi.org/products/raspberry-pi-3-model-b/
+		
+		\bibitem{wyswietlaczwidok}
+		http://www.waveshare.com/img/devkit/LCD/7inch-HDMI-LCD-C/7inch-HDMI-LCD-C-3.jpg
+		
+		\bibitem{wyswietlaczconf}
+		http://www.waveshare.com/wiki/7inch\_HDMI\_LCD\_\%28C\%29	
 	
 		\bibitem{Schildt15}
 		Schildt H., \emph{Java. Kompendium programisty. Wydanie IX}, Wydawnictwo Helion, Gliwice, 2015.
