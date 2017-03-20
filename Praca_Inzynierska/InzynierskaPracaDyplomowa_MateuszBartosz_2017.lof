@@ -1,28 +1,28 @@
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Por\IeC {\'o}wnanie z\IeC {\l }\IeC {\k a}cza diagnostycznego w wersji A oraz B.\relax }}{7}{figure.caption.4}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Opis wyprowadze\IeC {\'n} z\IeC {\l }\IeC {\k a}cza diagnostycznego. Wykorzystywane wyprowadzenia zosta\IeC {\l }y zaznaczone kolorem niebieskim oraz odpowiednim numerem. Opis wyprowadze\IeC {\'n} znajduje si\IeC {\k e} w Tab \ref {tab_obd2_pinout}\relax }}{7}{figure.caption.5}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces ELM 327 w wersji bluetooth.\relax }}{15}{figure.caption.10}
-\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat uk\IeC {\l }adu. Opis w tek\IeC {\'s}cie.\relax }}{16}{figure.caption.11}
-\contentsline {figure}{\numberline {3.2}{\ignorespaces Poszczeg\IeC {\'o}lne elementy uk\IeC {\l }adu.\relax }}{17}{figure.caption.12}
-\contentsline {figure}{\numberline {4.1}{\ignorespaces Schemat blokowy zaprojektowanego interfejsu komunikacyjnego. Opis w tek\IeC {\'s}cie.\relax }}{18}{figure.caption.13}
-\contentsline {figure}{\numberline {4.2}{\ignorespaces Schemat obwodu uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym. Opis w tek\IeC {\'s}cie.\relax }}{20}{figure.caption.14}
-\contentsline {figure}{\numberline {4.3}{\ignorespaces Widok (a) oraz przekr\IeC {\'o}j poprzeczny z wymiarami (b) obudowy uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym.\relax }}{23}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{23}{figure.caption.18}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{23}{figure.caption.18}
-\contentsline {figure}{\numberline {4.4}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) g\IeC {\'o}rnej warstwy p\IeC {\l }ytki.\relax }}{24}{figure.caption.20}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{figure.caption.20}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{figure.caption.20}
-\contentsline {figure}{\numberline {4.5}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) dolnej warstwy p\IeC {\l }ytki.\relax }}{24}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{figure.caption.21}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{figure.caption.21}
-\contentsline {figure}{\numberline {5.1}{\ignorespaces Widok komputera Raspberry Pi 3 \cite {raspberrypiwidok}.\relax }}{25}{figure.caption.23}
-\contentsline {figure}{\numberline {5.2}{\ignorespaces Widok komputera Raspberry Pi 3 \cite {wyswietlaczwidok}.\relax }}{26}{figure.caption.25}
-\contentsline {figure}{\numberline {5.3}{\ignorespaces Schemat ideowy aplikacji.\relax }}{27}{figure.caption.26}
-\contentsline {figure}{\numberline {5.4}{\ignorespaces Schemat ideowy aplikacji.\relax }}{28}{figure.caption.27}
-\contentsline {figure}{\numberline {5.5}{\ignorespaces Model logiczny (a) oraz fizyczny (b) bazy danych. Opis w tek\IeC {\'s}cie.\relax }}{34}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{34}{figure.caption.28}
-\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{34}{figure.caption.28}
-\contentsline {figure}{\numberline {5.6}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{35}{figure.caption.29}
-\contentsline {figure}{\numberline {5.7}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{36}{figure.caption.30}
-\contentsline {figure}{\numberline {5.8}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{37}{figure.caption.31}
-\contentsline {figure}{\numberline {6.1}{\ignorespaces Wyniki testu r\IeC {\k e}cznego trybu pracy programu.\relax }}{38}{figure.caption.32}
-\contentsline {figure}{\numberline {6.2}{\ignorespaces Wyniki testu automatycznego trybu pracy programu.\relax }}{39}{figure.caption.34}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Por\IeC {\'o}wnanie z\IeC {\l }\IeC {\k a}cza diagnostycznego w wersji A oraz B.\relax }}{8}{figure.caption.4}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Opis wyprowadze\IeC {\'n} z\IeC {\l }\IeC {\k a}cza diagnostycznego. Wykorzystywane wyprowadzenia zosta\IeC {\l }y zaznaczone kolorem niebieskim oraz odpowiednim numerem. Opis wyprowadze\IeC {\'n} znajduje si\IeC {\k e} w Tab \ref {tab_obd2_pinout}\relax }}{8}{figure.caption.5}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces ELM 327 w wersji bluetooth.\relax }}{16}{figure.caption.10}
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Schemat uk\IeC {\l }adu. Opis w tek\IeC {\'s}cie.\relax }}{17}{figure.caption.11}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Poszczeg\IeC {\'o}lne elementy uk\IeC {\l }adu.\relax }}{18}{figure.caption.12}
+\contentsline {figure}{\numberline {4.1}{\ignorespaces Schemat blokowy zaprojektowanego interfejsu komunikacyjnego. Opis w tek\IeC {\'s}cie.\relax }}{19}{figure.caption.13}
+\contentsline {figure}{\numberline {4.2}{\ignorespaces Schemat obwodu uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym. Opis w tek\IeC {\'s}cie.\relax }}{21}{figure.caption.14}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Widok (a) oraz przekr\IeC {\'o}j poprzeczny z wymiarami (b) obudowy uk\IeC {\l }adu do komunikacji ze z\IeC {\l }\IeC {\k a}czem diagnostycznym.\relax }}{24}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{24}{figure.caption.18}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{24}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) g\IeC {\'o}rnej warstwy p\IeC {\l }ytki.\relax }}{25}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{25}{figure.caption.20}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{25}{figure.caption.20}
+\contentsline {figure}{\numberline {4.5}{\ignorespaces Schemat obwodu (a) oraz widok modelu (b) dolnej warstwy p\IeC {\l }ytki.\relax }}{25}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{25}{figure.caption.21}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{25}{figure.caption.21}
+\contentsline {figure}{\numberline {5.1}{\ignorespaces Widok komputera Raspberry Pi 3 \cite {raspberrypiwidok}.\relax }}{26}{figure.caption.23}
+\contentsline {figure}{\numberline {5.2}{\ignorespaces Widok komputera Raspberry Pi 3 \cite {wyswietlaczwidok}.\relax }}{27}{figure.caption.25}
+\contentsline {figure}{\numberline {5.3}{\ignorespaces Schemat ideowy aplikacji.\relax }}{28}{figure.caption.26}
+\contentsline {figure}{\numberline {5.4}{\ignorespaces Schemat ideowy aplikacji.\relax }}{29}{figure.caption.27}
+\contentsline {figure}{\numberline {5.5}{\ignorespaces Model logiczny (a) oraz fizyczny (b) bazy danych. Opis w tek\IeC {\'s}cie.\relax }}{35}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(a)}{\ignorespaces {}}}{35}{figure.caption.28}
+\contentsline {subfigure}{\numberline {(b)}{\ignorespaces {}}}{35}{figure.caption.28}
+\contentsline {figure}{\numberline {5.6}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{36}{figure.caption.29}
+\contentsline {figure}{\numberline {5.7}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{37}{figure.caption.30}
+\contentsline {figure}{\numberline {5.8}{\ignorespaces Panel g\IeC {\l }\IeC {\'o}wny interfejsu u\IeC {\.z}ytkownika.\relax }}{38}{figure.caption.31}
+\contentsline {figure}{\numberline {6.1}{\ignorespaces Wyniki testu r\IeC {\k e}cznego trybu pracy programu.\relax }}{39}{figure.caption.32}
+\contentsline {figure}{\numberline {6.2}{\ignorespaces Wyniki testu automatycznego trybu pracy programu.\relax }}{40}{figure.caption.34}

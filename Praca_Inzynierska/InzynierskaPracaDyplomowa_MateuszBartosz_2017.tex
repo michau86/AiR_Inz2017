@@ -1,6 +1,6 @@
-\documentclass[12pt]{article} %Styl dokumentu
+\documentclass[12pt, twoside]{article} %Styl dokumentu
 \usepackage{times} %Czcionka
-\usepackage[a4paper,left=3.5cm,right=2.5cm,top=3cm,bottom=3cm,includefoot=false,includehead=false]{geometry} %Ustawienia marginesów
+\usepackage[a4paper,top=25mm, bottom=25mm, outer=25mm, inner=35mm,includefoot=false,includehead=false]{geometry} %Ustawienia marginesów
 \linespread{1} %Interlinia
 \setlength{\parindent}{0.5cm} %Wcięcie na początku akapitu
 \setlength{\parskip}{1ex plus 0.5ex minus 0.2ex} %Odstępy pomiędzy akapitami
@@ -103,11 +103,17 @@
 \thispagestyle{empty}
 \newpage
 
+\begin{center}
+
+\end{center}
+\thispagestyle{empty}
+\newpage
+
 %---------------------------------------------------POCZĄTEK DOKUMENTU-------------------------------------------------------------
 
 \pagestyle{fancy}
-\rhead{\thepage}
-\lhead{\slshape \rightmark}
+\rhead[\slshape \rightmark]{\thepage}
+\lhead[\thepage]{\slshape \rightmark }
 \lfoot{}
 \cfoot{}
 \rfoot{}
@@ -120,12 +126,12 @@
 \thispagestyle{empty}
 \section*{Streszczenie}
 \vspace{0.5cm}
-\hspace{0.5cm}W ramach niniejszej pracy zbudowany został układ umożliwiający komunikację ze złączem diagnostycznym OBD-II. Częściami układu są interfejs obsługujący połączenie z komputerem pokładowym samochodu oraz oprogramowanie umożliwiające pracę w trybie ręcznego wysyłania komend do interfejsu lub pracę w trybie automatycznym. Oprogramowanie składa się z dwóch współpracujących ze sobą modułów: interfejsu komunikacyjnego oraz graficznego interfejsu użytkownika. W ramach pracy omówiono strukturę zapytać wysyłanych do złącza diagnostycznego, otrzymywanych odpowiedzi, a także kodów błędów wysyłanych przez sterownik pojazdu. Dodatkowo zaprojektowano własny układ umożliwiający połączenie z pojazdami udostępniającymi do komunikacji linię K protokołu ISO 9141-2. Przeprowadzono również testy stworzonego oprogramowania i omówiono potencjalne zastosowania układu w realizacji zadań wspomagających prowadzenie pojazdu.
+\hspace{0.5cm}W ramach niniejszej pracy zbudowany został układ umożliwiający komunikację ze złączem diagnostycznym OBD-II. Częściami układu są interfejs obsługujący połączenie z komputerem pokładowym samochodu oraz oprogramowanie umożliwiające pracę w trybie ręcznego wysyłania komend do interfejsu lub pracę w trybie automatycznym. Oprogramowanie składa się z dwóch współpracujących ze sobą modułów: interfejsu komunikacyjnego oraz graficznego interfejsu użytkownika. W ramach pracy omówiono strukturę zapytań wysyłanych do złącza diagnostycznego, otrzymywanych odpowiedzi, a także kodów błędów wysyłanych przez sterownik pojazdu. Dodatkowo zaprojektowano własny układ umożliwiający połączenie z pojazdami udostępniającymi do komunikacji linię K protokołu ISO 9141-2. Przeprowadzono również testy stworzonego oprogramowania i omówiono potencjalne zastosowania układu w realizacji zadań wspomagających prowadzenie pojazdu.
 \newpage
 
 \section*{Abstract}
 \vspace{0.5cm}
-\hspace{0.5cm}As part of this thesis system which enable coummunication with OBD-II connector was built. Parts of the system are the interface that supports connection to vehicle on-board computer and the software which allows to work in manual mode or automatic mode. The software consist of two cooperating modules: communication interface and graphical user interface. As part of disseration discusses the structure of requests sent to the diagnostic interface, receive responses and trouble code sent by the driver of the vehicle. In addition, own system for connecting to vehicles which provides communication via K-line ISO 9141-2 protocol was designed. Furthermote created software was tested in vehicle and potential applications of the system in the implementation of tasks to support driving was discussed. 
+\hspace{0.5cm}As part of this thesis, a system which enables coummunication with an OBD-II connector was built. Part of the system is an interface that supports connection to a vehicle's on-board computer and the software which allows this to work in manual mode or automatic mode. The software consists of two cooperating modules: acommunication interface and a graphical user interface. Part of my dissertation discusses the structure of requests sent to the diagnostic interface, the responses received and trouble codes sent by the vehicles Electronic Control Unit. In addition, a system for connecting to vehicles, which provides communication via K-line ISO 9141-2 protocol, was designed. Furthermore, the software was tested on a vehicle and the potential applications of the system to improve the driving experience was discussed.
 
 
 \thispagestyle{empty}
@@ -275,7 +281,7 @@ Opis trybów rozszerzonych można znaleźć w literaturze \cite{Merkisz02}.
 			\item{41 00 BE 1F B8 10}
 		\end{itemize}
 		
-		Odpowiedź - po usunięciu z niej nagłówka - należy zapisać w postaci binarnej, w której wartość 1 oznacza że dany kod jest udostępniony. Sposób dekodowanie odpowiedzi przedstawiony zostały w tabeli \ref{tab_pid_response}
+		Odpowiedź - po usunięciu z niej nagłówka - należy zapisać w postaci binarnej, w której wartość 1 oznacza że dany kod jest udostępniony. Sposób dekodowania odpowiedzi przedstawiony zostały w tabeli \ref{tab_pid_response}
 		
 \begin{table}[!h]
 \centering
@@ -314,7 +320,7 @@ Opis trybów rozszerzonych można znaleźć w literaturze \cite{Merkisz02}.
 			\item{41 01 81 07 65 04.}
 		\end{itemize}
 		
-		Wartości 41 01 to nagłówek odpowiedzi. Właściwa odpowiedź zaczyna się od dwóch pary bajtów 81, w których zapisana jest informacja o ilości przechowywanych kodów błędów pojazdu. Wartość 81 to liczba zapisana w postaci szesnastkowej, której wartość w systemie dziesiętnym to 129. Nie jest to jednak wprost liczba kodów błędów. W kodzie tym zawarta jest również informacja o stanie diody kontrolnej silnika, który zapisany jest na najbardziej znaczącym bicie, co oznacza, że odczytaną wartość należy pomniejszyć o 128 lub 80 w systemie szesnastkowym. Wynika z tego że w zaprezentowanym przykładzie przechowywany jest tylko jeden kod błędu. Podany przykład ilustruję sytuację, w której pojazd udostępnia tylko jeden moduł, który raportuje kody błędów. Jeżeli takich modułów byłoby więcej w odpowiedzi na instrukcję 01 01 wysłana zostanie odpowiedź podobna do przedstawionej dla każdego modułu. W celu sprawdzenia z którego modułu wysłana została odpowiedź należy włączyć wysyłanie nagłówka odpowiedzi.
+		Wartości 41 01 to nagłówek odpowiedzi. Właściwa odpowiedź zaczyna się od bajtu 81, w którym zapisana jest informacja o liczbie przechowywanych kodów błędów pojazdu. Wartość 81 to liczba zapisana w postaci szesnastkowej, której wartość w systemie dziesiętnym to 129. Nie jest to jednak wprost liczba kodów błędów. W kodzie tym zawarta jest również informacja o stanie diody kontrolnej silnika, który zapisany jest na najbardziej znaczącym bicie, co oznacza, że odczytaną wartość należy pomniejszyć o 128 lub 80 w systemie szesnastkowym. Wynika z tego że w zaprezentowanym przykładzie przechowywany jest tylko jeden kod błędu. Podany przykład ilustruje sytuację, w której pojazd udostępnia tylko jeden moduł, który raportuje kody błędów. Jeżeli takich modułów byłoby więcej w odpowiedzi na instrukcję 01 01 wysłana zostanie odpowiedź podobna do przedstawionej dla każdego modułu. W celu sprawdzenia z którego modułu wysłana została odpowiedź należy włączyć wysyłanie nagłówka odpowiedzi.
 		
 		Po ustaleniu liczby przechowywanych błędów można przejść do odczytywania ich kodów poprzez wysłanie instrukcji 03. Odpowiedź powinna mieć postać zbliżoną do:
 		
@@ -352,7 +358,7 @@ F                                                                            & U
 \end{tabular}
 \end{table}
 		
-	Kod błędu z przykładowej odpowiedzi to 0133. Pierwszą cyfrę należy zastąpić wartością z tabeli, a pozostałe trzy cyfry pozostawić bez zmiany. W przedstawionym przykładzie daje to wartość P0133 co oznacza wystąpienie błędu wolnej odpowiedzi obwodu czujnika tlenu. Analogicznie po otrzymaniu odpowiedzi w postaci D016 odczytanym kodem jest U1016. Znaczenie wszystkich kodów błędów można odnaleźć w dokumentacji normie \cite{saej1979} lub w literaturze \cite{White06}.
+	Kod błędu z przykładowej odpowiedzi to 0133. Pierwszą cyfrę należy zastąpić wartością z tabeli, a pozostałe trzy cyfry pozostawić bez zmiany. W przedstawionym przykładzie daje to wartość P0133 co oznacza wystąpienie błędu wolnej odpowiedzi obwodu czujnika tlenu. Analogicznie po otrzymaniu odpowiedzi w postaci D016 odczytanym kodem jest U1016. Znaczenie wszystkich kodów błędów można odnaleźć w normie \cite{saej1979} lub literaturze \cite{White06}.
 	
 	
 	\newpage	
@@ -405,7 +411,7 @@ F                                                                            & U
 		\label{rys_schemat_ukladu}
 		\end{figure}
 	
-	W pierwszej fazie projektu planowano wykonać autorski moduł do komunikacji ze złączem diagnostycznym. W tym celu zaprojektowany został układ oparty o mikroprocesor STM32F103CBT6 opisany w rozdziale \ref{rozdzial_uklad_stm}. Niestety ze względu na zbyt wysoką cenę wykonania tylko jednej sztuki prace zakończono na projekcie schematu elektrycznego oraz obwodu drukowanego. Jako zamiennik autorskiego układu w pracy wykorzystano popularne urządzenie ELM327 v2.1 udostępniające komunikację bezprzewodową bluetooth. 
+	W pierwszej fazie projektu planowano wykonać autorski moduł do komunikacji ze złączem diagnostycznym. W tym celu zaprojektowany został układ oparty o mikroprocesor STM32F103CBT6 opisany w rozdziale \ref{rozdzial_uklad_stm}. Niestety, ze względu na zbyt wysoką cenę wykonania tylko jednej sztuki prace zakończono na projekcie schematu elektrycznego oraz obwodu drukowanego. Jako zamiennik autorskiego układu w pracy wykorzystano popularne urządzenie ELM327 v2.1 udostępniające komunikację bezprzewodową bluetooth. 
 	
 	\newpage
 	
@@ -452,11 +458,11 @@ F                                                                            & U
 	\newpage
 	\subsection{Schemat elektryczny}
 	
-		\hspace{0.5cm}Celem zaprojektowanego układu było umożliwienie komunikacji z samochodowym komputerem pokładowym poprzez złącze diagnostyczne. Głównym elementem układu jest mikroprocesor U1, którego zadaniem jest odbieranie danych ze złącza diagnostycznego oraz przesyłanie odebranych danych za pomocą modułu bluetooth do układu wizualizacji danych. Mikroprocesor zasilany jest napięciem 3.3V. Układ został zaprojektowany do obsługi tylko jednego protokołu komunikacyjnego udostępnianego przez złącze diagnostyczne - ISO 9141-2. Wynika to z potrzeby minimalizacji całego układu, a także minimalizacji ceny jego wykonania. Sygnał protokołu komunikacyjnego doprowadzony jest do złącza P1 wraz z napięciem 12V - którego źródłem jest akumulator - oraz wyprowadzeniami masy układu. Sygnał zasilania złącza P1 doprowadzony jest to dwóch regulatorów napięcia U4 oraz U5, dzięki którym w układzie dostępne są napięcia zasilające odpowiednio 5V oraz 3.3V. W obwodzie wejściowym oraz wyjściowym umieszczone zostały kondensatory C1, C2 i C3 zgodnie z zaleceniami producenta \cite{MC7805}\cite{MCP17}. W obwodzie zasilania znajduje się dioda prostownicza D8 oraz dodatkowo dwie czerwone diody LED D4 i D5 wraz z odpowiadającymi im rezystorami R4 i R5, których zadaniem jest sygnalizowanie obecności napięcia.
+		\hspace{0.5cm}Celem zaprojektowanego układu było umożliwienie komunikacji z samochodowym komputerem pokładowym poprzez złącze diagnostyczne. Głównym elementem układu jest mikroprocesor U1, którego zadaniem jest odbieranie danych ze złącza diagnostycznego oraz przesyłanie odebranych danych za pomocą modułu bluetooth do układu wizualizacji danych. Mikroprocesor zasilany jest napięciem 3.3V. Układ został zaprojektowany do obsługi tylko jednego protokołu komunikacyjnego udostępnianego przez złącze diagnostyczne - ISO 9141-2. Wynika to z potrzeby minimalizacji całego układu, a także minimalizacji ceny jego wykonania. Sygnał protokołu komunikacyjnego doprowadzony jest do złącza P1 wraz z napięciem 12V - którego źródłem jest akumulator - oraz wyprowadzeniami masy układu. Sygnał zasilania złącza P1 doprowadzony jest do dwóch regulatorów napięcia U4 oraz U5, dzięki którym w układzie dostępne są napięcia zasilające odpowiednio 5V oraz 3.3V. W obwodzie wejściowym oraz wyjściowym umieszczone zostały kondensatory C1, C2 i C3 zgodnie z zaleceniami producenta \cite{MC7805}\cite{MCP17}. W obwodzie zasilania znajduje się dioda prostownicza D8 oraz dodatkowo dwie czerwone diody LED D4 i D5 wraz z odpowiadającymi im rezystorami R4 i R5, których zadaniem jest sygnalizowanie obecności napięcia.
 		
-		Sygnał linii k protokołu ISO 9141-2 wychodzący ze złącza P1 doprowadzony jest do układu interfejsu magistrali ISO 9141. Układ ten zasilany jest napięciem 5V, a jego zadaniem jest przetwarzanie sygnału wyprowadzonego ze złącza diagnostycznego. Zastosowanie takiego rozwiązania umożliwia wygodne programowanie komunikacji ze złączem diagnostycznym przy użyciu interfejsu UART, które  jest bezpośrednio dostępne w zastosowanym mikroprocesorze. Ze względu na różnicę napięć pracy układu L9637D oraz mikroprocesora do odbierania danych z wyprowadzenia Rx interfejsu ISO należy dodatkowo obniżyć napięcie sygnału. Do tego celu wykorzystano rezystancyjny dzielnik napięcia R8 i R9. Wysyłanie danych z mikroprocesora może odbywać się bezpośrednio, ponieważ napięcie 3.3V jest wystarczające do zmiany stanu na wejściu Tx układu U3. W obwodzie komunikacji pomiędzy modułami umieszczono dodatkowo złącze umożliwiające bezpośrednie odczytywanie danych na liniach Rx oraz Tx, które może być wykorzystywane w celach diagnostycznych lub jako wyprowadzenie do dodatkowego mikroprocesora. Dokładny opis układu można znaleźć w nocie katalogowej producenta \cite{L9637D}.
+		Sygnał linii K protokołu ISO 9141-2 wychodzący ze złącza P1 doprowadzony jest do układu interfejsu magistrali ISO 9141. Układ ten zasilany jest napięciem 5V, a jego zadaniem jest przetwarzanie sygnału wyprowadzonego ze złącza diagnostycznego. Zastosowanie takiego rozwiązania umożliwia wygodne programowanie komunikacji ze złączem diagnostycznym przy użyciu interfejsu UART, które  jest bezpośrednio dostępne w zastosowanym mikroprocesorze. Ze względu na różnicę napięć pracy układu L9637D oraz mikroprocesora do odbierania danych z wyprowadzenia Rx interfejsu ISO należy dodatkowo obniżyć napięcie sygnału. Do tego celu wykorzystano rezystancyjny dzielnik napięcia R8 i R9. Wysyłanie danych z mikroprocesora może odbywać się bezpośrednio, ponieważ napięcie 3.3V jest wystarczające do zmiany stanu na wejściu Tx układu U3. W obwodzie komunikacji pomiędzy modułami umieszczono dodatkowo złącze umożliwiające bezpośrednie odczytywanie danych na liniach Rx oraz Tx, które może być wykorzystywane w celach diagnostycznych lub jako wyprowadzenie do dodatkowego mikroprocesora. Dokładny opis układu można znaleźć w nocie katalogowej producenta \cite{L9637D}.
 		
-		Układ U2 znajdujący się na schemacie to moduł komunikacyjny bluetooth. Jego zadaniem jest odbieranie wstępnie opracowanych wyników ze złącza diagnostycznego do układu wizualizacji danych. Moduł charakteryzuje się małym poborem prądu w stanie pracy(12mA), bardzo małym w stanie spoczynku(<0.5A), a także dużą szybkością przesyłania danych(do 1Mbps). Dokładną specyfikację urządzenia można znaleźć w nocie katalogowej producenta \cite{RN4020}. Układ zasilany jest napięciem 3.3V oraz komunikuje się z mikroprocesorem wykorzystując magistralę UART. Dodatkowo do modułu U2 doprowadzony jest sygnał wybudzający ze stanu czuwania(7:WAKE\_ SW) oraz sygnał wejścia resetującego układ(8:CMD/MLDP). Wyprowadzenia PIO1, PIO2, PIO3 wykorzystane zostały do sygnalizowania stanu komunikacji układu. Dodatkowo moduł bluetooth posiada wyprowadzenia magistrali SPI, które w zaprojektowanym układzie nie zostały wykorzystane. 
+		Układ U2 znajdujący się na schemacie to moduł komunikacyjny bluetooth. Jego zadaniem jest odbieranie wstępnie opracowanych wyników ze złącza diagnostycznego do układu wizualizacji danych. Moduł charakteryzuje się małym poborem prądu w stanie pracy(12mA), bardzo małym w stanie spoczynku(<0.5mA), a także dużą szybkością przesyłania danych(do 1Mbps). Dokładną specyfikację urządzenia można znaleźć w nocie katalogowej producenta \cite{RN4020}. Układ zasilany jest napięciem 3.3V oraz komunikuje się z mikroprocesorem wykorzystując magistralę UART. Dodatkowo do modułu U2 doprowadzony jest sygnał wybudzający ze stanu czuwania(7:WAKE\_ SW) oraz sygnał wejścia resetującego układ(8:CMD/MLDP). Wyprowadzenia PIO1, PIO2, PIO3 wykorzystane zostały do sygnalizowania stanu komunikacji układu. Dodatkowo moduł bluetooth posiada wyprowadzenia magistrali SPI, które w zaprojektowanym układzie nie zostały wykorzystane. 
 		
 		\newpage		
 		
@@ -683,7 +689,7 @@ Pokrycie dolne                                                    &             
 
 \newpage
 
-\hspace{0.5cm}W ramach pracy stworzono oprogramowanie umożliwiające komunikację ze złączem diagnostycznym poprzez urządzenie ELM327, zapisywanie danych pomiarowych oraz wizualizację odczytywanych parametrów. Zgodnie z przyjętymi standardami dobrego wytwarzania oprogramowania, aplikacja podzielona została na dwa osobne moduły. Moduł pierwszy odpowiedzialny jest za zarządzanie logiką aplikacji, drugi natomiast za komunikację z użytkownikiem za pomocą graficznego interfejsu. Na Rys. \ref{rys_ogolny_schemat_aplikacji} przedstawiony został schemat ideowy aplikacji.
+W ramach pracy stworzono oprogramowanie umożliwiające komunikację ze złączem diagnostycznym poprzez urządzenie ELM327, zapisywanie danych pomiarowych oraz wizualizację odczytywanych parametrów. Zgodnie z przyjętymi standardami dobrego wytwarzania oprogramowania, aplikacja podzielona została na dwa osobne moduły. Moduł pierwszy odpowiedzialny jest za zarządzanie logiką aplikacji, drugi natomiast za komunikację z użytkownikiem za pomocą graficznego interfejsu. Na Rys. \ref{rys_ogolny_schemat_aplikacji} przedstawiony został schemat ideowy aplikacji.
 
 		\begin{figure}[!h]
 			\centering
@@ -785,7 +791,7 @@ W kolejnych dwóch podrozdziałach znajduje się dokładny opis zastosowanych ro
 	
 	\lstinputlisting[language=JavaL, caption={Funkcja sprawdzająca poprawność odpowiedzi i wymuszająca odświeżenie interfejsu użytkownika. Opis w tekście.}, label={listing_execute_response}]{Listings/execute_response.java}	
 	
-	Pozostałe pakiety wymienione w podrozdziale \ref{rozdzial_pakiety_api} odpowiadają za komunikację aplikacji z bazą danych i są w istocie implementacją framworku Hibernate, dlatego ich dokładny opis został w pracy pominięty.
+	Pozostałe pakiety wymienione w podrozdziale \ref{rozdzial_pakiety_api} odpowiadają za komunikację aplikacji z bazą danych i są w istocie implementacją frameworku Hibernate, dlatego ich dokładny opis został w pracy pominięty.
 	
 	\newpage
 	
@@ -1069,5 +1075,22 @@ gdzie: $C_{sr}$ to średnia spalanie w l/km, $c_{sr}$ obliczona średnia prędko
 
 	\listoftables
 	\newpage
+	
+	\section*{Załączniki}
+	\lhead{\textit{Załączniki}}
+
+	\begin{enumerate}
+		\item{Schemat elektryczny}
+	\end{enumerate}
+	
+	\newpage
+	
+	\thispagestyle{empty}
+	\newgeometry{a4paper,left=2cm,right=2cm,top=2cm,bottom=2cm,includefoot=false,includehead=false}
+	\begin{figure}[ht]
+		\centering
+		\includegraphics[scale=0.8, angle=90]{Images/SchematUkladuElektrycznego.pdf}
+	\end{figure}
+	\thispagestyle{empty}
 
 \end{document}
